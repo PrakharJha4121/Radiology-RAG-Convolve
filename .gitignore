@@ -2,6 +2,8 @@
 .env
 .env.local
 
+node_modules/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -28,4 +30,4 @@ qdrant_storage/
 # Secrets (CRITICAL)
 google_credentials.json
 client_secret_*.json
-*.json
+
