@@ -1,7 +1,9 @@
-streamlit
+fastapi
+uvicorn
 qdrant-client
 sentence-transformers
 torch
-pypdf
+PyMuPDF
 pillow
-# streamlit-oauth
+python-multipart
+pydantic
