@@ -1,11 +1,6 @@
 streamlit
-fastapi
-uvicorn
 qdrant-client
-transformers
 sentence-transformers
 torch
-python-dotenv
-pydantic
-Pillow
-pdfplumber
+pypdf
+pillow
