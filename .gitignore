@@ -24,3 +24,8 @@ qdrant_storage/
 .vscode/
 .idea/
 .DS_Store
+
+# Secrets (CRITICAL)
+google_credentials.json
+client_secret_*.json
+*.json
