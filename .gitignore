@@ -19,9 +19,9 @@ venv/
 ENV/
 
 # Data and storage
-data/
-qdrant_storage/
-backend/uploads/
+# data/
+# qdrant_storage/
+# backend/uploads/
 
 # IDEs and OS
 .vscode/
@@ -31,3 +31,6 @@ backend/uploads/
 # Secrets (CRITICAL)
 google_credentials.json
 client_secret_*.json
+data/data/
+backend/uploads/
+qdrant_storage/

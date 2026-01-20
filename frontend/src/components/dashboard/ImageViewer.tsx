@@ -1,29 +1,55 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Upload, ZoomIn, ZoomOut, RotateCcw, Contrast, Image as ImageIcon, ScanSearch, X } from 'lucide-react';
+import { Upload, ZoomIn, ZoomOut, RotateCcw, Contrast, Image as ImageIcon, ScanSearch, X, Check, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import sampleXray from '@/assets/sample-xray.jpg';
 
 interface ImageViewerProps {
-  onImageUpload?: (file: File) => Promise<void>;
+  onImageUpload?: (file: File, scanType: string) => Promise<{ scan_id: string } | void>;
+  historicalImage?: string | null;
+  historicalScanId?: string | null;
+  onClearHistorical?: () => void;
 }
 
-const ImageViewer = ({ onImageUpload }: ImageViewerProps) => {
+const API_BASE = 'http://localhost:8000';
+
+const scanTypes = [
+  { value: 'CXR', label: 'Chest X-Ray' },
+  { value: 'CT', label: 'CT Scan' },
+  { value: 'MRI', label: 'MRI' },
+  { value: 'Ultrasound', label: 'Ultrasound' },
+  { value: 'Other', label: 'Other' },
+];
+
+const ImageViewer = ({ onImageUpload, historicalImage, historicalScanId, onClearHistorical }: ImageViewerProps) => {
   const [image, setImage] = useState<string | null>(null);
-  const [selectedFile, setSelectedFile] = useState<File | null>(null); // Store file before uploading
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isUploading, setIsUploading] = useState(false);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
   const [zoom, setZoom] = useState(1);
   const [highContrast, setHighContrast] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [scanType, setScanType] = useState('CXR');
+  const [viewMode, setViewMode] = useState<'upload' | 'historical'>('upload');
 
-  // Helper to read file and show preview
+  // Handle historical image display
+  useEffect(() => {
+    if (historicalImage) {
+      setViewMode('historical');
+    }
+  }, [historicalImage]);
+
   const processFile = (file: File) => {
     if (file && file.type.startsWith('image/')) {
       const reader = new FileReader();
       reader.onload = () => {
         setImage(reader.result as string);
-        setSelectedFile(file); // Save file but DO NOT upload yet
+        setSelectedFile(file);
+        setUploadSuccess(false);
+        setViewMode('upload');
       };
       reader.readAsDataURL(file);
     }
@@ -42,25 +68,27 @@ const ImageViewer = ({ onImageUpload }: ImageViewerProps) => {
   }, []);
 
   const loadSampleImage = async () => {
-    // For sample, we fetch it as a blob so we can "upload" it like a real file
     try {
       const response = await fetch(sampleXray);
       const blob = await response.blob();
       const file = new File([blob], "sample_xray.jpg", { type: "image/jpeg" });
       setImage(sampleXray);
       setSelectedFile(file);
+      setUploadSuccess(false);
+      setViewMode('upload');
     } catch (e) {
       console.error("Could not load sample", e);
     }
   };
 
-  // The new manual upload trigger
   const handleAnalyze = async () => {
     if (!selectedFile || !onImageUpload) return;
     
     setIsUploading(true);
     try {
-      await onImageUpload(selectedFile);
+      const result = await onImageUpload(selectedFile, scanType);
+      setUploadSuccess(true);
+      // Don't reset the image - keep it visible for analysis
     } catch (error) {
       console.error(error);
     } finally {
@@ -70,12 +98,26 @@ const ImageViewer = ({ onImageUpload }: ImageViewerProps) => {
 
   const handleZoomIn = () => setZoom(prev => Math.min(prev + 0.25, 3));
   const handleZoomOut = () => setZoom(prev => Math.max(prev - 0.25, 0.5));
+  
   const handleReset = () => {
     setImage(null);
     setSelectedFile(null);
     setZoom(1);
     setHighContrast(false);
+    setUploadSuccess(false);
+    setViewMode('upload');
+    if (onClearHistorical) onClearHistorical();
   };
+
+  const handleBackToUpload = () => {
+    setViewMode('upload');
+    if (onClearHistorical) onClearHistorical();
+  };
+
+  // Determine which image to display
+  const displayImage = viewMode === 'historical' && historicalImage 
+    ? `${API_BASE}/uploads/${historicalImage}`
+    : image;
 
   return (
     <Card className="h-full flex flex-col border-border shadow-sm overflow-hidden">
@@ -83,19 +125,26 @@ const ImageViewer = ({ onImageUpload }: ImageViewerProps) => {
         <div className="flex items-center justify-between">
           <CardTitle className="text-sm font-semibold flex items-center gap-2 text-foreground">
             <Upload className="h-4 w-4 text-primary" />
-            Scan Upload
+            {viewMode === 'historical' ? 'Historical Scan' : 'Scan Upload'}
           </CardTitle>
-          {image && (
-            <Button variant="ghost" size="icon" className="h-6 w-6" onClick={handleReset}>
-              <X className="h-4 w-4" />
-            </Button>
-          )}
+          <div className="flex items-center gap-1">
+            {viewMode === 'historical' && (
+              <Button variant="ghost" size="sm" className="h-6 text-xs" onClick={handleBackToUpload}>
+                Back to Upload
+              </Button>
+            )}
+            {(displayImage || image) && (
+              <Button variant="ghost" size="icon" className="h-6 w-6" onClick={handleReset}>
+                <X className="h-4 w-4" />
+              </Button>
+            )}
+          </div>
         </div>
       </CardHeader>
 
       <CardContent className="flex-1 p-0 flex flex-col bg-zinc-950/5 relative">
         <AnimatePresence mode="wait">
-          {!image ? (
+          {!displayImage ? (
             // --- STATE 1: UPLOAD AREA ---
             <motion.div
               key="upload"
@@ -148,7 +197,7 @@ const ImageViewer = ({ onImageUpload }: ImageViewerProps) => {
               {/* Image Area */}
               <div className="flex-1 overflow-hidden relative flex items-center justify-center bg-zinc-950/90 p-4">
                 <motion.img
-                  src={image}
+                  src={displayImage}
                   alt="Medical scan"
                   className="max-w-full max-h-full object-contain shadow-2xl"
                   style={{
@@ -158,6 +207,24 @@ const ImageViewer = ({ onImageUpload }: ImageViewerProps) => {
                   drag
                   dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
                 />
+                
+                {/* Status Badge */}
+                {viewMode === 'upload' && uploadSuccess && (
+                  <div className="absolute top-4 left-4">
+                    <Badge className="bg-emerald-500/90 text-white">
+                      <Check className="h-3 w-3 mr-1" />
+                      Uploaded & Indexed
+                    </Badge>
+                  </div>
+                )}
+
+                {viewMode === 'historical' && (
+                  <div className="absolute top-4 left-4">
+                    <Badge variant="secondary">
+                      Historical Scan
+                    </Badge>
+                  </div>
+                )}
                 
                 {/* Floating Zoom Controls */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1 bg-background/90 backdrop-blur border rounded-full p-1 shadow-lg">
@@ -181,27 +248,57 @@ const ImageViewer = ({ onImageUpload }: ImageViewerProps) => {
                 </div>
               </div>
 
-              {/* Action Bar */}
-              <div className="p-4 bg-card border-t border-border">
-                <Button 
-                  size="lg" 
-                  className="w-full font-semibold shadow-lg hover:shadow-primary/25 transition-all" 
-                  onClick={handleAnalyze}
-                  disabled={isUploading}
-                >
-                  {isUploading ? (
-                    <>Processing...</>
-                  ) : (
-                    <>
-                      <ScanSearch className="h-5 w-5 mr-2" />
-                      Save & Analyze Scan
-                    </>
+              {/* Action Bar - Only for upload mode */}
+              {viewMode === 'upload' && (
+                <div className="p-4 bg-card border-t border-border space-y-3">
+                  {/* Scan Type Selector */}
+                  {!uploadSuccess && (
+                    <Select value={scanType} onValueChange={setScanType}>
+                      <SelectTrigger className="h-9">
+                        <SelectValue placeholder="Select scan type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {scanTypes.map(type => (
+                          <SelectItem key={type.value} value={type.value}>
+                            {type.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   )}
-                </Button>
-                <p className="text-xs text-muted-foreground text-center mt-2">
-                  HIPAA Compliant • Encrypted Upload
-                </p>
-              </div>
+
+                  <Button 
+                    size="lg" 
+                    className={`w-full font-semibold shadow-lg transition-all ${
+                      uploadSuccess 
+                        ? 'bg-emerald-600 hover:bg-emerald-700' 
+                        : 'hover:shadow-primary/25'
+                    }`}
+                    onClick={handleAnalyze}
+                    disabled={isUploading || uploadSuccess}
+                  >
+                    {isUploading ? (
+                      <>
+                        <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                        Processing...
+                      </>
+                    ) : uploadSuccess ? (
+                      <>
+                        <Check className="h-5 w-5 mr-2" />
+                        Scan Saved - Ask AI in Chat
+                      </>
+                    ) : (
+                      <>
+                        <ScanSearch className="h-5 w-5 mr-2" />
+                        Save & Analyze Scan
+                      </>
+                    )}
+                  </Button>
+                  <p className="text-xs text-muted-foreground text-center">
+                    HIPAA Compliant • Encrypted Upload
+                  </p>
+                </div>
+              )}
             </motion.div>
           )}
         </AnimatePresence>

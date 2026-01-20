@@ -13,3 +13,5 @@ datasets
 tqdm
 matplotlib
 python-dotenv
+google-generativeai
+aiofiles

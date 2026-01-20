@@ -10,6 +10,25 @@ A full-stack radiology image analysis application with RAG (Retrieval-Augmented 
 - **Modern UI**: React frontend with TypeScript, Tailwind CSS, and shadcn/ui components
 - **FastAPI Backend**: Python backend with automatic CORS handling
 
+### 🆕 Patient Memory System
+- **Patient-wise Scan History**: Every uploaded scan is stored and indexed per patient
+- **Chat History Persistence**: Conversations about each scan are saved and can be resumed
+- **Historical Scan Viewer**: View any previous scan directly from the timeline
+
+### 🤖 Intelligent RAG Chat Assistant
+The AI assistant supports **three types of intents**:
+
+| Intent | Description | Example Query |
+|--------|-------------|---------------|
+| 🔬 **Diagnose** | Global RAG scan analysis using 3500+ verified radiology reports | *"Analyze this scan and provide findings"* |
+| 📋 **Fetch** | Semantic search to retrieve specific historical scans | *"Show my lung scan from last year February"* |
+| 📊 **Compare** | Compare current scan with historical ones | *"Compare this scan with my previous one and tell how I've improved"* |
+
+### 🧠 LLM-Powered Analysis
+- **Gemini 1.5 Flash** integration for intelligent reasoning
+- RAG pipeline fetches similar cases from knowledge base
+- Generates detailed diagnostic reports with clinical observations
+
 ## Repository Structure
 
 - `backend/`                # FastAPI backend service
@@ -84,16 +103,30 @@ docker-compose up qdrant -d
 
 ## API Endpoints
 
-- `POST /upload-scan`: Upload a medical scan image
-- `GET /health`: Health check endpoint
+### Core Endpoints
+- `POST /upload-scan` - Upload a medical scan image with patient tagging
+- `POST /analyze-scan` - RAG-based scan analysis using knowledge base
+- `GET /health` - Health check endpoint
+
+### Patient History Endpoints
+- `POST /patient-history` - Retrieve all scans for a specific patient
+- `GET /scan-image/{filename}` - Serve scan image files
+- `POST /update-scan-report` - Update scan findings after analysis
+
+### Chat & Memory Endpoints
+- `POST /chat` - Main RAG chat endpoint with intent classification
+- `POST /save-chat` - Save chat conversation for a specific scan
+- `POST /get-chat-history` - Retrieve chat history for a scan
 
 ## Environment Variables
 
 See `.env.example` for required environment variables:
 
-- `QDRANT_URL`: Qdrant instance URL
+- `QDRANT_URL`: Qdrant instance URL (default: `http://localhost:6333`)
 - `QDRANT_API_KEY`: Qdrant API key (optional for local)
-- `QDRANT_COLLECTION`: Collection name for radiology data
+- `QDRANT_KNOWLEDGE_COLLECTION`: Collection for verified radiology reports (default: `radiology_memory`)
+- `QDRANT_USER_COLLECTION`: Collection for patient uploads (default: `patient_uploads`)
+- `GEMINI_API_KEY`: Google Gemini API key for LLM reasoning (get from [Google AI Studio](https://makersuite.google.com/app/apikey))
 
 ## Development Notes
 
@@ -101,3 +134,37 @@ See `.env.example` for required environment variables:
 - Uploaded images are stored in `backend/uploads/`
 - Vector embeddings use 512-dimensional space for both image and text
 - CORS is configured for local development (ports 5173, 3000)
+- Chat histories are stored in a separate `chat_history` Qdrant collection
+
+## Architecture
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│                 │     │                 │     │                 │
+│    Frontend     │────▶│    Backend      │────▶│    Qdrant       │
+│   (React/TS)    │     │   (FastAPI)     │     │  Vector DB      │
+│                 │     │                 │     │                 │
+└─────────────────┘     └────────┬────────┘     └─────────────────┘
+                                 │
+                        ┌────────┴────────┐
+                        │                 │
+                        │  BioMedCLIP     │
+                        │  (Embeddings)   │
+                        │                 │
+                        └────────┬────────┘
+                                 │
+                        ┌────────┴────────┐
+                        │                 │
+                        │  Gemini LLM     │
+                        │  (Reasoning)    │
+                        │                 │
+                        └─────────────────┘
+```
+
+## Collections Structure
+
+| Collection | Purpose | Vectors |
+|------------|---------|---------|
+| `radiology_memory` | 3500+ verified radiology reports (knowledge base) | image_vector, text_vector |
+| `patient_uploads` | Patient-uploaded scans | image_vector, text_vector |
+| `chat_history` | Chat conversations per scan | text_vector |
