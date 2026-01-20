@@ -194,7 +194,7 @@ const ImageViewer = ({ onImageUpload }: ImageViewerProps) => {
                   ) : (
                     <>
                       <ScanSearch className="h-5 w-5 mr-2" />
-                      Upload
+                      Save & Analyze Scan
                     </>
                   )}
                 </Button>

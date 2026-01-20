@@ -34,6 +34,10 @@ const Dashboard = () => {
     try {
       const formData = new FormData();
       formData.append('file', file);
+      
+      // 👇 CRITICAL FIX: Send the patient_id to the backend
+      // If user data exists, use their ID, otherwise fallback to a default
+      formData.append('patient_id', user?.patientId || 'PID1'); 
 
       const response = await fetch('http://localhost:8000/upload-scan', {
         method: 'POST',
@@ -47,7 +51,7 @@ const Dashboard = () => {
       const result = await response.json();
       toast({
         title: 'Upload successful',
-        description: 'Medical scan has been uploaded and indexed.',
+        description: 'Medical scan has been saved to patient records.',
       });
     } catch (error) {
       console.error('Upload error:', error);
