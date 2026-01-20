@@ -19,9 +19,9 @@ venv/
 ENV/
 
 # Data and storage
-data/
-qdrant_storage/
-backend/uploads/
+# data/
+# qdrant_storage/
+# backend/uploads/
 
 # IDEs and OS
 .vscode/

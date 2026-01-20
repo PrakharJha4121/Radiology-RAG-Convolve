@@ -1,0 +1,5038 @@
+[
+    {
+        "patient_id": "P_327622",
+        "scan_date": "2023-12-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest roentgenogram revealing an elevated left hemidiaphragm and a shift of the lower mediastinum to right.",
+        "image_path": "./data/chest_xrays\\chest_bc37cdcb.jpg"
+    },
+    {
+        "patient_id": "P_635018",
+        "scan_date": "2023-06-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph on admission demonstrating right midzone consolidation.",
+        "image_path": "./data/chest_xrays\\chest_9f93bd00.jpg"
+    },
+    {
+        "patient_id": "P_135691",
+        "scan_date": "2023-02-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray shows ill-defined density in the right lower lung with blunted costophrenic angle.",
+        "image_path": "./data/chest_xrays\\chest_0d7e75d0.jpg"
+    },
+    {
+        "patient_id": "P_748112",
+        "scan_date": "2023-03-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia"
+        ],
+        "report_text": "Chest X-ray indicated mild pneumonia in the right lung.",
+        "image_path": "./data/chest_xrays\\chest_22a1655d.jpg"
+    },
+    {
+        "patient_id": "P_645536",
+        "scan_date": "2023-11-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "cardiomegaly"
+        ],
+        "report_text": "Thoracic radiograph (lateral view) from a 6-month-old domestic kitten with progressive dyspnoea. Diffuse interstitial and alveolar pattern, with mild pleural effusion, was evident. The increased sternal contact of the cardiac silhouette suggested right-side cardiomegaly.",
+        "image_path": "./data/chest_xrays\\chest_8264fba9.jpg"
+    },
+    {
+        "patient_id": "P_695573",
+        "scan_date": "2023-09-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "X-ray chest on admission. X-ray of the chest (PA-view), showing a left sided massive pleural effusion. This X-ray was taken on admission.",
+        "image_path": "./data/chest_xrays\\chest_95c75017.jpg"
+    },
+    {
+        "patient_id": "P_148839",
+        "scan_date": "2023-06-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Follow-up chest X-ray shows a thin-walled cavitary lesion in the right lower lobe (white arrow).",
+        "image_path": "./data/chest_xrays\\chest_a6ab83d8.jpg"
+    },
+    {
+        "patient_id": "P_697788",
+        "scan_date": "2023-09-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Frontal chest radiograph of the patient aged 1 day revealed hyperinflation, diffuse opacification and air bronchogram of the lungs.",
+        "image_path": "./data/chest_xrays\\chest_dfafa7f2.jpg"
+    },
+    {
+        "patient_id": "P_754431",
+        "scan_date": "2023-01-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing an infiltrate with a cavitation in the right lower and middle lobes.",
+        "image_path": "./data/chest_xrays\\chest_cdae1b4b.jpg"
+    },
+    {
+        "patient_id": "P_297442",
+        "scan_date": "2023-02-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Posterior-anterior chest x-ray of patient",
+        "image_path": "./data/chest_xrays\\chest_40409ba6.jpg"
+    },
+    {
+        "patient_id": "P_451278",
+        "scan_date": "2023-10-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray was taken with abdominal shield. There was a huge mass occupying the left chest; trachea is deviated to the right. The mass caused loss of volume in left lung and elevated left hemidiaphragm.",
+        "image_path": "./data/chest_xrays\\chest_10c7e912.jpg"
+    },
+    {
+        "patient_id": "P_319263",
+        "scan_date": "2023-04-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": "Erect chest X-ray (posteroanterior view)In this chest X-ray, we can see numerous tiny dense nodules extensively distributed in both lungs especially in the lower zones and in a branching (dendriform) pattern. Reticulations from thickening of the interlobular septa can be appreciated as well.",
+        "image_path": "./data/chest_xrays\\chest_90652443.jpg"
+    },
+    {
+        "patient_id": "P_497397",
+        "scan_date": "2023-10-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The posteroanterior view of chest X-ray illustrating diffuse calcified outline of the left atrial wall (arrow).",
+        "image_path": "./data/chest_xrays\\chest_b8de23b2.jpg"
+    },
+    {
+        "patient_id": "P_402991",
+        "scan_date": "2023-06-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing clear lungs and a prominent mediastinum (red arrows).",
+        "image_path": "./data/chest_xrays\\chest_5abf836b.jpg"
+    },
+    {
+        "patient_id": "P_119563",
+        "scan_date": "2023-04-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph (CXR) of a patient with mild COVID-19 disease.The initial CXR of a 29-year-old male patient with mild symptom. The patient reported rhinorrhea and chest pain at the time of CTC entry. However, the initial CXR showed diffusely increased opacities in both the mid- to lower-lung zones (arrowheads). Dyspnea was aggravated the following day, and the patient was transferred to a hospital.",
+        "image_path": "./data/chest_xrays\\chest_e520a92f.jpg"
+    },
+    {
+        "patient_id": "P_982384",
+        "scan_date": "2023-11-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing diffuse, patchy bilateral interstitial infiltrates.",
+        "image_path": "./data/chest_xrays\\chest_b906bd22.jpg"
+    },
+    {
+        "patient_id": "P_563187",
+        "scan_date": "2023-05-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-Ray Revealing a Right Middle Lobe Infiltrate (Blue Arrow).",
+        "image_path": "./data/chest_xrays\\chest_713b3883.jpg"
+    },
+    {
+        "patient_id": "P_768225",
+        "scan_date": "2023-01-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Upright chest radiograph showing a widened mediastinum (arrow) in a 12-year-old with vascular Ehlers-Danlos Syndrome.",
+        "image_path": "./data/chest_xrays\\chest_f333a402.jpg"
+    },
+    {
+        "patient_id": "P_291092",
+        "scan_date": "2023-11-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest X-Ray after the 11th day of pleural fluid drainage showed no effusion.",
+        "image_path": "./data/chest_xrays\\chest_873af323.jpg"
+    },
+    {
+        "patient_id": "P_928956",
+        "scan_date": "2023-08-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing haziness of both lung fields.",
+        "image_path": "./data/chest_xrays\\chest_774ac920.jpg"
+    },
+    {
+        "patient_id": "P_176188",
+        "scan_date": "2023-10-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray.",
+        "image_path": "./data/chest_xrays\\chest_718d95f6.jpg"
+    },
+    {
+        "patient_id": "P_254267",
+        "scan_date": "2023-08-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing the NG tube blocked at the distal oesophagus. The typical retrocardiac gas filled viscus cannot be seen.",
+        "image_path": "./data/chest_xrays\\chest_a57ceb9a.jpg"
+    },
+    {
+        "patient_id": "P_121285",
+        "scan_date": "2023-07-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray on presentation showing a large right upper lung lobe mass, slightly impinging on the trachea (marked with red arrow).",
+        "image_path": "./data/chest_xrays\\chest_d4ebc0d8.jpg"
+    },
+    {
+        "patient_id": "P_213713",
+        "scan_date": "2023-10-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray: bilateral hilar enlargement (arrows) and reticulonodular opacities (arrowheads)",
+        "image_path": "./data/chest_xrays\\chest_91891790.jpg"
+    },
+    {
+        "patient_id": "P_939813",
+        "scan_date": "2023-06-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray demonstrating findings suspicious of ARDS.",
+        "image_path": "./data/chest_xrays\\chest_1b281583.jpg"
+    },
+    {
+        "patient_id": "P_223021",
+        "scan_date": "2023-10-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest radiograph revealing a massive herniation of intra-abdominal contents. Abdominal contents herniating (green outline) above the level of the diaphragm (yellow arrows) into the thorax are observed. The air-fluid level of the stomach (red arrow) is identified above the level of the diaphragm. A small pleural effusion is seen in the lower lobe of the left lung (blue arrow).\u00a0",
+        "image_path": "./data/chest_xrays\\chest_b76b41cf.jpg"
+    },
+    {
+        "patient_id": "P_237803",
+        "scan_date": "2023-06-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray (Case-1). \u201cBoot shaped\u201d heart and variable perfusion of the lung parenchyma.",
+        "image_path": "./data/chest_xrays\\chest_7e587453.jpg"
+    },
+    {
+        "patient_id": "P_558790",
+        "scan_date": "2023-05-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Day 4: portable chest X-ray showing worsening bilateral interstitial infiltrates",
+        "image_path": "./data/chest_xrays\\chest_40834cc0.jpg"
+    },
+    {
+        "patient_id": "P_234588",
+        "scan_date": "2023-04-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Patient - 2 X-ray chest after granuloma excision",
+        "image_path": "./data/chest_xrays\\chest_02da2792.jpg"
+    },
+    {
+        "patient_id": "P_453042",
+        "scan_date": "2023-12-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Initial chest radiograph.",
+        "image_path": "./data/chest_xrays\\chest_94b950dc.jpg"
+    },
+    {
+        "patient_id": "P_787820",
+        "scan_date": "2023-06-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis",
+            "effusion"
+        ],
+        "report_text": "Chest PA radiograph of a patient with minimal pleural effusion and subsegmental atelectasis in both lower lung fields.",
+        "image_path": "./data/chest_xrays\\chest_d80d5d34.jpg"
+    },
+    {
+        "patient_id": "P_740246",
+        "scan_date": "2023-05-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Anteroposterior chest radiograph on the first postoperative day shows a decrease in cardiac silhouette with increased lung markings.",
+        "image_path": "./data/chest_xrays\\chest_8fcbd398.jpg"
+    },
+    {
+        "patient_id": "P_447549",
+        "scan_date": "2023-10-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray: lung fields appear clear and there is no evidence of cardiomegaly. A smooth enlargement of the left hilum, initially felt to represent an enlarged pulmonary artery, can be seen.",
+        "image_path": "./data/chest_xrays\\chest_4c91a41d.jpg"
+    },
+    {
+        "patient_id": "P_510348",
+        "scan_date": "2023-08-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Repeat chest radiograph revealed enlargement of the pneumatoceles causing massive mediastinal shift to the right.",
+        "image_path": "./data/chest_xrays\\chest_4463bfa0.jpg"
+    },
+    {
+        "patient_id": "P_692630",
+        "scan_date": "2023-06-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray revealing mild cardiomegaly, dilated right descending pulmonary artery, and oligemia in the right lung",
+        "image_path": "./data/chest_xrays\\chest_492c60c7.jpg"
+    },
+    {
+        "patient_id": "P_123182",
+        "scan_date": "2023-10-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Measuring the size of pneumothorax. The area of pneumothorax were measured on a chest radiograph using an automated region of interest caculator in a picture archiving communication system.",
+        "image_path": "./data/chest_xrays\\chest_4c5c414f.jpg"
+    },
+    {
+        "patient_id": "P_112497",
+        "scan_date": "2023-10-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A chest radiograph on admission shows subpleural consolidation and cystic lesions (arrowheads) in both lungs.",
+        "image_path": "./data/chest_xrays\\chest_25dc1f28.jpg"
+    },
+    {
+        "patient_id": "P_637093",
+        "scan_date": "2023-07-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing intrathoracic rib plates on right ribs 6 through 9.",
+        "image_path": "./data/chest_xrays\\chest_e696e9f2.jpg"
+    },
+    {
+        "patient_id": "P_204142",
+        "scan_date": "2023-09-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray, control one month after the surgery in the baby boy.",
+        "image_path": "./data/chest_xrays\\chest_e0927265.jpg"
+    },
+    {
+        "patient_id": "P_246272",
+        "scan_date": "2023-01-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing basal left pulmonary infiltrate.",
+        "image_path": "./data/chest_xrays\\chest_d972307d.jpg"
+    },
+    {
+        "patient_id": "P_113191",
+        "scan_date": "2023-09-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia"
+        ],
+        "report_text": "Chest X-ray at admission of a patient with pneumonia by L. anisa.Radiological signs showed an infiltrate to right lung base (arrow) and a bilateral interstitial pattern.",
+        "image_path": "./data/chest_xrays\\chest_608a3eb1.jpg"
+    },
+    {
+        "patient_id": "P_392318",
+        "scan_date": "2023-02-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Xray chest PA view showing heterogeneous opacity in the right upper zone with blunting of the right costophrenic angle.",
+        "image_path": "./data/chest_xrays\\chest_7d6b667e.jpg"
+    },
+    {
+        "patient_id": "P_425926",
+        "scan_date": "2023-09-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Chest X-ray anteroposterior view showed no abnormalities with cardiothoracic ratio of 47%.",
+        "image_path": "./data/chest_xrays\\chest_29a47ffa.jpg"
+    },
+    {
+        "patient_id": "P_780566",
+        "scan_date": "2023-12-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing enlarged cardiac silhouette",
+        "image_path": "./data/chest_xrays\\chest_21443d5a.jpg"
+    },
+    {
+        "patient_id": "P_700769",
+        "scan_date": "2023-06-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Portable chest X-ray. Chest X-ray seven hours after admission, showing worsening bilateral patchy infiltrates.",
+        "image_path": "./data/chest_xrays\\chest_552a7e48.jpg"
+    },
+    {
+        "patient_id": "P_291791",
+        "scan_date": "2023-12-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray: infiltration in the base of both lungs.",
+        "image_path": "./data/chest_xrays\\chest_f2345430.jpg"
+    },
+    {
+        "patient_id": "P_535937",
+        "scan_date": "2023-11-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph of Case 1 on day of admission which shows bilateral multifocal airspace opacities.",
+        "image_path": "./data/chest_xrays\\chest_9c49e5b8.jpg"
+    },
+    {
+        "patient_id": "P_386902",
+        "scan_date": "2023-03-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing enlargement of the mediastinum, consistent with tuberculous abscess mass.",
+        "image_path": "./data/chest_xrays\\chest_3cfca1e9.jpg"
+    },
+    {
+        "patient_id": "P_843182",
+        "scan_date": "2023-01-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray on 1st admission at the hospital. Consolidation was present in the right lower lung field, and the costophrenic angle was blunted on the right side",
+        "image_path": "./data/chest_xrays\\chest_207f487f.jpg"
+    },
+    {
+        "patient_id": "P_285062",
+        "scan_date": "2023-12-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Initial chest. This initial chest X-ray shows an apparent cardiomegaly and pulmonary congestion. The cardiothoracic ratio was 0.64.",
+        "image_path": "./data/chest_xrays\\chest_cd98742d.jpg"
+    },
+    {
+        "patient_id": "P_377084",
+        "scan_date": "2023-06-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Repeat chest X-ray showing clamped chest tubes and inflated lungs",
+        "image_path": "./data/chest_xrays\\chest_82197692.jpg"
+    },
+    {
+        "patient_id": "P_841041",
+        "scan_date": "2023-03-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis",
+            "effusion"
+        ],
+        "report_text": "Chest X-ray on presentation. Anterior-posterior (AP) view showing opacification of the right hemithorax consistent with right pleural effusion and right basilar atelectasis.",
+        "image_path": "./data/chest_xrays\\chest_6a0ba781.jpg"
+    },
+    {
+        "patient_id": "P_706499",
+        "scan_date": "2023-12-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray at 2\u00a0weeks after administration of steroid",
+        "image_path": "./data/chest_xrays\\chest_25c4fc54.jpg"
+    },
+    {
+        "patient_id": "P_233860",
+        "scan_date": "2023-11-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal",
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray. More penetrated than the previous one. Presence of endotracheal cannula. Pulmonary congestion, opacification at the right base and cardiomegaly with double contour (enlargement of the left atrium) and abnormal enlargement or bulging at mid-arch of the aorta (right ventricle enlargement).",
+        "image_path": "./data/chest_xrays\\chest_58d6263f.jpg"
+    },
+    {
+        "patient_id": "P_368955",
+        "scan_date": "2023-03-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray on day two of admission.",
+        "image_path": "./data/chest_xrays\\chest_05da9450.jpg"
+    },
+    {
+        "patient_id": "P_822588",
+        "scan_date": "2023-04-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Anteroposterior bedside chest X-ray demonstrating the presence of a diffuse opacity in the right hemithorax.",
+        "image_path": "./data/chest_xrays\\chest_0d973e7c.jpg"
+    },
+    {
+        "patient_id": "P_811744",
+        "scan_date": "2023-07-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest X-ray showed a right lung infiltrate and moderate right pleural effusion, small left pleural effusion, bilateral small irregular opacities, and pleural thickening.",
+        "image_path": "./data/chest_xrays\\chest_6fb8fb13.jpg"
+    },
+    {
+        "patient_id": "P_704653",
+        "scan_date": "2023-07-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "pneumothorax"
+        ],
+        "report_text": "Chest X-ray of the patient. Chest X-ray revealed\u00a0patchy bilateral peripheral lung infiltrate. No pleural effusion pneumothorax is seen",
+        "image_path": "./data/chest_xrays\\chest_5f290116.jpg"
+    },
+    {
+        "patient_id": "P_695222",
+        "scan_date": "2023-04-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray in posteroanterior projection. Bilateral paracardiac alveolar infiltrate and accentuated increase in cardiac area were observed.",
+        "image_path": "./data/chest_xrays\\chest_95582fdf.jpg"
+    },
+    {
+        "patient_id": "P_912924",
+        "scan_date": "2023-12-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph.",
+        "image_path": "./data/chest_xrays\\chest_ad7d6390.jpg"
+    },
+    {
+        "patient_id": "P_736010",
+        "scan_date": "2023-10-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Follow-up chest X-ray performed when the patient was symptomatic (22 hours after transbronchial biopsy). Figure shows the presence of a left-sided apical pneumothorax (black arrow delineates the pleural line).",
+        "image_path": "./data/chest_xrays\\chest_df7db431.jpg"
+    },
+    {
+        "patient_id": "P_521229",
+        "scan_date": "2023-03-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis"
+        ],
+        "report_text": "Chest radiograph obtained on the fourth day after admission shows right middle lobe atelectasis (arrow) and right-sided hemothorax (arrowhead).",
+        "image_path": "./data/chest_xrays\\chest_dcdb73db.jpg"
+    },
+    {
+        "patient_id": "P_578401",
+        "scan_date": "2023-03-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing bilateral air space opacification and cardiac silhouette enlargement.",
+        "image_path": "./data/chest_xrays\\chest_21abe037.jpg"
+    },
+    {
+        "patient_id": "P_247097",
+        "scan_date": "2023-07-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Anteroposterior chest x-ray. Dense bilateral pulmonary consolidation with minimal sparing of the lung apices.",
+        "image_path": "./data/chest_xrays\\chest_76d6addb.jpg"
+    },
+    {
+        "patient_id": "P_595797",
+        "scan_date": "2023-01-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Follow-up chest X-ray showing significant improvement with resolution of the right upper lobe infiltrate and tracheal deviation",
+        "image_path": "./data/chest_xrays\\chest_158f6986.jpg"
+    },
+    {
+        "patient_id": "P_209760",
+        "scan_date": "2023-12-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography revealed a large bulging contour overlying aorta and left hilar shadow.",
+        "image_path": "./data/chest_xrays\\chest_1cd7fb48.jpg"
+    },
+    {
+        "patient_id": "P_639674",
+        "scan_date": "2023-05-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": "A chest radiography after treatment showed resolution of diffuse micro-nodules involving both lung fields.",
+        "image_path": "./data/chest_xrays\\chest_eed7677d.jpg"
+    },
+    {
+        "patient_id": "P_159226",
+        "scan_date": "2023-03-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis",
+            "effusion"
+        ],
+        "report_text": "Chest radiograph showing bilateral basilar atelectasis and small pleural effusions",
+        "image_path": "./data/chest_xrays\\chest_ee43e48a.jpg"
+    },
+    {
+        "patient_id": "P_666093",
+        "scan_date": "2023-08-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph revealing air streaks in the mediastinum.",
+        "image_path": "./data/chest_xrays\\chest_d21bafb5.jpg"
+    },
+    {
+        "patient_id": "P_770078",
+        "scan_date": "2023-02-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "A postoperative chest X-ray revealed that the pulmonary artery catheter was maintained as the mirror image of its normal position",
+        "image_path": "./data/chest_xrays\\chest_8ed96839.jpg"
+    },
+    {
+        "patient_id": "P_793175",
+        "scan_date": "2023-03-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Chest roentgenogram showed normal cardiac size with calcification of the pericardium (arrows).",
+        "image_path": "./data/chest_xrays\\chest_ca3e9138.jpg"
+    },
+    {
+        "patient_id": "P_406726",
+        "scan_date": "2023-08-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography showing wide hernia of the hiatus June, 2016.The right arrow shows a stomach portion within the thoracic\u00a0cavity and the left arrow shows another stomach portion within the abdominal cavity.",
+        "image_path": "./data/chest_xrays\\chest_a5359d65.jpg"
+    },
+    {
+        "patient_id": "P_694535",
+        "scan_date": "2023-11-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray image of patient 3",
+        "image_path": "./data/chest_xrays\\chest_f6cc0955.jpg"
+    },
+    {
+        "patient_id": "P_423544",
+        "scan_date": "2023-08-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Endotracheal tuberculosis in a 26-year-old woman. Posteroanterior chest radiograph shows segmental narrowing of the trachea (arrows).",
+        "image_path": "./data/chest_xrays\\chest_b3cba291.jpg"
+    },
+    {
+        "patient_id": "P_874928",
+        "scan_date": "2023-04-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "CXR demonstrating right-sided pneumothorax (shown by arrow).CXR,\u00a0Chest X-ray",
+        "image_path": "./data/chest_xrays\\chest_34de7d35.jpg"
+    },
+    {
+        "patient_id": "P_106787",
+        "scan_date": "2023-02-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing extensive bilateral alveolar scattered and coalescent alveolar infiltrate involving both lung fields",
+        "image_path": "./data/chest_xrays\\chest_77994afa.jpg"
+    },
+    {
+        "patient_id": "P_288467",
+        "scan_date": "2023-03-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema"
+        ],
+        "report_text": "Chest radiograph shows resolution of the pulmonary edema at postoperative day 3.",
+        "image_path": "./data/chest_xrays\\chest_686bea69.jpg"
+    },
+    {
+        "patient_id": "P_857105",
+        "scan_date": "2023-09-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Neonatal chest X-ray showing catheter in esophagus at T6 vertebral level and intrathoracic gastric bubble in the mediastinum",
+        "image_path": "./data/chest_xrays\\chest_b4515f96.jpg"
+    },
+    {
+        "patient_id": "P_570520",
+        "scan_date": "2023-03-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph. Chest X-ray showing bilateral airspace disease.",
+        "image_path": "./data/chest_xrays\\chest_1fa27097.jpg"
+    },
+    {
+        "patient_id": "P_272126",
+        "scan_date": "2023-11-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Right lower lung infiltrate on chest X-ray.",
+        "image_path": "./data/chest_xrays\\chest_322f57af.jpg"
+    },
+    {
+        "patient_id": "P_696179",
+        "scan_date": "2023-09-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "CXR showing bilateral pulmonary infiltrates.",
+        "image_path": "./data/chest_xrays\\chest_9276e0b3.jpg"
+    },
+    {
+        "patient_id": "P_381460",
+        "scan_date": "2023-10-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": " In chest radiographs, the suspicious old tuberculous calcified nodule was seen (white arrow).",
+        "image_path": "./data/chest_xrays\\chest_211d3739.jpg"
+    },
+    {
+        "patient_id": "P_755651",
+        "scan_date": "2023-11-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Frontal chest X-ray on admission showed severe scattered patchy bilateral lung infiltrates, diffusely in the right lung and in the left upper lobe (red arrows).",
+        "image_path": "./data/chest_xrays\\chest_0fc82cae.jpg"
+    },
+    {
+        "patient_id": "P_675347",
+        "scan_date": "2023-04-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray demonstrating massive cardiomegaly with oligemic appearing lung fields",
+        "image_path": "./data/chest_xrays\\chest_e1776ca3.jpg"
+    },
+    {
+        "patient_id": "P_773695",
+        "scan_date": "2023-09-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray of the infant suggesting situs inversus totalis",
+        "image_path": "./data/chest_xrays\\chest_ba0e8e7d.jpg"
+    },
+    {
+        "patient_id": "P_307563",
+        "scan_date": "2023-05-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Initial chest radiograph prior to ECMO initiation.",
+        "image_path": "./data/chest_xrays\\chest_b0211ced.jpg"
+    },
+    {
+        "patient_id": "P_698277",
+        "scan_date": "2023-02-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "The immediate post-operative chest AP x-ray shows a chest tube and no residual pneumothorax.",
+        "image_path": "./data/chest_xrays\\chest_c6ca53fb.jpg"
+    },
+    {
+        "patient_id": "P_479316",
+        "scan_date": "2023-03-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing complete opacification of the left hemithorax (red arrow) after chest tube insertion (blue arrow).",
+        "image_path": "./data/chest_xrays\\chest_a18e1e39.jpg"
+    },
+    {
+        "patient_id": "P_330838",
+        "scan_date": "2023-06-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Chest radiography four weeks after treatment reveals improvement of pneumothorax and pulmonary infiltration.",
+        "image_path": "./data/chest_xrays\\chest_5edca1d0.jpg"
+    },
+    {
+        "patient_id": "P_445361",
+        "scan_date": "2023-07-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest x-ray showing widespread lung hyperinflation and severe cardiomegaly.",
+        "image_path": "./data/chest_xrays\\chest_22d998c4.jpg"
+    },
+    {
+        "patient_id": "P_555836",
+        "scan_date": "2023-02-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph before transfer to the Department of Internal Medicine",
+        "image_path": "./data/chest_xrays\\chest_71183c1a.jpg"
+    },
+    {
+        "patient_id": "P_436673",
+        "scan_date": "2023-06-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiographs demonstrating bilateral infiltrates (arrows).",
+        "image_path": "./data/chest_xrays\\chest_d1540556.jpg"
+    },
+    {
+        "patient_id": "P_472670",
+        "scan_date": "2023-07-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph (PA view) showing diffuse reticulonodular and alveolar opacities of varying sizes from apex to base predominantly in periphery of lung.",
+        "image_path": "./data/chest_xrays\\chest_f28e745d.jpg"
+    },
+    {
+        "patient_id": "P_410265",
+        "scan_date": "2023-08-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray immediately after orotracheal intubation showing diffuse bilateral opacities that are compatible with primary graft dysfunction after lung transplantation",
+        "image_path": "./data/chest_xrays\\chest_a696eddb.jpg"
+    },
+    {
+        "patient_id": "P_671707",
+        "scan_date": "2023-09-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray.",
+        "image_path": "./data/chest_xrays\\chest_188bdfc9.jpg"
+    },
+    {
+        "patient_id": "P_514249",
+        "scan_date": "2023-10-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "anteroposterior chest radiography showing enlargement of the cardiac silhouette with a right-sided pulmonary effusion",
+        "image_path": "./data/chest_xrays\\chest_1a61c3c5.jpg"
+    },
+    {
+        "patient_id": "P_386303",
+        "scan_date": "2023-12-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing left colon herniation.",
+        "image_path": "./data/chest_xrays\\chest_f81622e2.jpg"
+    },
+    {
+        "patient_id": "P_188794",
+        "scan_date": "2023-04-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "(Lateral view) Thoracic radiograph of the pericardial cyst in the mediastinum.",
+        "image_path": "./data/chest_xrays\\chest_79cfd311.jpg"
+    },
+    {
+        "patient_id": "P_683422",
+        "scan_date": "2023-07-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray after the surgical intervention revealed the right hemidiaphragm in its proper position",
+        "image_path": "./data/chest_xrays\\chest_f92a1ee1.jpg"
+    },
+    {
+        "patient_id": "P_557851",
+        "scan_date": "2023-01-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "PA chest radiography view showing a well-defined lesion (arrow) in the right lower zone of the lung with air fluid level.",
+        "image_path": "./data/chest_xrays\\chest_c5f7626d.jpg"
+    },
+    {
+        "patient_id": "P_816946",
+        "scan_date": "2023-04-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema"
+        ],
+        "report_text": "Initial chest X-ray revealed interstitial pulmonary edema.",
+        "image_path": "./data/chest_xrays\\chest_83229995.jpg"
+    },
+    {
+        "patient_id": "P_467737",
+        "scan_date": "2023-12-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray AP view showing reticulonodular infiltrates and microcalcifications.",
+        "image_path": "./data/chest_xrays\\chest_ace999a3.jpg"
+    },
+    {
+        "patient_id": "P_831940",
+        "scan_date": "2023-08-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal",
+            "effusion",
+            "pneumothorax"
+        ],
+        "report_text": "Chest X-ray upon first admission.Cardio-mediastinal silhouette is within normal limits with the heart being normal in size.No pleural effusion / pneumothorax/consolidative patches identified.",
+        "image_path": "./data/chest_xrays\\chest_0ed3d1a1.jpg"
+    },
+    {
+        "patient_id": "P_703246",
+        "scan_date": "2023-05-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray performed during period of hypoxia demonstrating bilateral fluffy infiltrates compatible with pulmonary haemorrhage.",
+        "image_path": "./data/chest_xrays\\chest_cc80a198.jpg"
+    },
+    {
+        "patient_id": "P_804499",
+        "scan_date": "2023-07-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": " Chest X-ray showing pulmonary septic emboli.",
+        "image_path": "./data/chest_xrays\\chest_0badb2b3.jpg"
+    },
+    {
+        "patient_id": "P_484809",
+        "scan_date": "2023-04-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography shows the Swan-Ganz catheter located too deep in the right ventricle.",
+        "image_path": "./data/chest_xrays\\chest_6e1a691e.jpg"
+    },
+    {
+        "patient_id": "P_527536",
+        "scan_date": "2023-04-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing the implanted lead configuration. Location of the puncture site of the right internal jugular vein (circle).",
+        "image_path": "./data/chest_xrays\\chest_c3b28c83.jpg"
+    },
+    {
+        "patient_id": "P_459402",
+        "scan_date": "2023-07-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "PA chest X-ray.",
+        "image_path": "./data/chest_xrays\\chest_5d551924.jpg"
+    },
+    {
+        "patient_id": "P_691096",
+        "scan_date": "2023-09-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph demonstrating left lower lobe collapse during a previous admission, which improved following treatment with antibiotics, nebulisers and chest physiotherapy.",
+        "image_path": "./data/chest_xrays\\chest_a9bd849e.jpg"
+    },
+    {
+        "patient_id": "P_517153",
+        "scan_date": "2023-11-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": " Posteroanterior chest X-ray showed increase in density in the lower zone of the right hemithorax .",
+        "image_path": "./data/chest_xrays\\chest_71297c5d.jpg"
+    },
+    {
+        "patient_id": "P_295954",
+        "scan_date": "2023-07-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Anteroposterior full-length radiographic view of the spine. There is S-shape scoliosis with the upper curve convex to the right and the lower curve convex to the left. There are also vertebral end-plate irregularities and narrowed disc spaces as evidence of degenerative spondylosis. The chest is narrow with an increased cardiothoracic ratio.",
+        "image_path": "./data/chest_xrays\\chest_190ef370.jpg"
+    },
+    {
+        "patient_id": "P_630056",
+        "scan_date": "2023-12-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray revealed bilateral diffuse infiltration disclosing a presentation of acute respiratory distress syndrome.",
+        "image_path": "./data/chest_xrays\\chest_86401449.jpg"
+    },
+    {
+        "patient_id": "P_607017",
+        "scan_date": "2023-12-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": "PA chest radiograph: there is a 1.3\u2009cm nodule within the left lower lobe (arrow), projected lateral to the left cardiac border.",
+        "image_path": "./data/chest_xrays\\chest_acc25127.jpg"
+    },
+    {
+        "patient_id": "P_316810",
+        "scan_date": "2023-02-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Chest radiograph in frontal projection showing homogenous opacity of left hemithorax with mediastinal shift and contralateral herniation of right lung into left upper hemithorax",
+        "image_path": "./data/chest_xrays\\chest_37f2ff46.jpg"
+    },
+    {
+        "patient_id": "P_659375",
+        "scan_date": "2023-01-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray shows soft tissue swelling on the left chest wall with internal air density.",
+        "image_path": "./data/chest_xrays\\chest_18bcaeb7.jpg"
+    },
+    {
+        "patient_id": "P_795473",
+        "scan_date": "2023-03-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray seen from the front showing the cardiac stimulation lead descending into the LSVC, making a loop in the right atrium before being fixed in the right ventricle, just behind tricuspid valve.",
+        "image_path": "./data/chest_xrays\\chest_4e9e0cbf.jpg"
+    },
+    {
+        "patient_id": "P_611977",
+        "scan_date": "2023-12-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray showing diffuse infiltrates in both lung fields.",
+        "image_path": "./data/chest_xrays\\chest_d61096bc.jpg"
+    },
+    {
+        "patient_id": "P_688954",
+        "scan_date": "2023-01-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Portable chest X-ray. A single anteroposterior chest X-ray was obtained on admission. No acute intrathoracic process was observed. Degenerative change of the spine and shoulders was documented.\u00a0",
+        "image_path": "./data/chest_xrays\\chest_300de5b4.jpg"
+    },
+    {
+        "patient_id": "P_719908",
+        "scan_date": "2023-09-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest Radiograph done a month after discharge.",
+        "image_path": "./data/chest_xrays\\chest_9ce9f224.jpg"
+    },
+    {
+        "patient_id": "P_107093",
+        "scan_date": "2023-09-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray: the chest X-ray showed reinforcement of the bronchial tree shadows, no bronchiectasis, and a markedly reduced thymic image.",
+        "image_path": "./data/chest_xrays\\chest_b3120333.jpg"
+    },
+    {
+        "patient_id": "P_924835",
+        "scan_date": "2023-04-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "fracture",
+            "pneumothorax"
+        ],
+        "report_text": "Chest radiograph taken two hours after the injury, showing left fractured clavicle and pneumothorax",
+        "image_path": "./data/chest_xrays\\chest_9d38faf8.jpg"
+    },
+    {
+        "patient_id": "P_752912",
+        "scan_date": "2023-11-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema",
+            "effusion"
+        ],
+        "report_text": "Chest X-ray of the patient of case 2 taken on day 4 of the illness showing patchy opacities more in the peripheries of both lung fields indicating pulmonary edema due to a noncardiac cause. A bilateral pleural effusion also can be seen.",
+        "image_path": "./data/chest_xrays\\chest_9bf807ad.jpg"
+    },
+    {
+        "patient_id": "P_583768",
+        "scan_date": "2023-04-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray profile. Accentuated cardiomegaly observed.",
+        "image_path": "./data/chest_xrays\\chest_643b9d87.jpg"
+    },
+    {
+        "patient_id": "P_832805",
+        "scan_date": "2023-04-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Frontal chest radiograph showing oesophageal conduit withmultiple surgical clips in the mediastinum to the right of midline.",
+        "image_path": "./data/chest_xrays\\chest_edfc5f48.jpg"
+    },
+    {
+        "patient_id": "P_867361",
+        "scan_date": "2023-09-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph demonstrating a right-sided apical cavitary lesion (yellow arrow) and a chemotherapy port (blue arrow).",
+        "image_path": "./data/chest_xrays\\chest_cc9f5559.jpg"
+    },
+    {
+        "patient_id": "P_141973",
+        "scan_date": "2023-07-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph.",
+        "image_path": "./data/chest_xrays\\chest_db2100d0.jpg"
+    },
+    {
+        "patient_id": "P_812008",
+        "scan_date": "2023-11-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity",
+            "pneumothorax"
+        ],
+        "report_text": "A posteroanterior chest radiograph reveals increased radiolucency along with overinflated lung parenchyma and sparse vasculature in the upper half of the right lung. Also noted v-shaped branching opacity is in the right parahilar area (arrow). Pneumothorax is associated in the right lower pleural cavity (arrow head).",
+        "image_path": "./data/chest_xrays\\chest_c6c66134.jpg"
+    },
+    {
+        "patient_id": "P_496074",
+        "scan_date": "2023-12-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Lateral view of chest X-ray with findings suspicious for right upper lobe pneumonitis.",
+        "image_path": "./data/chest_xrays\\chest_12758798.jpg"
+    },
+    {
+        "patient_id": "P_479799",
+        "scan_date": "2023-09-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The chest radiograph showed a homogeneous mass lesion in the left upper zone, with multiple pleural-based mass lesions. ",
+        "image_path": "./data/chest_xrays\\chest_ec93a9ce.jpg"
+    },
+    {
+        "patient_id": "P_528137",
+        "scan_date": "2023-12-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray, anterior view, initial presentation showing anterior mediastinal mass which extends into the left hilum",
+        "image_path": "./data/chest_xrays\\chest_19f3b86b.jpg"
+    },
+    {
+        "patient_id": "P_598477",
+        "scan_date": "2023-11-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Xray chest PA view at 4 months showed clearing of the pleural on the left side with blunting of right costo-phrenic angle due to thickening of the pleura.",
+        "image_path": "./data/chest_xrays\\chest_90c215ba.jpg"
+    },
+    {
+        "patient_id": "P_686812",
+        "scan_date": "2023-02-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray revealed widespread bilateral alveolo-interstitial infiltrates.",
+        "image_path": "./data/chest_xrays\\chest_4268601d.jpg"
+    },
+    {
+        "patient_id": "P_605741",
+        "scan_date": "2023-05-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Progression of the bilateral pulmonary consolidation on chest X-ray",
+        "image_path": "./data/chest_xrays\\chest_44b692cc.jpg"
+    },
+    {
+        "patient_id": "P_175540",
+        "scan_date": "2023-04-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Post-Operative Chest X-Ray Showing Resolution of Diaphragmatic Hernia",
+        "image_path": "./data/chest_xrays\\chest_187ee821.jpg"
+    },
+    {
+        "patient_id": "P_538480",
+        "scan_date": "2023-01-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray show fixed scoliotic deformity. The major scoliosis is concentrated in the thoracic region and curves to the right.",
+        "image_path": "./data/chest_xrays\\chest_837f884e.jpg"
+    },
+    {
+        "patient_id": "P_548484",
+        "scan_date": "2023-11-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "X-ray chest after surgery (thoracotomy).",
+        "image_path": "./data/chest_xrays\\chest_414e6e03.jpg"
+    },
+    {
+        "patient_id": "P_636272",
+        "scan_date": "2023-04-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography shows slightly widened superior mediastinum and laterally shifted dome of the right hemidiaphragm.",
+        "image_path": "./data/chest_xrays\\chest_0410a6c4.jpg"
+    },
+    {
+        "patient_id": "P_165681",
+        "scan_date": "2023-01-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal",
+            "effusion"
+        ],
+        "report_text": "Chest radiograph after contrast agent application showing massive effusion in the pleural cavity and abnormal right-sided position of the nasogastric tube.",
+        "image_path": "./data/chest_xrays\\chest_2fb7d44d.jpg"
+    },
+    {
+        "patient_id": "P_102895",
+        "scan_date": "2023-09-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Chest radiograph on the day of admission noted indistinct increased markings and a patchy opacity in the right lower lung.",
+        "image_path": "./data/chest_xrays\\chest_912db869.jpg"
+    },
+    {
+        "patient_id": "P_971148",
+        "scan_date": "2023-05-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray suggestive of right side infiltrates/haze in lung bases.",
+        "image_path": "./data/chest_xrays\\chest_4bd69117.jpg"
+    },
+    {
+        "patient_id": "P_312169",
+        "scan_date": "2023-03-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Normal chest x-ray taken before induction.",
+        "image_path": "./data/chest_xrays\\chest_f8273e08.jpg"
+    },
+    {
+        "patient_id": "P_758791",
+        "scan_date": "2023-04-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Bilateral multiple opacifications in chest radiograph.",
+        "image_path": "./data/chest_xrays\\chest_33927348.jpg"
+    },
+    {
+        "patient_id": "P_738981",
+        "scan_date": "2023-11-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Initial CXR of the patient. The image shows large airspace consolidation in the left mid-lung with a cavitary appearance (arrow), and bi-apical reticular opacities, more prominent on the left than right. CXR: chest X-ray",
+        "image_path": "./data/chest_xrays\\chest_739bfd1f.jpg"
+    },
+    {
+        "patient_id": "P_312964",
+        "scan_date": "2023-07-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Bedside chest radiography performed immediately after admission. Bilateral pneumothorax (large arrows), pneumomediastinum (thin arrows) and extensive subcutaneous emphysema are visible.",
+        "image_path": "./data/chest_xrays\\chest_f153bac7.jpg"
+    },
+    {
+        "patient_id": "P_130765",
+        "scan_date": "2023-04-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray on follow-up shows improvement of the consolidation",
+        "image_path": "./data/chest_xrays\\chest_12568810.jpg"
+    },
+    {
+        "patient_id": "P_208399",
+        "scan_date": "2023-04-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray- bilateral patchy opacities.",
+        "image_path": "./data/chest_xrays\\chest_229c2639.jpg"
+    },
+    {
+        "patient_id": "P_322954",
+        "scan_date": "2023-03-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography with left lung collapsed and slight mediastinal shift.",
+        "image_path": "./data/chest_xrays\\chest_53f409f7.jpg"
+    },
+    {
+        "patient_id": "P_543125",
+        "scan_date": "2023-05-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "X-ray chest showing dextrocardia and gastric air bubble on right side i.e. situs inversus totalis.",
+        "image_path": "./data/chest_xrays\\chest_da7a0705.jpg"
+    },
+    {
+        "patient_id": "P_605342",
+        "scan_date": "2023-02-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Portable chest radiograph demonstrating a 4.4 cm mass at the right AV groove as a double density (white arrows) of the ascending aorta.",
+        "image_path": "./data/chest_xrays\\chest_1c6ff821.jpg"
+    },
+    {
+        "patient_id": "P_173358",
+        "scan_date": "2023-05-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Posteroanterior chest X-ray. Bowel loops compressing the right ventricle of the heart.",
+        "image_path": "./data/chest_xrays\\chest_cec6a851.jpg"
+    },
+    {
+        "patient_id": "P_619115",
+        "scan_date": "2023-07-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray shows left lung ruptured cyst (arrow).",
+        "image_path": "./data/chest_xrays\\chest_ea9d8c67.jpg"
+    },
+    {
+        "patient_id": "P_859455",
+        "scan_date": "2023-05-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Pre-operative chest X-rays of the patient (not intubated). Widening of the superior mediastinum with early left lower-lobe patchy infiltrates and right lung upper-lobe early herniation to the left.",
+        "image_path": "./data/chest_xrays\\chest_70892d71.jpg"
+    },
+    {
+        "patient_id": "P_671335",
+        "scan_date": "2023-03-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph depicts consolidation at right lower zone (white arrow) in addition to reduced right lung volume and ipsilateral shifting of cardiac shadow.",
+        "image_path": "./data/chest_xrays\\chest_3a6c40f4.jpg"
+    },
+    {
+        "patient_id": "P_946058",
+        "scan_date": "2023-09-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray on the first day of admission. Ground glass opacities (red arrows) are seen involving the central and peripheral zones bilaterally\u00a0",
+        "image_path": "./data/chest_xrays\\chest_a02e6f8b.jpg"
+    },
+    {
+        "patient_id": "P_804901",
+        "scan_date": "2023-03-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showed multiple sclerotic lesions of right 4th, 5th, 6th and 7th ribs.",
+        "image_path": "./data/chest_xrays\\chest_b8628b1e.jpg"
+    },
+    {
+        "patient_id": "P_372620",
+        "scan_date": "2023-06-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "CXR shows a new hazy opacity in the left lower zone of the chest",
+        "image_path": "./data/chest_xrays\\chest_0684cde8.jpg"
+    },
+    {
+        "patient_id": "P_639778",
+        "scan_date": "2023-05-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Prebronchoscopy chest X-ray.",
+        "image_path": "./data/chest_xrays\\chest_50eb4554.jpg"
+    },
+    {
+        "patient_id": "P_464325",
+        "scan_date": "2023-04-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Regression of nodular lesions at the postoperative 2nd month follow-up chest X-ray following chemotherapy.",
+        "image_path": "./data/chest_xrays\\chest_05200dbc.jpg"
+    },
+    {
+        "patient_id": "P_407253",
+        "scan_date": "2023-08-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography (AP orientation) demonstrating a widened superior mediastinum.",
+        "image_path": "./data/chest_xrays\\chest_a04b5ad9.jpg"
+    },
+    {
+        "patient_id": "P_711175",
+        "scan_date": "2023-10-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The chest X-ray shows diffuse consolidation of the left lung due to massive bleeding. A single-lumen endotracheal tube is placed in the right main bronchus",
+        "image_path": "./data/chest_xrays\\chest_40974ca2.jpg"
+    },
+    {
+        "patient_id": "P_104980",
+        "scan_date": "2023-06-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing consolidation in both lung fields and a cavity in the left upper lung field.",
+        "image_path": "./data/chest_xrays\\chest_0a949789.jpg"
+    },
+    {
+        "patient_id": "P_757322",
+        "scan_date": "2023-04-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray image revealing oar-like ribs.",
+        "image_path": "./data/chest_xrays\\chest_d5c65c88.jpg"
+    },
+    {
+        "patient_id": "P_318685",
+        "scan_date": "2023-01-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema",
+            "cardiomegaly"
+        ],
+        "report_text": "A repeat chest X-ray (day 7) revealed diffuse bilateral infiltrates or edema, predominantly interstitial in character with cardiomegaly (not significantly improved from admission, in spite of aggressive diuresis).",
+        "image_path": "./data/chest_xrays\\chest_2dad9e66.jpg"
+    },
+    {
+        "patient_id": "P_932567",
+        "scan_date": "2023-08-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray shows bilateral, predominantly peripheral, pneumonic infiltrates most pronounced at the lung bases",
+        "image_path": "./data/chest_xrays\\chest_a8056e49.jpg"
+    },
+    {
+        "patient_id": "P_655733",
+        "scan_date": "2023-11-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray at ICU admission after airway management and mechanical ventilation. It showed bilateral air collections in subphrenic areas (see arrows)",
+        "image_path": "./data/chest_xrays\\chest_8a817a67.jpg"
+    },
+    {
+        "patient_id": "P_790062",
+        "scan_date": "2023-11-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph with bilateral hilar lymphadenopathy and bilateral nodular pulmonary infiltrates.",
+        "image_path": "./data/chest_xrays\\chest_24489874.jpg"
+    },
+    {
+        "patient_id": "P_619061",
+        "scan_date": "2023-02-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing right peri-hilar mass with tracheal compression.",
+        "image_path": "./data/chest_xrays\\chest_e3015e14.jpg"
+    },
+    {
+        "patient_id": "P_755317",
+        "scan_date": "2023-07-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": " X-ray of chest. Scan taken 16 days post-admission, reported as having some minor airspace shadowing in both lower zones, which may be due to an infection.",
+        "image_path": "./data/chest_xrays\\chest_9089a074.jpg"
+    },
+    {
+        "patient_id": "P_484978",
+        "scan_date": "2023-02-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The followed-up chest radiograph showed complete clearing of pulmonary infiltration.",
+        "image_path": "./data/chest_xrays\\chest_99328743.jpg"
+    },
+    {
+        "patient_id": "P_912682",
+        "scan_date": "2023-02-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Frontal chest radiograph.",
+        "image_path": "./data/chest_xrays\\chest_f7c45a4a.jpg"
+    },
+    {
+        "patient_id": "P_965163",
+        "scan_date": "2023-11-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A frontal chest radiograph of Patient 2 showing interval development of spontaneous pneumomediastinum and possible pneumopericardium (arrow)",
+        "image_path": "./data/chest_xrays\\chest_7b1ec3f5.jpg"
+    },
+    {
+        "patient_id": "P_656233",
+        "scan_date": "2023-12-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Postoperative radiograph of the chest demonstrating reduction of abdominal viscera and lung collapse.",
+        "image_path": "./data/chest_xrays\\chest_82fe28bf.jpg"
+    },
+    {
+        "patient_id": "P_911486",
+        "scan_date": "2023-10-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "AP chest X-ray showing a radiolucency over the cardiac silhouette just above the diaphragm (arrowhead).",
+        "image_path": "./data/chest_xrays\\chest_72b73523.jpg"
+    },
+    {
+        "patient_id": "P_458269",
+        "scan_date": "2023-06-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray on ICU admission.",
+        "image_path": "./data/chest_xrays\\chest_db8f1e7e.jpg"
+    },
+    {
+        "patient_id": "P_534241",
+        "scan_date": "2023-08-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "X-ray chest demonstrates bilateral opacities",
+        "image_path": "./data/chest_xrays\\chest_d0eabfe5.jpg"
+    },
+    {
+        "patient_id": "P_163682",
+        "scan_date": "2023-07-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray: megaoesophagus behind trachea.",
+        "image_path": "./data/chest_xrays\\chest_f0a9832f.jpg"
+    },
+    {
+        "patient_id": "P_743225",
+        "scan_date": "2023-09-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph demonstrating complete opacification of the right hemithorax with mild mediastinal shift to the left side.",
+        "image_path": "./data/chest_xrays\\chest_0a9ca111.jpg"
+    },
+    {
+        "patient_id": "P_988783",
+        "scan_date": "2023-07-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Normal Chest x-ray in a case of early FBA",
+        "image_path": "./data/chest_xrays\\chest_50f5fc0b.jpg"
+    },
+    {
+        "patient_id": "P_855576",
+        "scan_date": "2023-08-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "This figure shows the preoperative simple chest radiography.",
+        "image_path": "./data/chest_xrays\\chest_52e4267c.jpg"
+    },
+    {
+        "patient_id": "P_644972",
+        "scan_date": "2023-10-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Patient\u2019s chest X-ray A-P projection. Widespread mild accentuation of the broncho-vascular texture with blurred aspect",
+        "image_path": "./data/chest_xrays\\chest_0ab0ec4b.jpg"
+    },
+    {
+        "patient_id": "P_724728",
+        "scan_date": "2023-01-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "fracture"
+        ],
+        "report_text": "Chest radiographs showing large amounts of pleural effusion and a fracture in the seventh right rib.",
+        "image_path": "./data/chest_xrays\\chest_75cb362c.jpg"
+    },
+    {
+        "patient_id": "P_727297",
+        "scan_date": "2023-05-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A frontal chest radiograph of a 15-year-old Saudi girl with scimitar syndrome, demonstrating a scimitar sign (msv), focal herniation of liver (m) mimicking a right paraspinal mass or sequestration, slightly opaque and small right hemithorax with nonvisualization of heart shadow",
+        "image_path": "./data/chest_xrays\\chest_c2e7336a.jpg"
+    },
+    {
+        "patient_id": "P_964019",
+        "scan_date": "2023-05-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography showing diffuse bilateral patchy infiltrates 60 minutes after propofol administration.",
+        "image_path": "./data/chest_xrays\\chest_fad0b111.jpg"
+    },
+    {
+        "patient_id": "P_517490",
+        "scan_date": "2023-09-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest radiograph taken at in the operating room shows haziness and pleural effusion in the right lung. The arrows indicate the angiocatheter inserted into both lungs for air release.",
+        "image_path": "./data/chest_xrays\\chest_3b7ed4c8.jpg"
+    },
+    {
+        "patient_id": "P_699446",
+        "scan_date": "2023-11-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray. Chest roentgenogram showed air-space consolidation with an air bronchogram, predominantly in the right upper and left lower lung fields.",
+        "image_path": "./data/chest_xrays\\chest_c511e75d.jpg"
+    },
+    {
+        "patient_id": "P_649648",
+        "scan_date": "2023-02-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing presence of mediastinal widening with a paracardiac shadow of increased lucency giving a double contour effect.",
+        "image_path": "./data/chest_xrays\\chest_a885f650.jpg"
+    },
+    {
+        "patient_id": "P_979908",
+        "scan_date": "2023-11-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing bilateral opacities, pneumomediastinum, and subcutaneous emphysema.",
+        "image_path": "./data/chest_xrays\\chest_2ac6dae1.jpg"
+    },
+    {
+        "patient_id": "P_126854",
+        "scan_date": "2023-05-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema"
+        ],
+        "report_text": "Chest X-ray showing pulmonary edema.",
+        "image_path": "./data/chest_xrays\\chest_f8ff1523.jpg"
+    },
+    {
+        "patient_id": "P_182674",
+        "scan_date": "2023-01-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Frontal chest radiograph.",
+        "image_path": "./data/chest_xrays\\chest_32bcf979.jpg"
+    },
+    {
+        "patient_id": "P_439231",
+        "scan_date": "2023-10-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray (posteroanterior). Marked cardiomegaly, rectified middle arch and free pulmonary fields.",
+        "image_path": "./data/chest_xrays\\chest_08cce26a.jpg"
+    },
+    {
+        "patient_id": "P_491770",
+        "scan_date": "2023-01-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray finding after placement of biventricular pacemaker.",
+        "image_path": "./data/chest_xrays\\chest_cbe8e886.jpg"
+    },
+    {
+        "patient_id": "P_851277",
+        "scan_date": "2023-10-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Frontal chest radiograph.",
+        "image_path": "./data/chest_xrays\\chest_fd6da47e.jpg"
+    },
+    {
+        "patient_id": "P_784346",
+        "scan_date": "2023-04-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Repeat chest radiograph 1\u2009day after admission demonstrating resolution of the changes within 24\u2009h.",
+        "image_path": "./data/chest_xrays\\chest_cb399b8c.jpg"
+    },
+    {
+        "patient_id": "P_384734",
+        "scan_date": "2023-06-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Chest radiograph following removal of chest drain. Complete re-expansion of the left lung as seen following removal of left-sided chest drain for spontaneous pneumothorax secondary to response to treatment with crizotinib.",
+        "image_path": "./data/chest_xrays\\chest_4dbdf304.jpg"
+    },
+    {
+        "patient_id": "P_654041",
+        "scan_date": "2023-03-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Chest radiography: a total pneumothorax in the right lung.",
+        "image_path": "./data/chest_xrays\\chest_c0904e51.jpg"
+    },
+    {
+        "patient_id": "P_724639",
+        "scan_date": "2023-05-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest X-ray showing bilateral pleural effusion and pulmonary venous congestion.",
+        "image_path": "./data/chest_xrays\\chest_e67817f5.jpg"
+    },
+    {
+        "patient_id": "P_606661",
+        "scan_date": "2023-12-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray one month later. This picture was taken the day of his arrival at our hospital. The empyema is loculated, the foreign body is still present in the chest, and the radiological signs of esophageal perforation are more obvious.",
+        "image_path": "./data/chest_xrays\\chest_f70c8c49.jpg"
+    },
+    {
+        "patient_id": "P_838724",
+        "scan_date": "2023-09-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography: superior mediastinal enlargement",
+        "image_path": "./data/chest_xrays\\chest_1503e6b2.jpg"
+    },
+    {
+        "patient_id": "P_464731",
+        "scan_date": "2023-02-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest and abdomen plain Radiograph",
+        "image_path": "./data/chest_xrays\\chest_7ef67a1a.jpg"
+    },
+    {
+        "patient_id": "P_320819",
+        "scan_date": "2023-12-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": " Bilateral predominantly peripheral alveolar infiltrates with loss of left hemidiaphragm silhouette on anteroposterior chest X-ray",
+        "image_path": "./data/chest_xrays\\chest_ab3325cc.jpg"
+    },
+    {
+        "patient_id": "P_306591",
+        "scan_date": "2023-06-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph from a 45-year old patient who sustained a left posterior sternoclavicular joint dislocation after a fall on his left shoulder in a skiing accident. Note that the subtle signs of the incongruent anatomy of the left sternoclavicular joint, which is frequently missed on plain radiographs.",
+        "image_path": "./data/chest_xrays\\chest_a96e5430.jpg"
+    },
+    {
+        "patient_id": "P_429000",
+        "scan_date": "2023-05-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "X-ray of the thorax showing the radiolucent area with clear borders in the right paracardiac region.",
+        "image_path": "./data/chest_xrays\\chest_090761fc.jpg"
+    },
+    {
+        "patient_id": "P_469584",
+        "scan_date": "2023-04-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Admission chest X-ray showing severe bilateral diffuse pulmonary infiltrates.",
+        "image_path": "./data/chest_xrays\\chest_925329b5.jpg"
+    },
+    {
+        "patient_id": "P_170148",
+        "scan_date": "2023-09-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The chest roentgenogram on the 5th hospital day shows aggravated airspace consolidation in both lung fields.",
+        "image_path": "./data/chest_xrays\\chest_25158c2c.jpg"
+    },
+    {
+        "patient_id": "P_225983",
+        "scan_date": "2023-06-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "CXR. Widened mediastinum.",
+        "image_path": "./data/chest_xrays\\chest_d39b322d.jpg"
+    },
+    {
+        "patient_id": "P_700126",
+        "scan_date": "2023-01-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "This chest radiograph showed significant worsening with consolidation involving all but the left upper zone.",
+        "image_path": "./data/chest_xrays\\chest_15bc8621.jpg"
+    },
+    {
+        "patient_id": "P_388667",
+        "scan_date": "2023-01-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Intraoperative chest radiograph shows the curvature of the wire-reinforced tube facing rightward, instead of upward, but does not show the presence of bronchial intubation or pneumothorax.",
+        "image_path": "./data/chest_xrays\\chest_faeed0c2.jpg"
+    },
+    {
+        "patient_id": "P_999543",
+        "scan_date": "2023-05-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray after tracheal rupture.",
+        "image_path": "./data/chest_xrays\\chest_abea639f.jpg"
+    },
+    {
+        "patient_id": "P_683505",
+        "scan_date": "2023-11-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography showed bilateral aortic notches at the level of aortic arch, suggesting aortic arch anomaly. Right aortic arch (large arrow) and left aortic arch (small arrow) can be seen.",
+        "image_path": "./data/chest_xrays\\chest_de5cb922.jpg"
+    },
+    {
+        "patient_id": "P_450599",
+        "scan_date": "2023-09-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing consolidation and bronchiectatic changes.",
+        "image_path": "./data/chest_xrays\\chest_c0f60335.jpg"
+    },
+    {
+        "patient_id": "P_900593",
+        "scan_date": "2023-02-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Appropriate localization of the external jugular vein catheter on chest X-ray. Catheter tip marked with an arrow.",
+        "image_path": "./data/chest_xrays\\chest_f5fafd88.jpg"
+    },
+    {
+        "patient_id": "P_436347",
+        "scan_date": "2023-03-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing scattered infiltrates in both lungs (blue arrows)",
+        "image_path": "./data/chest_xrays\\chest_9b5566a1.jpg"
+    },
+    {
+        "patient_id": "P_405339",
+        "scan_date": "2023-06-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray shows massive right hemothorax, superior mediastinal widening and tracheal deviation to the left.",
+        "image_path": "./data/chest_xrays\\chest_fe925590.jpg"
+    },
+    {
+        "patient_id": "P_895445",
+        "scan_date": "2023-11-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray depicting a predominantly right lower lung infiltrate (yellow arrow) concerning for a developing infectious process.",
+        "image_path": "./data/chest_xrays\\chest_f18f5014.jpg"
+    },
+    {
+        "patient_id": "P_167829",
+        "scan_date": "2023-06-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis"
+        ],
+        "report_text": "Chest radiography showed an ill-defined mass at the left hilum suggesting a mass involving the left upper bronchus with marked atelectasis of the left upper lobe.",
+        "image_path": "./data/chest_xrays\\chest_add2ee5a.jpg"
+    },
+    {
+        "patient_id": "P_598251",
+        "scan_date": "2023-03-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "fracture",
+            "pneumothorax"
+        ],
+        "report_text": "Chest radiograph with ribs fractures and pneumothorax.",
+        "image_path": "./data/chest_xrays\\chest_daef3506.jpg"
+    },
+    {
+        "patient_id": "P_674176",
+        "scan_date": "2023-04-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Initial chest X-ray at the ICU, showing diffuse bilateral cotton-like infiltrates.",
+        "image_path": "./data/chest_xrays\\chest_cb51a411.jpg"
+    },
+    {
+        "patient_id": "P_192155",
+        "scan_date": "2023-03-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray shows bilateral lung infiltrates and radiolucency in the right side of the neck representing subcutaneous emphysema.",
+        "image_path": "./data/chest_xrays\\chest_e829ec9b.jpg"
+    },
+    {
+        "patient_id": "P_305586",
+        "scan_date": "2023-12-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray of the patient",
+        "image_path": "./data/chest_xrays\\chest_5cf335fc.jpg"
+    },
+    {
+        "patient_id": "P_210781",
+        "scan_date": "2023-02-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray revealed enlargement of mediastinum.",
+        "image_path": "./data/chest_xrays\\chest_5441e3c4.jpg"
+    },
+    {
+        "patient_id": "P_725667",
+        "scan_date": "2023-08-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray shows bilateral pulmonary infiltrates and subcutaneous emphysema along the lower neck and upper lung apices.",
+        "image_path": "./data/chest_xrays\\chest_c27d764d.jpg"
+    },
+    {
+        "patient_id": "P_129761",
+        "scan_date": "2023-10-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest Radiography",
+        "image_path": "./data/chest_xrays\\chest_9c4bec6f.jpg"
+    },
+    {
+        "patient_id": "P_246073",
+        "scan_date": "2023-04-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Magnified view of the immediate postoperative chest X-ray suggestive of a knot in the catheter identified by retrospective scrutiny",
+        "image_path": "./data/chest_xrays\\chest_251ec53c.jpg"
+    },
+    {
+        "patient_id": "P_202601",
+        "scan_date": "2023-01-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray of the patient at admission.",
+        "image_path": "./data/chest_xrays\\chest_a4b1aece.jpg"
+    },
+    {
+        "patient_id": "P_800868",
+        "scan_date": "2023-04-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "pneumothorax"
+        ],
+        "report_text": "chest X-ray showing large, complete and compressive right-sided pneumothorax associated to pleural effusion",
+        "image_path": "./data/chest_xrays\\chest_00f3d00f.jpg"
+    },
+    {
+        "patient_id": "P_937756",
+        "scan_date": "2023-09-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing RP Impella with the inlet situated in the inferior vena cava (red arrow) and the outlet in the pulmonary artery (green arrow) and Impella 5.0 with the inlet in the left ventricle and the outlet in the ascending aorta (yellow arrow).",
+        "image_path": "./data/chest_xrays\\chest_498f7793.jpg"
+    },
+    {
+        "patient_id": "P_308679",
+        "scan_date": "2023-06-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph performed 48\u2009h postoperatively. There has been an increase in the right perihilar opacification, with well-defined superior and inferior margins formed by the boundaries of the torted right middle lobe; the diagnosis could have been suspected at this point. Surgical emphysema is seen throughout the soft tissues of the right chest wall.\u00a0AP, anteroposterior.",
+        "image_path": "./data/chest_xrays\\chest_4a19ea4c.jpg"
+    },
+    {
+        "patient_id": "P_704450",
+        "scan_date": "2023-05-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Plain chest radiograph at the time of admission.",
+        "image_path": "./data/chest_xrays\\chest_d4114d04.jpg"
+    },
+    {
+        "patient_id": "P_321307",
+        "scan_date": "2023-07-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Portable chest X-ray on the second day revealed increased infiltration.",
+        "image_path": "./data/chest_xrays\\chest_9ebc395e.jpg"
+    },
+    {
+        "patient_id": "P_765048",
+        "scan_date": "2023-12-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph in 17 days after gefitinib treatment.",
+        "image_path": "./data/chest_xrays\\chest_4e402602.jpg"
+    },
+    {
+        "patient_id": "P_202928",
+        "scan_date": "2023-03-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray revealed a soft tissue density mass on the left.",
+        "image_path": "./data/chest_xrays\\chest_d6f15fb3.jpg"
+    },
+    {
+        "patient_id": "P_217505",
+        "scan_date": "2023-04-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray (CXR) showing cardiomegaly and bilateral plural effusion",
+        "image_path": "./data/chest_xrays\\chest_eedb6dd7.jpg"
+    },
+    {
+        "patient_id": "P_702326",
+        "scan_date": "2023-10-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Chest x-ray (postero-anterior view)- Metallic sutures in the sternum, normal lungs and enlarged heart image.",
+        "image_path": "./data/chest_xrays\\chest_90a0f609.jpg"
+    },
+    {
+        "patient_id": "P_904588",
+        "scan_date": "2023-10-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray, showing no accessory cervical rib",
+        "image_path": "./data/chest_xrays\\chest_935904a5.jpg"
+    },
+    {
+        "patient_id": "P_942705",
+        "scan_date": "2023-10-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia",
+            "opacity",
+            "pneumothorax"
+        ],
+        "report_text": "Chest X-ray reveals bilateral pneumothorax (A) with a chest tube inserted on the left chest, pneumomediastium (B), pneumopericardium (C), pneumoretroperitoneum (D) and subcutaneous emphysema (E). Chest X-ray shows ill-defined patchy ground glass opacity in both middle lower lungs suggesting underlying aspiration pneumonia and minimal fibrotic scar in left apex.",
+        "image_path": "./data/chest_xrays\\chest_239289f5.jpg"
+    },
+    {
+        "patient_id": "P_864788",
+        "scan_date": "2023-08-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "PA Chest Radiography, Also Shows the Foreign Body",
+        "image_path": "./data/chest_xrays\\chest_c6a03b73.jpg"
+    },
+    {
+        "patient_id": "P_361598",
+        "scan_date": "2023-05-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Postoperative chest x-ray showing expansion of the previously collapsed left lung",
+        "image_path": "./data/chest_xrays\\chest_ce8248c9.jpg"
+    },
+    {
+        "patient_id": "P_831120",
+        "scan_date": "2023-08-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest Radiography of a Patient with Mild COVID-19Chest radiography on admission showed patch infiltrate on right lower lobe.",
+        "image_path": "./data/chest_xrays\\chest_28e8641c.jpg"
+    },
+    {
+        "patient_id": "P_344078",
+        "scan_date": "2023-11-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray showing covered stent in the superior vena cava extending to the right internal jugular vein.",
+        "image_path": "./data/chest_xrays\\chest_195cc473.jpg"
+    },
+    {
+        "patient_id": "P_109563",
+        "scan_date": "2023-11-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray - a large tumorous process of the right hemithorax with mediastinal shift to the left.",
+        "image_path": "./data/chest_xrays\\chest_d0df1737.jpg"
+    },
+    {
+        "patient_id": "P_551868",
+        "scan_date": "2023-02-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray showing air bubbles in the left chest.",
+        "image_path": "./data/chest_xrays\\chest_a41478c2.jpg"
+    },
+    {
+        "patient_id": "P_169144",
+        "scan_date": "2023-09-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Upright posteroanterior chest radiograph after insufflating air into the stomach. The free subdiaphragmatic air has slightly increased in size bilaterally compared with Figure 1 (white arrows).",
+        "image_path": "./data/chest_xrays\\chest_69586f17.jpg"
+    },
+    {
+        "patient_id": "P_215395",
+        "scan_date": "2023-04-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "X-ray of chest showing resolution of the previously seen mediastinal mass, except for a small left parahilar opacity.",
+        "image_path": "./data/chest_xrays\\chest_bac60f28.jpg"
+    },
+    {
+        "patient_id": "P_822402",
+        "scan_date": "2023-03-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema"
+        ],
+        "report_text": "Chest X-ray showing pulmonary edema with bilateral vascular congestion with mild interstitial thickening (arrows)",
+        "image_path": "./data/chest_xrays\\chest_ee4f5e4c.jpg"
+    },
+    {
+        "patient_id": "P_992217",
+        "scan_date": "2023-06-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray on 13th postoperative day, showing right-sided hemothorax with chest tube placement.",
+        "image_path": "./data/chest_xrays\\chest_1d3d0692.jpg"
+    },
+    {
+        "patient_id": "P_874514",
+        "scan_date": "2023-05-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing a solitary pulmonary mass lesion in the right upper lobe",
+        "image_path": "./data/chest_xrays\\chest_96acca1b.jpg"
+    },
+    {
+        "patient_id": "P_772947",
+        "scan_date": "2023-03-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest x-ray post-extubation, showing signs of improved aeration with possible small airway inflammation as well as suspected small left effusion; however, assessment is limited by the low lung volumes. ",
+        "image_path": "./data/chest_xrays\\chest_13336f41.jpg"
+    },
+    {
+        "patient_id": "P_584188",
+        "scan_date": "2023-10-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray in posteroanterior projection. Cephalization of the pulmonary vasculature and accentuated cardiomegaly.",
+        "image_path": "./data/chest_xrays\\chest_87f4adca.jpg"
+    },
+    {
+        "patient_id": "P_823011",
+        "scan_date": "2023-09-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing homogenous opacification of the entire left hemithorax with marked mediastinal shift to the right.",
+        "image_path": "./data/chest_xrays\\chest_9a9b9751.jpg"
+    },
+    {
+        "patient_id": "P_343895",
+        "scan_date": "2023-11-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showed clear lung fields with no signs of consolidation",
+        "image_path": "./data/chest_xrays\\chest_916b3a83.jpg"
+    },
+    {
+        "patient_id": "P_405648",
+        "scan_date": "2023-03-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray.",
+        "image_path": "./data/chest_xrays\\chest_b3430154.jpg"
+    },
+    {
+        "patient_id": "P_218289",
+        "scan_date": "2023-04-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis"
+        ],
+        "report_text": "Initial chest radiography shows atelectasis of left lower lung field and metallic stents are placed at both main bronchus (arrows).",
+        "image_path": "./data/chest_xrays\\chest_64d9b47f.jpg"
+    },
+    {
+        "patient_id": "P_910298",
+        "scan_date": "2023-06-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph at presentation.",
+        "image_path": "./data/chest_xrays\\chest_b2211800.jpg"
+    },
+    {
+        "patient_id": "P_330930",
+        "scan_date": "2023-10-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray during expiration on day 3.",
+        "image_path": "./data/chest_xrays\\chest_1d8df3e5.jpg"
+    },
+    {
+        "patient_id": "P_531969",
+        "scan_date": "2023-08-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray of the patient on admission demonstrating markedly enlarged cardiac silhouette with \u201cwater-bottle\u201d appearance.",
+        "image_path": "./data/chest_xrays\\chest_0bb10e71.jpg"
+    },
+    {
+        "patient_id": "P_364498",
+        "scan_date": "2023-02-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Follow-up chest radiograph showing significant radiological clearing",
+        "image_path": "./data/chest_xrays\\chest_6d43fa3b.jpg"
+    },
+    {
+        "patient_id": "P_634213",
+        "scan_date": "2023-02-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Anterior-posterior chest radiograph revealed pneumomediastinum (arrows) and subcutaneous emphysema (arrowheads) with streaky radiolucencies.",
+        "image_path": "./data/chest_xrays\\chest_3457dc25.jpg"
+    },
+    {
+        "patient_id": "P_967853",
+        "scan_date": "2023-04-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Patient E underwent uneventful Epicutaneo cava catheter (ECC) insertion, but several hours after ECC infusion, the routine postoperative chest X-ray showed that the tip was too deep.",
+        "image_path": "./data/chest_xrays\\chest_3dcb2e29.jpg"
+    },
+    {
+        "patient_id": "P_822878",
+        "scan_date": "2023-07-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showed no deviation or luminal narrowing of central venous catheter representing pinch-off sign grade 0.",
+        "image_path": "./data/chest_xrays\\chest_e32e3ff4.jpg"
+    },
+    {
+        "patient_id": "P_673406",
+        "scan_date": "2023-08-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Initial chest radiography shows diffuse patchy consolidations with geographic ground glass opacities in the left upper and lower lung fields.",
+        "image_path": "./data/chest_xrays\\chest_cc99c4dd.jpg"
+    },
+    {
+        "patient_id": "P_825934",
+        "scan_date": "2023-06-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Anteroposterior X-Ray of the ChestDemonstrating clear bilateral lung fields with overlying breast tissue opacities and a normal-sized cardiac silhouette.",
+        "image_path": "./data/chest_xrays\\chest_0fdd9a3e.jpg"
+    },
+    {
+        "patient_id": "P_372360",
+        "scan_date": "2023-10-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": "Chest X-ray showing new multiple bilateral cavitary nodules and focal infiltrates in the lateral aspect of the right upper lobe.",
+        "image_path": "./data/chest_xrays\\chest_e81769c4.jpg"
+    },
+    {
+        "patient_id": "P_796293",
+        "scan_date": "2023-03-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Upright chest plain radiograph (X-ray) showing free air (gas) under diaphragm.",
+        "image_path": "./data/chest_xrays\\chest_a5d9f206.jpg"
+    },
+    {
+        "patient_id": "P_676124",
+        "scan_date": "2023-12-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest radiograph showing cardiomegaly and bilateral consolidation.",
+        "image_path": "./data/chest_xrays\\chest_e586cdbe.jpg"
+    },
+    {
+        "patient_id": "P_413415",
+        "scan_date": "2023-03-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest radiograph showing left-sided pleural effusion shortly after admission.",
+        "image_path": "./data/chest_xrays\\chest_84374988.jpg"
+    },
+    {
+        "patient_id": "P_351628",
+        "scan_date": "2023-08-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis",
+            "effusion"
+        ],
+        "report_text": "Chest x-ray on the first postoperative day showing an elevation of the right hemidiaphragm, associated with a basal atelectasis of the right lower lobe, but no pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_029afa59.jpg"
+    },
+    {
+        "patient_id": "P_166114",
+        "scan_date": "2023-09-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing bilateral lung infiltrates",
+        "image_path": "./data/chest_xrays\\chest_47d23a11.jpg"
+    },
+    {
+        "patient_id": "P_228616",
+        "scan_date": "2023-03-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "X-ray Chest showing bilateral patchy infiltrates, cardiomegaly, and unfolded aorta are seen",
+        "image_path": "./data/chest_xrays\\chest_01199e36.jpg"
+    },
+    {
+        "patient_id": "P_319341",
+        "scan_date": "2023-07-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": "Chest X-Ray. Diffuse, bilateral, small lung nodules suggestive of acute miliary pulmonary tuberculosis.",
+        "image_path": "./data/chest_xrays\\chest_357bb83a.jpg"
+    },
+    {
+        "patient_id": "P_232932",
+        "scan_date": "2023-10-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Posterolateral Chest radiography of the patient was essentially normal.",
+        "image_path": "./data/chest_xrays\\chest_7d4ecd0c.jpg"
+    },
+    {
+        "patient_id": "P_210977",
+        "scan_date": "2023-04-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Initial anterior-posterior chest radiograph taken shortly after arrival to the emergency department.",
+        "image_path": "./data/chest_xrays\\chest_4e5733df.jpg"
+    },
+    {
+        "patient_id": "P_600859",
+        "scan_date": "2023-11-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Erect chest X-ray showing free air under the right diaphragm.",
+        "image_path": "./data/chest_xrays\\chest_ded46754.jpg"
+    },
+    {
+        "patient_id": "P_706773",
+        "scan_date": "2023-12-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Chest radiograph of a tame cat before prednisone treatment of 3mg/day. A chest radiograph of a tame cat revealing ground-glass opacity in the bilateral upper lung fields.",
+        "image_path": "./data/chest_xrays\\chest_f2418ae4.jpg"
+    },
+    {
+        "patient_id": "P_753466",
+        "scan_date": "2023-10-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-Ray PA View (March '06)",
+        "image_path": "./data/chest_xrays\\chest_b98f5bb0.jpg"
+    },
+    {
+        "patient_id": "P_784863",
+        "scan_date": "2023-02-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Cryptococcosis. Imaging findings are varied and nonspecific. Reticular chest X-ray or reticulonodular infiltrates are the most common pattern as in this case where a reticulonodular infiltrate involved the left costophrenic angle",
+        "image_path": "./data/chest_xrays\\chest_a8fc86f0.jpg"
+    },
+    {
+        "patient_id": "P_138072",
+        "scan_date": "2023-10-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray - Cardiomegaly with pulmonary plethora with a narrow pedicle (case 1)",
+        "image_path": "./data/chest_xrays\\chest_034f4ad6.jpg"
+    },
+    {
+        "patient_id": "P_236596",
+        "scan_date": "2023-07-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "pneumothorax"
+        ],
+        "report_text": "Chest X-ray showing right upper lobe cavitary lesion with a large pneumothorax and pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_0ed3ee8a.jpg"
+    },
+    {
+        "patient_id": "P_174960",
+        "scan_date": "2023-06-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A chest radiograph shows a markedly enlarged pulmonary trunk (red arrow), enlarged central pulmonary arteries, and enlargement of the cardiac silhouette.",
+        "image_path": "./data/chest_xrays\\chest_5d79717f.jpg"
+    },
+    {
+        "patient_id": "P_894707",
+        "scan_date": "2023-09-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing bilateral clavicular hypoplasia.",
+        "image_path": "./data/chest_xrays\\chest_7051b0d8.jpg"
+    },
+    {
+        "patient_id": "P_871129",
+        "scan_date": "2023-02-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A chest radiograph revealed an ill-defined consolidation in the right lower lung fields and fibrotic change in the right upper lung fields.",
+        "image_path": "./data/chest_xrays\\chest_204f3017.jpg"
+    },
+    {
+        "patient_id": "P_689455",
+        "scan_date": "2023-11-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray shows widened mediastinum (blue arrow).",
+        "image_path": "./data/chest_xrays\\chest_143d1c56.jpg"
+    },
+    {
+        "patient_id": "P_370685",
+        "scan_date": "2023-08-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": "Chest X-ray showing bilateral multiple small nodules scattered in the lung fields giving the military shadow with blunting left costophrenic angle.",
+        "image_path": "./data/chest_xrays\\chest_ef4f2eca.jpg"
+    },
+    {
+        "patient_id": "P_878355",
+        "scan_date": "2023-05-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": "Chest X-ray showing bilateral pulmonary nodules",
+        "image_path": "./data/chest_xrays\\chest_63d8f84e.jpg"
+    },
+    {
+        "patient_id": "P_157258",
+        "scan_date": "2023-05-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Upright posteroanterior chest radiograph just before the patient's discharge. No subdiaphragmatic free air is noted bilaterally.",
+        "image_path": "./data/chest_xrays\\chest_af08a215.jpg"
+    },
+    {
+        "patient_id": "P_515834",
+        "scan_date": "2023-06-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing right hemithorax opacification.",
+        "image_path": "./data/chest_xrays\\chest_509fa28c.jpg"
+    },
+    {
+        "patient_id": "P_916856",
+        "scan_date": "2023-02-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Postoperative day 1 chest radiograph reveals large left pneumothorax.",
+        "image_path": "./data/chest_xrays\\chest_e2292d31.jpg"
+    },
+    {
+        "patient_id": "P_995069",
+        "scan_date": "2023-09-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "pneumothorax"
+        ],
+        "report_text": "Standard chest X-ray on the tenth postoperative day. New mantle pneumothorax on the right side with diffuse interstitial infiltrates in mid field of the left lung and left pleural effusion. No cysts or bullae visible.",
+        "image_path": "./data/chest_xrays\\chest_f07bade3.jpg"
+    },
+    {
+        "patient_id": "P_214469",
+        "scan_date": "2023-09-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest X-ray (CXR) with enlarged cardiac silhouette with bilateral small pleural effusions.",
+        "image_path": "./data/chest_xrays\\chest_3f33b9ae.jpg"
+    },
+    {
+        "patient_id": "P_848493",
+        "scan_date": "2023-05-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "chest X-ray showing bilateral excavated opacities in the upper lungs",
+        "image_path": "./data/chest_xrays\\chest_5da75b0c.jpg"
+    },
+    {
+        "patient_id": "P_648077",
+        "scan_date": "2023-10-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The final chest X-ray turned out to show total haziness of left thorax.",
+        "image_path": "./data/chest_xrays\\chest_a8e44c41.jpg"
+    },
+    {
+        "patient_id": "P_163571",
+        "scan_date": "2023-12-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest radiography 6 months after diagnosis showing drastic improvement. The lungs were clear except for a small persistent right-sided pleural effusion. The cardiothoracic ratio and the mediastinal contours were unremarkable.",
+        "image_path": "./data/chest_xrays\\chest_344de0ef.jpg"
+    },
+    {
+        "patient_id": "P_433058",
+        "scan_date": "2023-04-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray findings on arrival. Chest X-ray showed reduced permeability of the right lung field.",
+        "image_path": "./data/chest_xrays\\chest_e18d47fc.jpg"
+    },
+    {
+        "patient_id": "P_577059",
+        "scan_date": "2023-05-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Portable upright anteroposterior radiograph of a 72-year-old female shows characteristic bilateral confluent, bandlike (arrows) consolidative opacity in periphery of the right mid- and left-lower lung zones.",
+        "image_path": "./data/chest_xrays\\chest_4786da20.jpg"
+    },
+    {
+        "patient_id": "P_129789",
+        "scan_date": "2023-05-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia",
+            "effusion",
+            "opacity"
+        ],
+        "report_text": "Admission Chest X-ray. Initial chest X-ray demonstrating left perihilar, right mid and lower lung patchy opacities, which may represent pneumonia or aspiration (white arrows). There is blunting of the right costophrenic angle may represent a small pleural effusion or pleural thickening (blue arrow). There is a left paratracheal opacity, superior to the aortic arch, which may represent lymphadenopathy (green arrow).\u00a0",
+        "image_path": "./data/chest_xrays\\chest_2f55af90.jpg"
+    },
+    {
+        "patient_id": "P_491354",
+        "scan_date": "2023-01-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The preoperative chest X-ray showing mediastinal shifting and asymmetric thorax.",
+        "image_path": "./data/chest_xrays\\chest_0f51c594.jpg"
+    },
+    {
+        "patient_id": "P_383296",
+        "scan_date": "2023-04-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest radiograph (anterioposterior view) revealing large right-sided pleural effusion (red arrow)",
+        "image_path": "./data/chest_xrays\\chest_2746e7e2.jpg"
+    },
+    {
+        "patient_id": "P_300099",
+        "scan_date": "2023-06-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Patient two chest radiograph showing reticular opacities in the paracardiac and paratracheal regions with sparing of the lateral lung fields",
+        "image_path": "./data/chest_xrays\\chest_ab60b988.jpg"
+    },
+    {
+        "patient_id": "P_105059",
+        "scan_date": "2023-09-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "cardiomegaly",
+            "pneumothorax"
+        ],
+        "report_text": "Portable anteroposterior chest x-ray demonstrating cardiomegaly (white arrow) without pleural effusion, pneumothorax, or focal consolidation",
+        "image_path": "./data/chest_xrays\\chest_217e5166.jpg"
+    },
+    {
+        "patient_id": "P_984855",
+        "scan_date": "2023-02-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "CXR following drainage of the left pleural effusion",
+        "image_path": "./data/chest_xrays\\chest_5b85a283.jpg"
+    },
+    {
+        "patient_id": "P_284804",
+        "scan_date": "2023-07-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray of a 69-year-old male patient with a 2-day history of cough, adynamia, and fever who tested positive for SARS-CoV-2 on RT-PCR, showing low-attenuation pulmonary opacities (arrows) in the lung bases, more pronounced on the left.",
+        "image_path": "./data/chest_xrays\\chest_f47e270e.jpg"
+    },
+    {
+        "patient_id": "P_506181",
+        "scan_date": "2023-12-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray taken at 2 weeks postdischarge showing clear lung fields and minimal blunting of the left costophrenic angle.",
+        "image_path": "./data/chest_xrays\\chest_22dd118e.jpg"
+    },
+    {
+        "patient_id": "P_215992",
+        "scan_date": "2023-01-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray on admission",
+        "image_path": "./data/chest_xrays\\chest_02595731.jpg"
+    },
+    {
+        "patient_id": "P_930282",
+        "scan_date": "2023-07-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest plain radiography shows a 4.0\u2009\u00d7\u20093.5\u2009cm tumour adjacent to the mediastinum.",
+        "image_path": "./data/chest_xrays\\chest_6f1e66e3.jpg"
+    },
+    {
+        "patient_id": "P_929489",
+        "scan_date": "2023-01-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": "This chest radiograph (posteroanterior view) shows innumerable widespread, small, dense nodules, diffusely involving both lungs-predominantly in the basal regions - with obscuration of the mediastinal, cardiac, and diaphragmatic borders. A few fibrotic strands can be detected in bilateral lungs",
+        "image_path": "./data/chest_xrays\\chest_dbc03a49.jpg"
+    },
+    {
+        "patient_id": "P_406791",
+        "scan_date": "2023-02-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Figure 4: X-ray chest satisfactory lung expansion.",
+        "image_path": "./data/chest_xrays\\chest_b64ab3f5.jpg"
+    },
+    {
+        "patient_id": "P_894078",
+        "scan_date": "2023-11-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A chest X-ray obtained before lung puncture. The chest radiograph obtained just before decompression shows diffuse pulmonary interstitial emphysema in the right lung and a mediastinal shift to the left.",
+        "image_path": "./data/chest_xrays\\chest_b445f4a7.jpg"
+    },
+    {
+        "patient_id": "P_888890",
+        "scan_date": "2023-12-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The initial X-ray at the time of injury. The injury was misinterpreted as left hemothorax (black arrow)",
+        "image_path": "./data/chest_xrays\\chest_695b70e7.jpg"
+    },
+    {
+        "patient_id": "P_286031",
+        "scan_date": "2023-12-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Repeat chest x-ray prior to discharge showing improvement of right upper lobe opacity.",
+        "image_path": "./data/chest_xrays\\chest_401dde60.jpg"
+    },
+    {
+        "patient_id": "P_462563",
+        "scan_date": "2023-10-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray demonstrating interstitial infiltration.",
+        "image_path": "./data/chest_xrays\\chest_2b723e38.jpg"
+    },
+    {
+        "patient_id": "P_844043",
+        "scan_date": "2023-09-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph (PA View) of the patient showing thinning and hypoplasia of the clavicles and bell shaped rib-cage.",
+        "image_path": "./data/chest_xrays\\chest_78b7b896.jpg"
+    },
+    {
+        "patient_id": "P_131597",
+        "scan_date": "2023-11-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "chest X-ray; mediastinal enlargement detected in the initial study of the patient.",
+        "image_path": "./data/chest_xrays\\chest_af0f5253.jpg"
+    },
+    {
+        "patient_id": "P_313171",
+        "scan_date": "2023-05-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Early postoperative chest X-ray",
+        "image_path": "./data/chest_xrays\\chest_d4829c95.jpg"
+    },
+    {
+        "patient_id": "P_748939",
+        "scan_date": "2023-09-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph demonstrating pneumomediastinum and extensive cervical subcutaneous emphysema",
+        "image_path": "./data/chest_xrays\\chest_583dba68.jpg"
+    },
+    {
+        "patient_id": "P_843410",
+        "scan_date": "2023-03-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest radiograph showing bilateral hilar and lower zone consolidation and small pleural effusions",
+        "image_path": "./data/chest_xrays\\chest_d5f2e71f.jpg"
+    },
+    {
+        "patient_id": "P_898705",
+        "scan_date": "2023-04-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray at hospital admission. Chest x-ray showing bilateral pulmonary infiltrates\u00a0",
+        "image_path": "./data/chest_xrays\\chest_da88afe0.jpg"
+    },
+    {
+        "patient_id": "P_405819",
+        "scan_date": "2023-04-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray: diffuse bilateral interstitial and airspace opacities on the left greater than the right with an interval increase in size of the left lower lobe infiltrate",
+        "image_path": "./data/chest_xrays\\chest_1637c708.jpg"
+    },
+    {
+        "patient_id": "P_292323",
+        "scan_date": "2023-08-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Chest radiograph. The chest radiograph showing cardiomegaly and diffuse bilateral pulmonary infiltrates",
+        "image_path": "./data/chest_xrays\\chest_fcd47903.jpg"
+    },
+    {
+        "patient_id": "P_489879",
+        "scan_date": "2023-01-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography on admission. Total opacification of the left chest.",
+        "image_path": "./data/chest_xrays\\chest_893c6246.jpg"
+    },
+    {
+        "patient_id": "P_109271",
+        "scan_date": "2023-02-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Posteroanterior radiograph of the giant pulmonary hydatid cyst, which pushed the heart to the right side, with an appearance similar to pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_8f8e8f28.jpg"
+    },
+    {
+        "patient_id": "P_712338",
+        "scan_date": "2023-10-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "fracture"
+        ],
+        "report_text": "Initial chest X-ray: fracture of left 8th, 9th and 10th ribs (arrow).",
+        "image_path": "./data/chest_xrays\\chest_be9930e3.jpg"
+    },
+    {
+        "patient_id": "P_241292",
+        "scan_date": "2023-01-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph taken immediately after transfer to the intensive care unit. Diffuse bilateral pulmonary infiltration is shown in both lung fields.",
+        "image_path": "./data/chest_xrays\\chest_0415b88f.jpg"
+    },
+    {
+        "patient_id": "P_178529",
+        "scan_date": "2023-12-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography showed no active parenchymal lesion on admission.",
+        "image_path": "./data/chest_xrays\\chest_ad01a8d2.jpg"
+    },
+    {
+        "patient_id": "P_520720",
+        "scan_date": "2023-03-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray demonstrates high position of the right diaphragm due to postoperative paralysis.",
+        "image_path": "./data/chest_xrays\\chest_7c9898ce.jpg"
+    },
+    {
+        "patient_id": "P_624742",
+        "scan_date": "2023-03-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Follow-up chest radiography from case 1 showing resolution of the pneumomediastinum.",
+        "image_path": "./data/chest_xrays\\chest_2f398657.jpg"
+    },
+    {
+        "patient_id": "P_882836",
+        "scan_date": "2023-10-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Post-intubation chest radiograph. Measurement indicates distance of endotracheal tube tip above carina.",
+        "image_path": "./data/chest_xrays\\chest_ab447087.jpg"
+    },
+    {
+        "patient_id": "P_275146",
+        "scan_date": "2023-07-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia"
+        ],
+        "report_text": "Chest radiograph on admission showing right perihilar and basilar airspace opacities concerning for pneumonia",
+        "image_path": "./data/chest_xrays\\chest_0e85f8d9.jpg"
+    },
+    {
+        "patient_id": "P_896404",
+        "scan_date": "2023-12-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": " Chest radiography (CXR) on hospital day five showed diffuse heterogeneous airspace opacifications.",
+        "image_path": "./data/chest_xrays\\chest_5ceba87a.jpg"
+    },
+    {
+        "patient_id": "P_170552",
+        "scan_date": "2023-02-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing mediastinal widening.",
+        "image_path": "./data/chest_xrays\\chest_f1b4510a.jpg"
+    },
+    {
+        "patient_id": "P_442347",
+        "scan_date": "2023-08-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema",
+            "cardiomegaly"
+        ],
+        "report_text": "Chest X-ray shows cardiomegaly and no pulmonary edema.",
+        "image_path": "./data/chest_xrays\\chest_3f5b7cd5.jpg"
+    },
+    {
+        "patient_id": "P_648346",
+        "scan_date": "2023-03-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph.",
+        "image_path": "./data/chest_xrays\\chest_21ca9dc4.jpg"
+    },
+    {
+        "patient_id": "P_595063",
+        "scan_date": "2023-10-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis"
+        ],
+        "report_text": "Chest X-ray showing new right lung atelectasis.",
+        "image_path": "./data/chest_xrays\\chest_104ebae4.jpg"
+    },
+    {
+        "patient_id": "P_764875",
+        "scan_date": "2023-09-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Frontal chest radiograph displays bilateral scattered lung infiltrates most pronounced in right lower lung zone.",
+        "image_path": "./data/chest_xrays\\chest_852e8a2a.jpg"
+    },
+    {
+        "patient_id": "P_159970",
+        "scan_date": "2023-11-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Chest x-ray PA digital view did not reveal any major abnormalities except for marginal increase of cardiac size in transverse diameter.",
+        "image_path": "./data/chest_xrays\\chest_f9dd3df0.jpg"
+    },
+    {
+        "patient_id": "P_626265",
+        "scan_date": "2023-06-23",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph. Chest radiograph (AP view)\u00a0showing bullous changes involving bilateral upper lobe with severe bullous emphysematous changes particularly in the left hemithorax.",
+        "image_path": "./data/chest_xrays\\chest_9fb25789.jpg"
+    },
+    {
+        "patient_id": "P_385780",
+        "scan_date": "2023-09-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray showing bilateral diffuse interstitial infiltrates",
+        "image_path": "./data/chest_xrays\\chest_99fe822c.jpg"
+    },
+    {
+        "patient_id": "P_943004",
+        "scan_date": "2023-06-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph Extensive pneumoperitoneum, bilateral free intraperitoneal air (blue arrows), noted throughout the abdomen.",
+        "image_path": "./data/chest_xrays\\chest_683738dc.jpg"
+    },
+    {
+        "patient_id": "P_477230",
+        "scan_date": "2023-12-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal",
+            "opacity"
+        ],
+        "report_text": "Chest radiography demonstrated a normal heart shadow with fairly uniform opacity based on the upper half of the right lung.",
+        "image_path": "./data/chest_xrays\\chest_37eab414.jpg"
+    },
+    {
+        "patient_id": "P_886514",
+        "scan_date": "2023-03-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A Chest X-ray showing the malposition of a left internal jugular central venous catheter down the left internal mammary (thoracic) vein",
+        "image_path": "./data/chest_xrays\\chest_6a2f4bf1.jpg"
+    },
+    {
+        "patient_id": "P_177650",
+        "scan_date": "2023-01-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Poster\u2010anterior chest radiograph at discharge (after the insertion of chest tube)",
+        "image_path": "./data/chest_xrays\\chest_fc4fbe45.jpg"
+    },
+    {
+        "patient_id": "P_536479",
+        "scan_date": "2023-08-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray at 15 months postoperatively showing fully expanded lungs.",
+        "image_path": "./data/chest_xrays\\chest_5b58aaa9.jpg"
+    },
+    {
+        "patient_id": "P_972704",
+        "scan_date": "2023-02-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": " CXR on admission day showed complete opacification of the right side (red arrow) with a left-sided tracheal deviation. AP: anterior-posterior, CXR: chest X-ray, H: hilum and mediastinum, Rvm: Relevance Vector Machine.",
+        "image_path": "./data/chest_xrays\\chest_36824574.jpg"
+    },
+    {
+        "patient_id": "P_555567",
+        "scan_date": "2023-06-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest radiograph showing right loculated pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_fa086047.jpg"
+    },
+    {
+        "patient_id": "P_471363",
+        "scan_date": "2023-05-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "pneumothorax"
+        ],
+        "report_text": "Admission chest radiograph showing right hydropneumothorax and stable left pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_fadd2b74.jpg"
+    },
+    {
+        "patient_id": "P_708991",
+        "scan_date": "2023-08-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Admission chest radiograph in the emergency department.",
+        "image_path": "./data/chest_xrays\\chest_a8a27539.jpg"
+    },
+    {
+        "patient_id": "P_154398",
+        "scan_date": "2023-03-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing enlarged cardiac silhouette (red arrow) as well as right hemithorax status post chest wall resection with remnant neoplastic process (white arrow)",
+        "image_path": "./data/chest_xrays\\chest_90584877.jpg"
+    },
+    {
+        "patient_id": "P_531177",
+        "scan_date": "2023-09-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing multifocal patchy airspace disease, COVID-19.",
+        "image_path": "./data/chest_xrays\\chest_20e06d45.jpg"
+    },
+    {
+        "patient_id": "P_451596",
+        "scan_date": "2023-03-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Immediate postoperative chest AP radiograph shows increased opacity in bilateral perihilar areas.",
+        "image_path": "./data/chest_xrays\\chest_c52deb60.jpg"
+    },
+    {
+        "patient_id": "P_889013",
+        "scan_date": "2023-09-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Admission chest x-ray",
+        "image_path": "./data/chest_xrays\\chest_5093c5a7.jpg"
+    },
+    {
+        "patient_id": "P_823185",
+        "scan_date": "2023-07-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing a rounded subpleural mass in the upper left hemithorax\u00a0(circle). No rib invasion is seen.",
+        "image_path": "./data/chest_xrays\\chest_1b82779a.jpg"
+    },
+    {
+        "patient_id": "P_656426",
+        "scan_date": "2023-02-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "chest X-ray showing homogenous density in the right cardiophrenic angle and trachea deviation",
+        "image_path": "./data/chest_xrays\\chest_375b1f35.jpg"
+    },
+    {
+        "patient_id": "P_832493",
+        "scan_date": "2023-06-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-Ray in June 2020 with coronavirus disease 2019 reinfection",
+        "image_path": "./data/chest_xrays\\chest_8f16cc86.jpg"
+    },
+    {
+        "patient_id": "P_793139",
+        "scan_date": "2023-02-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing bibasilar and right middle lobe infiltrate on presentation.",
+        "image_path": "./data/chest_xrays\\chest_486ed94f.jpg"
+    },
+    {
+        "patient_id": "P_589529",
+        "scan_date": "2023-09-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "A chest X-ray showing the right ventricular lead residing at a normal position within the right ventricle after the revision.",
+        "image_path": "./data/chest_xrays\\chest_c70fca23.jpg"
+    },
+    {
+        "patient_id": "P_708756",
+        "scan_date": "2023-08-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing complete right hemithorax opacification with mediastinal shift to the left.",
+        "image_path": "./data/chest_xrays\\chest_85a2be6f.jpg"
+    },
+    {
+        "patient_id": "P_376055",
+        "scan_date": "2023-05-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Chest x-ray showing right-sided pneumothorax.",
+        "image_path": "./data/chest_xrays\\chest_4120cc29.jpg"
+    },
+    {
+        "patient_id": "P_933353",
+        "scan_date": "2023-12-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "X-ray after intubation. Endotracheal tube projects at the upper margin of the right clavicle, rotated, right internal jugular (IJ) temporary hemodialysis catheter in the right brachycephalic vein, nasogastric tube in place. Extensive diffuse pulmonary confluent airspace opacities.",
+        "image_path": "./data/chest_xrays\\chest_475f3816.jpg"
+    },
+    {
+        "patient_id": "P_402601",
+        "scan_date": "2023-01-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray of the same patient 2 months after pleurodesis and pigtail catheter removal showing no reaccumulation of fluid and successful pleurodesis.",
+        "image_path": "./data/chest_xrays\\chest_2ae4697d.jpg"
+    },
+    {
+        "patient_id": "P_284774",
+        "scan_date": "2023-12-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Upright posteroanterior chest radiograph. There is free subdiaphragmatic air bilaterally that is more clearly noted on the right side (white arrows).",
+        "image_path": "./data/chest_xrays\\chest_ead334e2.jpg"
+    },
+    {
+        "patient_id": "P_387146",
+        "scan_date": "2023-11-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "X-ray chest PA view showing a radio-opaque foreign body at the level of cricopharynx.",
+        "image_path": "./data/chest_xrays\\chest_7659ebf5.jpg"
+    },
+    {
+        "patient_id": "P_961669",
+        "scan_date": "2023-01-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Portable AP chest X-ray showing near complete opacification of the left hemidiaphragm.",
+        "image_path": "./data/chest_xrays\\chest_a242ea65.jpg"
+    },
+    {
+        "patient_id": "P_780488",
+        "scan_date": "2023-02-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray showing pneumomediastinum.",
+        "image_path": "./data/chest_xrays\\chest_11f287ec.jpg"
+    },
+    {
+        "patient_id": "P_601992",
+        "scan_date": "2023-05-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Follow-up chest X-ray (B) 30 days after onset of symptoms showed complete resolution of bilateral lung opacities.",
+        "image_path": "./data/chest_xrays\\chest_c3a04261.jpg"
+    },
+    {
+        "patient_id": "P_223202",
+        "scan_date": "2023-02-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Plain chest X-ray shows no pleural effusion or metastasis. Upward displacement of the diaphragm affecting air entry into the lower lobes of lungs (explains patient's tachypnea).",
+        "image_path": "./data/chest_xrays\\chest_5aee4416.jpg"
+    },
+    {
+        "patient_id": "P_592262",
+        "scan_date": "2023-03-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray on admission revealing multifocal consolidations mostly predominant in the right lung",
+        "image_path": "./data/chest_xrays\\chest_5908496c.jpg"
+    },
+    {
+        "patient_id": "P_537235",
+        "scan_date": "2023-08-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph of the patient at the time of discharge with a weight of 2,600 grams.",
+        "image_path": "./data/chest_xrays\\chest_03625edf.jpg"
+    },
+    {
+        "patient_id": "P_982811",
+        "scan_date": "2023-10-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Plain chest radiograph on admission demonstrating widespread consolidation in keeping with a bilateral pneumonic process",
+        "image_path": "./data/chest_xrays\\chest_bdae0f83.jpg"
+    },
+    {
+        "patient_id": "P_235745",
+        "scan_date": "2023-07-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "fracture"
+        ],
+        "report_text": "The plain radiograph\u00a0of the chest with bilateral shoulder\u00a0anteroposterior\u00a0view at six months follow up showing locking compression plate in position for left clavicle fracture and united right clavicle fracture",
+        "image_path": "./data/chest_xrays\\chest_269ac849.jpg"
+    },
+    {
+        "patient_id": "P_795696",
+        "scan_date": "2023-03-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Patient\u2019s chest X-ray demonstrating normal appearance of the heart.",
+        "image_path": "./data/chest_xrays\\chest_603a577e.jpg"
+    },
+    {
+        "patient_id": "P_620739",
+        "scan_date": "2023-08-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "After subsequent repositioning, a chest X-ray shows the catheter tip located at the junction of the superior vena cava.",
+        "image_path": "./data/chest_xrays\\chest_7993e687.jpg"
+    },
+    {
+        "patient_id": "P_559630",
+        "scan_date": "2023-04-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema"
+        ],
+        "report_text": "Chest X-ray of the patient. The image displays the development of diffuse pulmonary interstitial edema/infiltrates, including perihilar vascular congestion (yellow arrows) and Kerley B lines (blue arrows)",
+        "image_path": "./data/chest_xrays\\chest_051fe995.jpg"
+    },
+    {
+        "patient_id": "P_801104",
+        "scan_date": "2023-11-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Left hand radiograph. Bone age determined by the Greulich-Pyle method was 5 years 9 months (chonological age was 7 years 2 months). Madelung deformity is shown: triangularization of the distal radial epiphysis, and lucent ulnar side of distal radius (arrow).",
+        "image_path": "./data/chest_xrays\\chest_56b65fdc.jpg"
+    },
+    {
+        "patient_id": "P_329607",
+        "scan_date": "2023-01-09",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "CXR shows opaque lungs with air bronchogram due to respiratory distress syndrome in a 1-day-old infant",
+        "image_path": "./data/chest_xrays\\chest_5d166dc8.jpg"
+    },
+    {
+        "patient_id": "P_279451",
+        "scan_date": "2023-07-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A chest X-ray of a serious case of subcutaneous emphysema. Subcutaneous emphysema (SCE) massively extended as far as the neck region in 12 serious cases among 55 SCE (+) cases. Arrowheads indicate SCE in the neck region.",
+        "image_path": "./data/chest_xrays\\chest_b2d1d7e1.jpg"
+    },
+    {
+        "patient_id": "P_662368",
+        "scan_date": "2023-01-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A herniated bowel loop in posteroanterior chest X-ray.",
+        "image_path": "./data/chest_xrays\\chest_104f313f.jpg"
+    },
+    {
+        "patient_id": "P_500041",
+        "scan_date": "2023-04-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A 52-year-old man who developed Middle East respiratory syndrome coronavirus. Frontal chest radiograph obtained on day 8 shows bilateral multifocal patchy airspace disease with predominant hemiopacification of the left lung; chest radiographic score is 14 with LDH of 760. The patient died ten days after initial admission",
+        "image_path": "./data/chest_xrays\\chest_9b854d3b.jpg"
+    },
+    {
+        "patient_id": "P_899593",
+        "scan_date": "2023-09-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray shows left-sided congenital diaphragmatic hernia with herniating loops of large bowel into the right hemithorax.",
+        "image_path": "./data/chest_xrays\\chest_5ecfd841.jpg"
+    },
+    {
+        "patient_id": "P_661155",
+        "scan_date": "2023-10-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing pulmonary vascular congestion.",
+        "image_path": "./data/chest_xrays\\chest_4a787bd2.jpg"
+    },
+    {
+        "patient_id": "P_884475",
+        "scan_date": "2023-11-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph obtained on day 1 of admission to intensive care unit revealed bibasilar airspace disease",
+        "image_path": "./data/chest_xrays\\chest_dc0eca42.jpg"
+    },
+    {
+        "patient_id": "P_649351",
+        "scan_date": "2023-07-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Preoperative chest roentgenogram showing a large hiatal hernia.",
+        "image_path": "./data/chest_xrays\\chest_4cf5558f.jpg"
+    },
+    {
+        "patient_id": "P_297206",
+        "scan_date": "2023-12-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography following removal of the Seldinger chest drain.",
+        "image_path": "./data/chest_xrays\\chest_1f992754.jpg"
+    },
+    {
+        "patient_id": "P_386447",
+        "scan_date": "2023-10-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray 5-6 weeks before admission showing bilateral patchy lung opacities.",
+        "image_path": "./data/chest_xrays\\chest_8a6a6ba4.jpg"
+    },
+    {
+        "patient_id": "P_231634",
+        "scan_date": "2023-09-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The chest radiograph, taken 4 years prior to the current presentation, revealed a mass lesion in the left mid to upper zone. A clear hilum overlay sign was present and the descending aorta was clearly visible, suggesting an anterior mediastinal mass. ",
+        "image_path": "./data/chest_xrays\\chest_2151c1c7.jpg"
+    },
+    {
+        "patient_id": "P_604229",
+        "scan_date": "2023-02-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Upright chest X-ray (AP view) on hospital day one. The image shows spontaneous pneumomediastinum at the base of the left neck (arrows)AP:\u00a0anteroposterior",
+        "image_path": "./data/chest_xrays\\chest_b12fd299.jpg"
+    },
+    {
+        "patient_id": "P_409926",
+        "scan_date": "2023-11-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray.",
+        "image_path": "./data/chest_xrays\\chest_ec7b8691.jpg"
+    },
+    {
+        "patient_id": "P_929800",
+        "scan_date": "2023-05-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray on second hospital day, shows rapidly aggravated bilateral airspace consolidation.",
+        "image_path": "./data/chest_xrays\\chest_569bbfb0.jpg"
+    },
+    {
+        "patient_id": "P_227888",
+        "scan_date": "2023-03-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray after chest drainage.",
+        "image_path": "./data/chest_xrays\\chest_c4e70bc8.jpg"
+    },
+    {
+        "patient_id": "P_605870",
+        "scan_date": "2023-09-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing the presence of pneumomediastinum. Red arrows point to free air around the heart silhouette.",
+        "image_path": "./data/chest_xrays\\chest_3a93cb9b.jpg"
+    },
+    {
+        "patient_id": "P_238764",
+        "scan_date": "2023-10-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph of a 4-year-old-girl who presented with abdominal pain after minor trauma, showing a large, gas-filled structure in the left hemithorax (black arrow) and mediastinal shift (white arrow) and poor definition of the left diaphragm.",
+        "image_path": "./data/chest_xrays\\chest_2f6c0cc4.jpg"
+    },
+    {
+        "patient_id": "P_633554",
+        "scan_date": "2023-10-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Plain chest X-ray radiography. No apparent free air was present, but marked right pleural effusion was observed.",
+        "image_path": "./data/chest_xrays\\chest_a73a4218.jpg"
+    },
+    {
+        "patient_id": "P_336656",
+        "scan_date": "2023-07-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest X-ray: bilateral pleural effusions and extensive interstitial reticulo-nodular shadowing.",
+        "image_path": "./data/chest_xrays\\chest_112a04e9.jpg"
+    },
+    {
+        "patient_id": "P_528850",
+        "scan_date": "2023-08-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing coarse reticular infiltration extending from the right hilum to the periphery (arrows).",
+        "image_path": "./data/chest_xrays\\chest_3b1305eb.jpg"
+    },
+    {
+        "patient_id": "P_100813",
+        "scan_date": "2023-10-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest X-ray showing multiple air-filled cavitary right lung lesions, right-sided pleural effusion, and progression of the air-space disease in the left lung.",
+        "image_path": "./data/chest_xrays\\chest_202c0810.jpg"
+    },
+    {
+        "patient_id": "P_315794",
+        "scan_date": "2023-04-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Plain chest radiography showing a mediastinal enlargement with a bulging along the right atrium contour.",
+        "image_path": "./data/chest_xrays\\chest_29141b21.jpg"
+    },
+    {
+        "patient_id": "P_607474",
+        "scan_date": "2023-06-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "nodule"
+        ],
+        "report_text": "Chest X-ray showed poorly defined nodules of focal consolidation in the right upper and lower lobes.",
+        "image_path": "./data/chest_xrays\\chest_f1454dd8.jpg"
+    },
+    {
+        "patient_id": "P_917530",
+        "scan_date": "2023-12-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing a right-sided port-A-cath tip overlying the distal superior vena cava (red arrow)",
+        "image_path": "./data/chest_xrays\\chest_346fdcb2.jpg"
+    },
+    {
+        "patient_id": "P_372634",
+        "scan_date": "2023-05-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest X-ray showing a left-sided pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_7b402ef5.jpg"
+    },
+    {
+        "patient_id": "P_762162",
+        "scan_date": "2023-02-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Anterior posterior chest radiograph demonstrates unilateral (left sided) opacities.",
+        "image_path": "./data/chest_xrays\\chest_fc717c7b.jpg"
+    },
+    {
+        "patient_id": "P_211211",
+        "scan_date": "2023-06-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "X-Ray post chest drain insertion. Note the presence of extraluminal air in the abdomen.",
+        "image_path": "./data/chest_xrays\\chest_b1a87b4c.jpg"
+    },
+    {
+        "patient_id": "P_921020",
+        "scan_date": "2023-04-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray of the patient 48 h after the start of ECLS support. Correct positioning of the (a) distal tip of the drainage cannula in the junction between the superior vena cava and the right atrium (straight white arrow) and (b) distal tip of the inflow cannula in the junction between the right common carotid artery and the aortic arch (dotted white arrow).",
+        "image_path": "./data/chest_xrays\\chest_bb2de5d8.jpg"
+    },
+    {
+        "patient_id": "P_256406",
+        "scan_date": "2023-04-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Preoperative mobile chest X-ray showing a large gastric shadow (G), absence of the left diaphragmatic outline and rightward displacement of the cardiac silhouette and trachea (T).",
+        "image_path": "./data/chest_xrays\\chest_15a7343c.jpg"
+    },
+    {
+        "patient_id": "P_136900",
+        "scan_date": "2023-06-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing Bi-V Impella placement.Bi-V, biventricular",
+        "image_path": "./data/chest_xrays\\chest_49644010.jpg"
+    },
+    {
+        "patient_id": "P_512789",
+        "scan_date": "2023-02-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema"
+        ],
+        "report_text": "Chest X-ray showing pulmonary edema.",
+        "image_path": "./data/chest_xrays\\chest_d95bfe0f.jpg"
+    },
+    {
+        "patient_id": "P_107212",
+        "scan_date": "2023-12-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray showing bilateral opacities",
+        "image_path": "./data/chest_xrays\\chest_f2bc8191.jpg"
+    },
+    {
+        "patient_id": "P_219891",
+        "scan_date": "2023-10-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray (day 3) revealing multiple bilateral patchy lung consolidations and ground-glass opacities",
+        "image_path": "./data/chest_xrays\\chest_025fb5ef.jpg"
+    },
+    {
+        "patient_id": "P_611808",
+        "scan_date": "2023-03-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia"
+        ],
+        "report_text": "Chest X-ray with right upper lobe cavitating pneumonia.",
+        "image_path": "./data/chest_xrays\\chest_7506f33c.jpg"
+    },
+    {
+        "patient_id": "P_648103",
+        "scan_date": "2023-07-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest radiograph indicated bilateral pleural effusion and pulmonary congestion",
+        "image_path": "./data/chest_xrays\\chest_4d2336d4.jpg"
+    },
+    {
+        "patient_id": "P_934981",
+        "scan_date": "2023-03-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis",
+            "effusion"
+        ],
+        "report_text": "Chest X-ray (PA) showing left linear atelectasis, right subsegmental atelectasis, small left pleural effusion in a patient who presented to the emergency department with no breathing difficulty.",
+        "image_path": "./data/chest_xrays\\chest_5138c667.jpg"
+    },
+    {
+        "patient_id": "P_658952",
+        "scan_date": "2023-08-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Chest radiograph in posteroaanterior view showed the rounded opacity along left cardiac silhouette.",
+        "image_path": "./data/chest_xrays\\chest_8caedf45.jpg"
+    },
+    {
+        "patient_id": "P_889826",
+        "scan_date": "2023-07-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing moderately advanced lesion with cavity less than 4\u2009cm in diameter.",
+        "image_path": "./data/chest_xrays\\chest_c3e1f0b9.jpg"
+    },
+    {
+        "patient_id": "P_529310",
+        "scan_date": "2023-06-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema",
+            "effusion",
+            "cardiomegaly"
+        ],
+        "report_text": "Portable AP chest radiograph of a 67 year old patient with pulmonary edema, small bilateral pleural effusions, and cardiomegaly five days post myocardial infarction.",
+        "image_path": "./data/chest_xrays\\chest_169d38c9.jpg"
+    },
+    {
+        "patient_id": "P_677179",
+        "scan_date": "2023-12-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph taken after extracorporeal membrane oxygenation (ECMO) cannulation. A 10 Fr-cannula is placed in the right internal jugular vein and a 12 Fr-cannula in the right femoral vein.",
+        "image_path": "./data/chest_xrays\\chest_2b42d635.jpg"
+    },
+    {
+        "patient_id": "P_656382",
+        "scan_date": "2023-02-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray on admission.Chest X-ray\u00a0on admission showing bilateral ground-glass opacities consistent with COVID-19 infection.",
+        "image_path": "./data/chest_xrays\\chest_04300615.jpg"
+    },
+    {
+        "patient_id": "P_954379",
+        "scan_date": "2023-02-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing long and narrow thorax (barrel-shaped chest) with anterior compression.",
+        "image_path": "./data/chest_xrays\\chest_424fe114.jpg"
+    },
+    {
+        "patient_id": "P_876857",
+        "scan_date": "2023-02-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing an air-filled, thick-walled structure (black arrows) overlying the left lower thorax with marked elevation of the left hemi-diaphragm (white arrows).",
+        "image_path": "./data/chest_xrays\\chest_fa03786f.jpg"
+    },
+    {
+        "patient_id": "P_315044",
+        "scan_date": "2023-11-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Plain erect chest radiograph, on close inspection a ring calcification can be seen in the right upper quadrant.",
+        "image_path": "./data/chest_xrays\\chest_78bbbc5b.jpg"
+    },
+    {
+        "patient_id": "P_239576",
+        "scan_date": "2023-05-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing left lower lobe infiltrates",
+        "image_path": "./data/chest_xrays\\chest_160941c8.jpg"
+    },
+    {
+        "patient_id": "P_496079",
+        "scan_date": "2023-04-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray with severe chest wall injury.",
+        "image_path": "./data/chest_xrays\\chest_e91b23a4.jpg"
+    },
+    {
+        "patient_id": "P_205577",
+        "scan_date": "2023-08-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Preoperative chest X-ray showing a right-sided pleural effusion and an elevated right hemidiaphragm.",
+        "image_path": "./data/chest_xrays\\chest_2b44140b.jpg"
+    },
+    {
+        "patient_id": "P_919694",
+        "scan_date": "2023-03-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "fracture"
+        ],
+        "report_text": "Plain radiograph of the chest and abdomen shows increased soft tissue over the shoulder and chest wall (arrows) with widening of the superior mediastinum (arrows). Cortical erosions and osteolytic areas are seen in the diaphyses of the humeri, left clavicle, and the right scapular spine (arrowheads). A healed fracture is seen in the right clavicle (double arrow)",
+        "image_path": "./data/chest_xrays\\chest_01819fe3.jpg"
+    },
+    {
+        "patient_id": "P_552185",
+        "scan_date": "2023-04-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "CXR showing persistent right-sided pneumothorax, pneumomediastinum, and the supraclavicular diffuse subcutaneous emphysema with a bilateral chest tube.",
+        "image_path": "./data/chest_xrays\\chest_da41660d.jpg"
+    },
+    {
+        "patient_id": "P_299147",
+        "scan_date": "2023-04-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest AP radiograph at the postoperative 1 day. This shows that central venous catheter tip is looped slightly in SVC and increased pleural effusion is in both lungs, especially RUL, RLL.",
+        "image_path": "./data/chest_xrays\\chest_28d2f6fe.jpg"
+    },
+    {
+        "patient_id": "P_949612",
+        "scan_date": "2023-10-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing bilateral perihilar and basilar reticulonodular infiltrate.",
+        "image_path": "./data/chest_xrays\\chest_8e3538a5.jpg"
+    },
+    {
+        "patient_id": "P_414162",
+        "scan_date": "2023-05-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion",
+            "opacity"
+        ],
+        "report_text": "Chest x-ray showed right upper lobe opacity and pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_3c08fdc5.jpg"
+    },
+    {
+        "patient_id": "P_421595",
+        "scan_date": "2023-08-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Chest radiograph demonstrating a right-sided pneumothorax (white arrow) and right lower lobe consolidation (black arrow)",
+        "image_path": "./data/chest_xrays\\chest_0a8be614.jpg"
+    },
+    {
+        "patient_id": "P_664685",
+        "scan_date": "2023-07-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "chest X-ray showed normal size heart with bilateral base-predominant alveolar and interstitial infiltrates",
+        "image_path": "./data/chest_xrays\\chest_5097f514.jpg"
+    },
+    {
+        "patient_id": "P_209459",
+        "scan_date": "2023-05-12",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Radiograph of chest and abdomen of a neonate following cardiac surgery, showing a misplaced intravenous line into a hepatic vein. The intravenous line has been introduced via the right femoral vein",
+        "image_path": "./data/chest_xrays\\chest_91c0000c.jpg"
+    },
+    {
+        "patient_id": "P_483756",
+        "scan_date": "2023-10-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing the \u201csheared\u201d (black arrow) central venous catheter and the \u201ctracheal bronchus\u201d (white arrow).",
+        "image_path": "./data/chest_xrays\\chest_c2858c7e.jpg"
+    },
+    {
+        "patient_id": "P_419170",
+        "scan_date": "2023-08-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema"
+        ],
+        "report_text": "CxR taken four days after admission showing bilateral alveolar infiltrates suggestive of acute pulmonary edema.",
+        "image_path": "./data/chest_xrays\\chest_6eafa667.jpg"
+    },
+    {
+        "patient_id": "P_217678",
+        "scan_date": "2023-05-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph lateral projection showing the ventricular lead to be pointing posteriorly, suggesting a left ventricular site.",
+        "image_path": "./data/chest_xrays\\chest_0ec6d688.jpg"
+    },
+    {
+        "patient_id": "P_575310",
+        "scan_date": "2023-09-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing extensive interstitial infiltration compared to previous chest radiograph.",
+        "image_path": "./data/chest_xrays\\chest_ddfde59b.jpg"
+    },
+    {
+        "patient_id": "P_861718",
+        "scan_date": "2023-01-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Initial chest X-ray showing right-sided pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_0f62c99d.jpg"
+    },
+    {
+        "patient_id": "P_114848",
+        "scan_date": "2023-08-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "X-ray image of the other tube malposition patient. Despite the drain, retained haemothorax is observed.",
+        "image_path": "./data/chest_xrays\\chest_c831b821.jpg"
+    },
+    {
+        "patient_id": "P_491684",
+        "scan_date": "2023-12-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Postoperative chest X-ray with no specific findings (no chylothorax).",
+        "image_path": "./data/chest_xrays\\chest_381da173.jpg"
+    },
+    {
+        "patient_id": "P_212512",
+        "scan_date": "2023-05-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "The posteroanterior chest x-ray demonstrating abnormal left heart border.",
+        "image_path": "./data/chest_xrays\\chest_b13952cb.jpg"
+    },
+    {
+        "patient_id": "P_903591",
+        "scan_date": "2023-10-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph of case 4 on day 2 in the ICU showing worsening of air space opacification.",
+        "image_path": "./data/chest_xrays\\chest_243e19b8.jpg"
+    },
+    {
+        "patient_id": "P_491539",
+        "scan_date": "2023-05-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Tension pneumothorax of the left lung on chest radiograph. Arrow indicates compressed left lung surrounded by free air.",
+        "image_path": "./data/chest_xrays\\chest_a1260b63.jpg"
+    },
+    {
+        "patient_id": "P_273817",
+        "scan_date": "2023-08-04",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray",
+        "image_path": "./data/chest_xrays\\chest_a6ca7075.jpg"
+    },
+    {
+        "patient_id": "P_420689",
+        "scan_date": "2023-10-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal",
+            "effusion"
+        ],
+        "report_text": "A portable chest X-ray shows a normal cardiac silhouette. There is no focal consolidation or effusion. Costophrenic angles are present. Trachea is midline.",
+        "image_path": "./data/chest_xrays\\chest_61b5f1cc.jpg"
+    },
+    {
+        "patient_id": "P_111792",
+        "scan_date": "2023-10-15",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Chest X-ray showing left lower lobe opacity with a small volume of subdiaphragmatic free air.",
+        "image_path": "./data/chest_xrays\\chest_be431672.jpg"
+    },
+    {
+        "patient_id": "P_126611",
+        "scan_date": "2023-10-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph showing multiple, round, variably sized masses scattering in both lungs, compatible with pulmonary metastasis.",
+        "image_path": "./data/chest_xrays\\chest_572e3164.jpg"
+    },
+    {
+        "patient_id": "P_538266",
+        "scan_date": "2023-05-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Lateral view of chest roentgenogram showing a cryoprobe transbronchially introduced into the lung periphery in a pig. No significant infiltration is seen around the probe after transbronchial insertion.",
+        "image_path": "./data/chest_xrays\\chest_3b17337f.jpg"
+    },
+    {
+        "patient_id": "P_530833",
+        "scan_date": "2023-05-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema"
+        ],
+        "report_text": "Chest roentgenogram. Chest X-ray showed a severe pulmonary edema.",
+        "image_path": "./data/chest_xrays\\chest_deacd7b3.jpg"
+    },
+    {
+        "patient_id": "P_159210",
+        "scan_date": "2023-04-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "chest radiograph of the patient",
+        "image_path": "./data/chest_xrays\\chest_4681a297.jpg"
+    },
+    {
+        "patient_id": "P_262830",
+        "scan_date": "2023-12-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-Ray 08/05/2020",
+        "image_path": "./data/chest_xrays\\chest_6cd3e888.jpg"
+    },
+    {
+        "patient_id": "P_553352",
+        "scan_date": "2023-11-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Thorax X-ray after VVI-R implantation.",
+        "image_path": "./data/chest_xrays\\chest_aa36242d.jpg"
+    },
+    {
+        "patient_id": "P_688440",
+        "scan_date": "2023-01-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "Chest x-ray showing expanded cardiothymic silhouette and persistent pneumothorax despite chest tube insertion.",
+        "image_path": "./data/chest_xrays\\chest_8ba0d09d.jpg"
+    },
+    {
+        "patient_id": "P_931977",
+        "scan_date": "2023-12-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph shows resolution of nodular densities after oral praziquantel therapy.",
+        "image_path": "./data/chest_xrays\\chest_16e703d4.jpg"
+    },
+    {
+        "patient_id": "P_815924",
+        "scan_date": "2023-10-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray showed the enlarged and irregular ball-like cardiac silhouette.",
+        "image_path": "./data/chest_xrays\\chest_4d6e3cb2.jpg"
+    },
+    {
+        "patient_id": "P_597216",
+        "scan_date": "2023-12-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph obtained April 2008, approximately 2 years after pleurectomy with hyperthermic intraoperative intrapleural chemotherapy. A persistent contraction from severe fibrosis of the right upper lobe is seen.",
+        "image_path": "./data/chest_xrays\\chest_c4a8e9e3.jpg"
+    },
+    {
+        "patient_id": "P_630127",
+        "scan_date": "2023-04-06",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Supine portable frontal chest radiograph with arrows pointing to what resembles bilateral pneumothoraces.",
+        "image_path": "./data/chest_xrays\\chest_ab664be8.jpg"
+    },
+    {
+        "patient_id": "P_102767",
+        "scan_date": "2023-02-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Pre-operative Chest x-Ray Showing a Dual Chamber Leads (Thick Arrow) and a Single Chamber Permanent Pacemaker (Narrow Arrow)",
+        "image_path": "./data/chest_xrays\\chest_422d6af8.jpg"
+    },
+    {
+        "patient_id": "P_350598",
+        "scan_date": "2023-04-22",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Anteroposterior chest radiography, which shows diffuse pulmonary congestion with bilateral pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_82f3075a.jpg"
+    },
+    {
+        "patient_id": "P_316470",
+        "scan_date": "2023-12-02",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Initial chest radiography. The endobronchial mass with left upper lobar bronchial narrowing was overlooked on the initial chest radiography.",
+        "image_path": "./data/chest_xrays\\chest_af7e3291.jpg"
+    },
+    {
+        "patient_id": "P_849000",
+        "scan_date": "2023-09-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Postoperative chest X-ray showing a patient with a stuck fragment of a totally implantable central venous access port after removal operation",
+        "image_path": "./data/chest_xrays\\chest_3b742031.jpg"
+    },
+    {
+        "patient_id": "P_258147",
+        "scan_date": "2023-11-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray at presentation; total opacification of the left lower lobe.",
+        "image_path": "./data/chest_xrays\\chest_e28627a4.jpg"
+    },
+    {
+        "patient_id": "P_265406",
+        "scan_date": "2023-08-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Hospital day 0 posterior-anterior chest radiograph demonstrating subglottic stenosis, known as Steeple sign (between red arrows).",
+        "image_path": "./data/chest_xrays\\chest_af12da7b.jpg"
+    },
+    {
+        "patient_id": "P_668497",
+        "scan_date": "2023-11-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "opacity"
+        ],
+        "report_text": "Chest radiograph showing a homogeneous opacity in the right middle and lower lung fields with shift of mediastinum to left.",
+        "image_path": "./data/chest_xrays\\chest_9154aa82.jpg"
+    },
+    {
+        "patient_id": "P_809171",
+        "scan_date": "2023-04-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Standard AP chest X-ray depicting an elevated diaphragm with loculation of the left pleural space",
+        "image_path": "./data/chest_xrays\\chest_c5e8f0a8.jpg"
+    },
+    {
+        "patient_id": "P_576867",
+        "scan_date": "2023-05-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Profile of the thorax radiography showing homogenous densification located in anterior mediastium suggesting round contouring large mass",
+        "image_path": "./data/chest_xrays\\chest_9702a4db.jpg"
+    },
+    {
+        "patient_id": "P_828221",
+        "scan_date": "2023-03-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest radiograph showing moderate right pleural effusion.",
+        "image_path": "./data/chest_xrays\\chest_edab3841.jpg"
+    },
+    {
+        "patient_id": "P_746171",
+        "scan_date": "2023-11-01",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "This chest X-ray shows slightly increased interstitial markings in both lower lung fields in one subject.",
+        "image_path": "./data/chest_xrays\\chest_4218bab5.jpg"
+    },
+    {
+        "patient_id": "P_818188",
+        "scan_date": "2023-10-08",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A frontal chest x-ray showing changes consistent sarcoidosis. There is bilateral bulky hilar and paratracheal lymphadenopathy together with extensive, confluent reticulonodular opacities with a characteristic distribution in the mid and upper zones.",
+        "image_path": "./data/chest_xrays\\chest_13913c5d.jpg"
+    },
+    {
+        "patient_id": "P_373392",
+        "scan_date": "2023-02-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Imaging. Chest X-ray scan reveals a limited semicircle shadow located in the left heart edge.",
+        "image_path": "./data/chest_xrays\\chest_62648004.jpg"
+    },
+    {
+        "patient_id": "P_851531",
+        "scan_date": "2023-01-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Antro-posterior chest X-ray",
+        "image_path": "./data/chest_xrays\\chest_24e563c5.jpg"
+    },
+    {
+        "patient_id": "P_395323",
+        "scan_date": "2023-02-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray showing free intraperitoneal air.",
+        "image_path": "./data/chest_xrays\\chest_e3b8a89f.jpg"
+    },
+    {
+        "patient_id": "P_357629",
+        "scan_date": "2023-11-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "Chest AP radiograph shows the pleural effusion of the left lung. The arrow shows that central venous catheter tip is positioned in the left brachiocephalic vein.",
+        "image_path": "./data/chest_xrays\\chest_57793c9d.jpg"
+    },
+    {
+        "patient_id": "P_360716",
+        "scan_date": "2023-12-11",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray demonstrates opacification of the entire left hemithorax with associated air bronchograms.",
+        "image_path": "./data/chest_xrays\\chest_ffc4f81e.jpg"
+    },
+    {
+        "patient_id": "P_467128",
+        "scan_date": "2023-04-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Patient\u2019s anterior-posterior chest X-ray film on extracorporeal membrane oxygenation decannulation, extubation day 7.",
+        "image_path": "./data/chest_xrays\\chest_82e1906c.jpg"
+    },
+    {
+        "patient_id": "P_391704",
+        "scan_date": "2023-08-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "fracture"
+        ],
+        "report_text": "Chest x-ray showing multiple rib fractures from child abuse. Fractures of ribs 3, 4, and 10 on the right and ribs 8, 9, and 10 on the left. Image courtesy of Nancy Harper, MD Masonic Children's Hospital, Minneapolis, MN and Sonja Eddleman, RN, Driscoll Children's Hospital, Corpus Christi, TX.",
+        "image_path": "./data/chest_xrays\\chest_bf2cbd95.jpg"
+    },
+    {
+        "patient_id": "P_384213",
+        "scan_date": "2023-02-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia"
+        ],
+        "report_text": "Chest X-ray showing bilateral radio-opacities suspicious for COVID-19 pneumonia.COVID-19: coronavirus disease 2019",
+        "image_path": "./data/chest_xrays\\chest_5a48f476.jpg"
+    },
+    {
+        "patient_id": "P_984205",
+        "scan_date": "2023-11-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Chest radiograph of a patient presenting with cyanosis shows a transverse liver, midline stomach shadow, and dextrocardia, which suggest a complex heart defect, probably a heterotaxia syndrome. Clear lung fields with a normal cardiac size indicate a significant PS and decreased pulmonary blood flow in the clinical situation.",
+        "image_path": "./data/chest_xrays\\chest_ec2e7ca8.jpg"
+    },
+    {
+        "patient_id": "P_949017",
+        "scan_date": "2023-04-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia",
+            "opacity"
+        ],
+        "report_text": "Chest X-ray shows an opacity in the right lung base consistent with pneumonia.",
+        "image_path": "./data/chest_xrays\\chest_87f94ac8.jpg"
+    },
+    {
+        "patient_id": "P_838616",
+        "scan_date": "2023-09-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "cardiomegaly"
+        ],
+        "report_text": "Initial chest x-ray with signs of pulmonary congestion and cardiomegaly.",
+        "image_path": "./data/chest_xrays\\chest_3c15c811.jpg"
+    },
+    {
+        "patient_id": "P_123473",
+        "scan_date": "2023-11-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia"
+        ],
+        "report_text": "Chest x-ray of the patient indicating COVID-19 pneumonia",
+        "image_path": "./data/chest_xrays\\chest_c34e748d.jpg"
+    },
+    {
+        "patient_id": "P_902712",
+        "scan_date": "2023-12-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiography on discharge.An evident\u00a0decrease in infiltrates can be observed over both lung fields. \u00a0",
+        "image_path": "./data/chest_xrays\\chest_398d05db.jpg"
+    },
+    {
+        "patient_id": "P_804466",
+        "scan_date": "2023-11-13",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Patient\u2019s chest X-ray on admission",
+        "image_path": "./data/chest_xrays\\chest_259b948b.jpg"
+    },
+    {
+        "patient_id": "P_516613",
+        "scan_date": "2023-06-24",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Postoperative 7th day chest radiograph of a rabbit of control group.",
+        "image_path": "./data/chest_xrays\\chest_4243b029.jpg"
+    },
+    {
+        "patient_id": "P_812715",
+        "scan_date": "2023-02-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Posttreatment chest X-ray.",
+        "image_path": "./data/chest_xrays\\chest_f165eeb7.jpg"
+    },
+    {
+        "patient_id": "P_246996",
+        "scan_date": "2023-05-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Six months later this chest X-ray revealed only a vestige of the aneurysm.",
+        "image_path": "./data/chest_xrays\\chest_a006a515.jpg"
+    },
+    {
+        "patient_id": "P_746690",
+        "scan_date": "2023-04-19",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Pneumomediastinum and pneumoretroperitoneum were observed on the chest X-ray (antero-posterio) that was performed immediately after the surgery.",
+        "image_path": "./data/chest_xrays\\chest_688cf20f.jpg"
+    },
+    {
+        "patient_id": "P_368007",
+        "scan_date": "2023-02-25",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph displaying extensive calcification of the aorta.",
+        "image_path": "./data/chest_xrays\\chest_dc51f840.jpg"
+    },
+    {
+        "patient_id": "P_835026",
+        "scan_date": "2023-07-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Postoperative chest X-ray performed immediately postoperatively demonstrated no evidence of intrathoracic fluid collection.",
+        "image_path": "./data/chest_xrays\\chest_b9a9ebe0.jpg"
+    },
+    {
+        "patient_id": "P_777285",
+        "scan_date": "2023-07-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray following thoracostomy tube placement.",
+        "image_path": "./data/chest_xrays\\chest_d5d74e97.jpg"
+    },
+    {
+        "patient_id": "P_451440",
+        "scan_date": "2023-10-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "fracture"
+        ],
+        "report_text": "Chest x-ray showing the fractured guidewire entrapped in the central venous catheter (CVC) located in the superior vena cava. (A) End of CVC. (B) End of fractured guidewire entrapped in the CVC.",
+        "image_path": "./data/chest_xrays\\chest_106859a2.jpg"
+    },
+    {
+        "patient_id": "P_497585",
+        "scan_date": "2023-08-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest x-ray demonstrating diffuse central predominant interstitial opacities (black arrows)",
+        "image_path": "./data/chest_xrays\\chest_213ca76c.jpg"
+    },
+    {
+        "patient_id": "P_803516",
+        "scan_date": "2023-01-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Anteroposterior chest X-ray showing a bilateral reticulonodular interstitial pattern that is more pronounced in the lower lobes.",
+        "image_path": "./data/chest_xrays\\chest_2503c82d.jpg"
+    },
+    {
+        "patient_id": "P_350781",
+        "scan_date": "2023-03-07",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia"
+        ],
+        "report_text": "Chest x-ray is negative for ground-glass opacities that are classically present in COVID-19 pneumonia.",
+        "image_path": "./data/chest_xrays\\chest_fd42afa7.jpg"
+    },
+    {
+        "patient_id": "P_847196",
+        "scan_date": "2023-01-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Chest radiograph of patient showing abnormality at the right sternoclavicular joint (arrow).",
+        "image_path": "./data/chest_xrays\\chest_3960d11b.jpg"
+    },
+    {
+        "patient_id": "P_607730",
+        "scan_date": "2023-07-18",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia"
+        ],
+        "report_text": "Chest X-ray on the 16th day of admission showing a regression of the pneumonia.",
+        "image_path": "./data/chest_xrays\\chest_e4ef7889.jpg"
+    },
+    {
+        "patient_id": "P_640434",
+        "scan_date": "2023-11-05",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "A 32-year-old man with linear density in the right lung apex (arrow). This radiographic image was acquired two years after a successful treatment for pulmonary tuberculosis.",
+        "image_path": "./data/chest_xrays\\chest_658ebf6d.jpg"
+    },
+    {
+        "patient_id": "P_547916",
+        "scan_date": "2023-09-20",
+        "modality": "CXR",
+        "diagnosis": [
+            "edema"
+        ],
+        "report_text": "Chest X-ray: anteroposterior view showing severe pulmonary edema.",
+        "image_path": "./data/chest_xrays\\chest_caede3cb.jpg"
+    },
+    {
+        "patient_id": "P_197019",
+        "scan_date": "2023-10-14",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray of the newborn done at one hour of age. X-ray chest anteroposterior\u00a0view with ventilator in situ showing bilateral good air entry.",
+        "image_path": "./data/chest_xrays\\chest_9d1e5ee0.jpg"
+    },
+    {
+        "patient_id": "P_544788",
+        "scan_date": "2023-06-17",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumonia"
+        ],
+        "report_text": "Posteroanterior chest radiograph of patient 2, 30 January 2020 (illness day 13). Endotracheal tube in situ approximately 2 cm above the carina. There is worsening of the previously noted pneumonia",
+        "image_path": "./data/chest_xrays\\chest_c23f86fa.jpg"
+    },
+    {
+        "patient_id": "P_704597",
+        "scan_date": "2023-05-21",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "The second chest X-ray displaying a left thoracic hemorrhage.",
+        "image_path": "./data/chest_xrays\\chest_57a4bbdd.jpg"
+    },
+    {
+        "patient_id": "P_273734",
+        "scan_date": "2023-05-26",
+        "modality": "CXR",
+        "diagnosis": [
+            "effusion"
+        ],
+        "report_text": "CxR at admission showing no signs of alveolar infiltrates or pleural effusions.",
+        "image_path": "./data/chest_xrays\\chest_9d5708b1.jpg"
+    },
+    {
+        "patient_id": "P_628163",
+        "scan_date": "2023-11-10",
+        "modality": "CXR",
+        "diagnosis": [
+            "atelectasis",
+            "opacity"
+        ],
+        "report_text": "Chest X-ray. Right paratracheal soft tissue opacity measuring approximately  4 \u00d7 4\u2009cm. Elevation of the right hemidiaphragm with a linear density in the right lower lung consistent with atelectasis.",
+        "image_path": "./data/chest_xrays\\chest_a7583851.jpg"
+    },
+    {
+        "patient_id": "P_879204",
+        "scan_date": "2023-11-28",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest radiograph shows bilateral perihilar alveolar opacities.",
+        "image_path": "./data/chest_xrays\\chest_d07188ec.jpg"
+    },
+    {
+        "patient_id": "P_178913",
+        "scan_date": "2023-08-03",
+        "modality": "CXR",
+        "diagnosis": [
+            "findings"
+        ],
+        "report_text": "Chest X-ray revealing pneumoperitoneum.",
+        "image_path": "./data/chest_xrays\\chest_ff20560a.jpg"
+    },
+    {
+        "patient_id": "P_614620",
+        "scan_date": "2023-11-16",
+        "modality": "CXR",
+        "diagnosis": [
+            "normal"
+        ],
+        "report_text": "Chest X-ray view shows normal findings.",
+        "image_path": "./data/chest_xrays\\chest_ef3edebe.jpg"
+    },
+    {
+        "patient_id": "P_563363",
+        "scan_date": "2023-05-27",
+        "modality": "CXR",
+        "diagnosis": [
+            "pneumothorax"
+        ],
+        "report_text": "CASE 9: left pneumothorax in chest X-ray",
+        "image_path": "./data/chest_xrays\\chest_33612006.jpg"
+    }
+]
