@@ -1,42 +1,44 @@
 version: '3.8'
 
 services:
+  # --- 1. Vector Database ---
   qdrant:
     image: qdrant/qdrant:latest
-    container_name: qdrant
+    container_name: radiology_qdrant
     restart: unless-stopped
     ports:
       - "6333:6333"
-      - "6334:6334"
     volumes:
       - ./qdrant_storage:/qdrant/storage
 
+  # --- 2. Python Backend ---
   backend:
     build:
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: radiology-backend
+      context: .             # Builds from ROOT to see requirements.txt
+      dockerfile: Dockerfile # Uses the Python Dockerfile at root
+    container_name: radiology_backend
     restart: unless-stopped
     ports:
       - "8000:8000"
     environment:
       - QDRANT_URL=http://qdrant:6333
-      - MODEL_NAME=all-MiniLM-L6-v2
-      - QDRANT_COLLECTION=radiology_reports
+      - QDRANT_COLLECTION=radiology_memory
+      # Add your OpenAI/Other keys here if needed
+      # - OPENAI_API_KEY=sk-...
+    volumes:
+      - ./backend:/app/backend   # Hot reload for code changes
+      - ./uploads:/app/uploads   # Keep uploads safe
     depends_on:
       - qdrant
-    volumes:
-      - ./backend:/app
-    env_file:
-      - .env
 
+  # --- 3. React Frontend ---
   frontend:
     build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    container_name: radiology-frontend
+      context: ./frontend    # Builds from Frontend folder
+      dockerfile: Dockerfile # Uses the Node Dockerfile inside frontend
+    container_name: radiology_frontend
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3000:4173"          # Maps PC port 3000 to Vite preview port 4173
     depends_on:
       - backend

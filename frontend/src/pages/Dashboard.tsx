@@ -30,6 +30,35 @@ const Dashboard = () => {
     navigate('/');
   };
 
+  const handleImageUpload = async (file: File) => {
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('http://localhost:8000/upload-scan', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Upload failed: ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      toast({
+        title: 'Upload successful',
+        description: 'Medical scan has been uploaded and indexed.',
+      });
+    } catch (error) {
+      console.error('Upload error:', error);
+      toast({
+        title: 'Upload failed',
+        description: 'Failed to upload the medical scan. Please try again.',
+        variant: 'destructive',
+      });
+    }
+  };
+
   if (!user) return null;
 
   return (
@@ -72,7 +101,7 @@ const Dashboard = () => {
         <ResizablePanelGroup direction="horizontal" className="h-full rounded-lg">
           {/* Left Panel - Image Viewer */}
           <ResizablePanel defaultSize={25} minSize={20} maxSize={35}>
-            <ImageViewer />
+            <ImageViewer onImageUpload={handleImageUpload} />
           </ResizablePanel>
 
           <ResizableHandle withHandle className="mx-2" />

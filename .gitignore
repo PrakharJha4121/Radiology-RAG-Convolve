@@ -21,6 +21,7 @@ ENV/
 # Data and storage
 data/
 qdrant_storage/
+backend/uploads/
 
 # IDEs and OS
 .vscode/
@@ -30,4 +31,3 @@ qdrant_storage/
 # Secrets (CRITICAL)
 google_credentials.json
 client_secret_*.json
-

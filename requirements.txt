@@ -2,11 +2,14 @@ fastapi
 uvicorn
 qdrant-client
 sentence-transformers
+open_clip_torch
 torch
-PyMuPDF
+torchvision
+pandas
 pillow
 python-multipart
 pydantic
-
-datasets 
+datasets
 tqdm
+matplotlib
+python-dotenv
