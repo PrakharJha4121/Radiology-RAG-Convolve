@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Brain, LogOut, Settings } from 'lucide-react';
@@ -6,14 +6,23 @@ import { Button } from '@/components/ui/button';
 import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from '@/components/ui/resizable';
 import ImageViewer from '@/components/dashboard/ImageViewer';
 import ChatInterface from '@/components/dashboard/ChatInterface';
-import PatientTimeline from '@/components/dashboard/PatientTimeline';
+import PatientTimeline, { type ScanHistoryItem } from '@/components/dashboard/PatientTimeline';
 import { getUser, logout } from '@/lib/auth';
 import { useToast } from '@/hooks/use-toast';
+
+const API_BASE = 'http://localhost:8000';
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const user = getUser();
+
+  // State management for cross-component communication
+  const [currentScanId, setCurrentScanId] = useState<string | null>(null);
+  const [historicalScanId, setHistoricalScanId] = useState<string | null>(null);
+  const [historicalScanData, setHistoricalScanData] = useState<ScanHistoryItem | null>(null);
+  const [historicalImageFilename, setHistoricalImageFilename] = useState<string | null>(null);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
 
   useEffect(() => {
     if (!user) {
@@ -30,16 +39,14 @@ const Dashboard = () => {
     navigate('/');
   };
 
-  const handleImageUpload = async (file: File) => {
+  const handleImageUpload = async (file: File, scanType: string): Promise<{ scan_id: string }> => {
     try {
       const formData = new FormData();
       formData.append('file', file);
-      
-      // 👇 CRITICAL FIX: Send the patient_id to the backend
-      // If user data exists, use their ID, otherwise fallback to a default
-      formData.append('patient_id', user?.patientId || 'PID1'); 
+      formData.append('patient_id', user?.patientId || 'PID1');
+      formData.append('scan_type', scanType);
 
-      const response = await fetch('http://localhost:8000/upload-scan', {
+      const response = await fetch(`${API_BASE}/upload-scan`, {
         method: 'POST',
         body: formData,
       });
@@ -49,10 +56,24 @@ const Dashboard = () => {
       }
 
       const result = await response.json();
+      
+      // Set the current scan ID for chat context
+      setCurrentScanId(result.scan_id);
+      
+      // Clear any historical scan context
+      setHistoricalScanId(null);
+      setHistoricalScanData(null);
+      setHistoricalImageFilename(null);
+      
+      // Trigger timeline refresh
+      setRefreshTrigger(prev => prev + 1);
+
       toast({
         title: 'Upload successful',
-        description: 'Medical scan has been saved to patient records.',
+        description: 'Scan saved. You can now ask the AI to analyze it.',
       });
+
+      return { scan_id: result.scan_id };
     } catch (error) {
       console.error('Upload error:', error);
       toast({
@@ -60,8 +81,39 @@ const Dashboard = () => {
         description: 'Failed to upload the medical scan. Please try again.',
         variant: 'destructive',
       });
+      throw error;
     }
   };
+
+  // Handle opening chat for a historical scan
+  const handleOpenChat = useCallback((scanId: string, scanData: ScanHistoryItem) => {
+    setHistoricalScanId(scanId);
+    setHistoricalScanData(scanData);
+    
+    // Don't clear current scan - allow comparison
+    toast({
+      title: scanData.has_chat_history ? 'Chat loaded' : 'Chat started',
+      description: `${scanData.title} from ${scanData.date}`,
+    });
+  }, [toast]);
+
+  // Handle viewing a historical scan image
+  const handleViewScan = useCallback((scanId: string, filename: string) => {
+    setHistoricalImageFilename(filename);
+    setHistoricalScanId(scanId);
+    
+    toast({
+      title: 'Scan loaded',
+      description: 'Historical scan displayed in viewer.',
+    });
+  }, [toast]);
+
+  // Clear historical scan context
+  const handleClearHistorical = useCallback(() => {
+    setHistoricalScanId(null);
+    setHistoricalScanData(null);
+    setHistoricalImageFilename(null);
+  }, []);
 
   if (!user) return null;
 
@@ -105,21 +157,35 @@ const Dashboard = () => {
         <ResizablePanelGroup direction="horizontal" className="h-full rounded-lg">
           {/* Left Panel - Image Viewer */}
           <ResizablePanel defaultSize={25} minSize={20} maxSize={35}>
-            <ImageViewer onImageUpload={handleImageUpload} />
+            <ImageViewer 
+              onImageUpload={handleImageUpload}
+              historicalImage={historicalImageFilename}
+              historicalScanId={historicalScanId}
+              onClearHistorical={handleClearHistorical}
+            />
           </ResizablePanel>
 
           <ResizableHandle withHandle className="mx-2" />
 
           {/* Center Panel - Chat Interface */}
           <ResizablePanel defaultSize={50} minSize={35}>
-            <ChatInterface />
+            <ChatInterface 
+              currentScanId={currentScanId}
+              historicalScanId={historicalScanId}
+              historicalScanData={historicalScanData}
+              onClearHistoricalScan={handleClearHistorical}
+            />
           </ResizablePanel>
 
           <ResizableHandle withHandle className="mx-2" />
 
           {/* Right Panel - Patient Timeline */}
           <ResizablePanel defaultSize={25} minSize={20} maxSize={35}>
-            <PatientTimeline />
+            <PatientTimeline 
+              onOpenChat={handleOpenChat}
+              onViewScan={handleViewScan}
+              refreshTrigger={refreshTrigger}
+            />
           </ResizablePanel>
         </ResizablePanelGroup>
       </motion.main>
