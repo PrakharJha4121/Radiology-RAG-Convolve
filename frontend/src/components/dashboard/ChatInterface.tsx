@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Send, User, Loader2, Image as ImageIcon, X, Sparkles, History, ZoomIn } from 'lucide-react';
+import { Brain, Send, User, Loader2, Image as ImageIcon, X, Sparkles, History, ZoomIn, FileText } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -23,6 +23,7 @@ interface Message {
   intent?: string;
 }
 
+// 1. UPDATED INTERFACE to accept the new props from Dashboard
 interface ChatInterfaceProps {
   currentScanId?: string | null;
   historicalScanId?: string | null;
@@ -33,6 +34,15 @@ interface ChatInterfaceProps {
     finding: string;
   } | null;
   onClearHistoricalScan?: () => void;
+  
+  // New props for AI Analysis
+  isAnalyzing?: boolean;
+  analysisReport?: {
+    pdf_url: string;
+    text: string;
+    raw_text?: string; // <--- Adding this fixes the "Property does not exist" error
+  } | null;
+  onGenerateReport?: () => void;
 }
 
 const API_BASE = 'http://localhost:8000';
@@ -57,7 +67,11 @@ const ChatInterface = ({
   currentScanId, 
   historicalScanId, 
   historicalScanData,
-  onClearHistoricalScan 
+  onClearHistoricalScan,
+  // 2. DESTRUCTURE NEW PROPS with default values
+  isAnalyzing = false,
+  analysisReport = null,
+  onGenerateReport
 }: ChatInterfaceProps) => {
   const user = getUser();
   const [messages, setMessages] = useState<Message[]>([]);
@@ -102,7 +116,6 @@ const ChatInterface = ({
         if (data.messages && data.messages.length > 0) {
           setMessages(data.messages);
         } else if (historicalScanData) {
-          // Start fresh chat context for this historical scan
           setMessages([{
             id: Date.now().toString(),
             role: 'assistant',
@@ -145,7 +158,7 @@ You can now ask questions about this scan or compare it with your current scan.`
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  }, [messages, isAnalyzing, analysisReport]); // Scroll when analysis state changes
 
   // Auto-save chat when messages change
   useEffect(() => {
@@ -258,6 +271,62 @@ You can now ask questions about this scan or compare it with your current scan.`
         </CardHeader>
         
         <CardContent className="flex-1 p-0 flex flex-col overflow-hidden">
+          
+          {/* 3. NEW AI ANALYSIS PANEL */}
+          {(isAnalyzing || analysisReport) && (
+            <div className="mx-4 mt-4 p-4 rounded-lg border bg-primary/5 space-y-3 shrink-0">
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-bold flex items-center gap-2 text-primary">
+                  <Sparkles className="h-4 w-4" />
+                  AI Clinical Analysis
+                </h3>
+                {isAnalyzing && <Loader2 className="h-3 w-3 animate-spin text-primary" />}
+              </div>
+
+              {isAnalyzing ? (
+                <div className="space-y-2">
+                   <p className="text-xs text-muted-foreground animate-pulse">
+                    BioMedCLIP is analyzing visual features and retrieving similar confirmed cases...
+                  </p>
+                  <div className="h-1 w-full bg-primary/10 rounded-full overflow-hidden">
+                    <div className="h-full bg-primary/50 w-1/2 animate-[shimmer_2s_infinite]" />
+                  </div>
+                </div>
+              ) : analysisReport && (
+                <motion.div 
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="space-y-3"
+                >
+                  <div className="text-xs text-muted-foreground line-clamp-3 prose prose-sm dark:prose-invert">
+  <ReactMarkdown>
+    {/* SAFETY CHECK: Use optional chaining and a fallback string */}
+                  {(analysisReport?.text || analysisReport?.raw_text || "Report generated successfully. Click download to view.")
+                    .toString()
+                    .substring(0, 300) + "..."}
+                   </ReactMarkdown>
+                  </div>
+                  <Button 
+                    variant="default" 
+                    size="sm" 
+                    className="w-full text-xs gap-2 h-8"
+                    asChild
+                  >
+                    <a 
+                      href={`${API_BASE}${analysisReport.pdf_url}`} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      download
+                    >
+                      <FileText className="h-3 w-3" />
+                      Download Formal PDF Report
+                    </a>
+                  </Button>
+                </motion.div>
+              )}
+            </div>
+          )}
+
           {/* Messages area */}
           <div className="flex-1 overflow-auto p-4 space-y-4">
             <AnimatePresence>

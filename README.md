@@ -61,6 +61,7 @@ The AI assistant supports **three types of intents**:
 3. **Start all services**
    ```bash
    docker-compose up --build
+   docker run -p 6333:6333 -v "$(pwd)/qdrant_storage:/qdrant/storage" qdrant/qdrant
    ```
 
 4. **Access the application**

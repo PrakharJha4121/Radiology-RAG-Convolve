@@ -17,7 +17,19 @@ from datetime import datetime
 import uuid
 import json
 import google.generativeai as genai
+from fpdf import FPDF, XPos, YPos
+import re
 
+# Helper for PDF character safety
+def clean_text_for_pdf(text: str):
+    """Removes non-Latin-1 characters to prevent PDF crashes."""
+    return re.sub(r'[^\x00-\x7F]+', '', text)
+
+class PDFReport(FPDF):
+    def header(self):
+        self.set_font("Helvetica", 'B', 16)
+        self.cell(0, 10, "Automated Radiology Diagnostic Report", align='C', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.ln(10)
 # Load environment variables
 load_dotenv()
 
@@ -1297,6 +1309,86 @@ async def download_medical_file(patient_id: str, item_id: str):
     except Exception as e:
         print(f"Error downloading file: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to download file: {str(e)}")
+@app.post("/generate-formal-report/{scan_id}")
+async def generate_formal_report(scan_id: str):
+    """
+    Retrieves similar cases, uses Gemini to structure a clinical report,
+    and returns a downloadable PDF.
+    """
+    try:
+        # 1. Fetch the scan from Qdrant
+        user_record = qdrant_client.retrieve(
+            collection_name=USER_COLLECTION,
+            ids=[scan_id],
+            with_vectors=True
+        )
+        if not user_record:
+            raise HTTPException(status_code=404, detail="Scan not found")
+
+        # 2. RAG: Search knowledge base for the best match
+        image_vector = user_record[0].vector['image_vector']
+        search_results = qdrant_client.query_points(
+            collection_name=KNOWLEDGE_COLLECTION,
+            query=image_vector,
+            using="image_vector",
+            limit=1
+        ).points
+
+        if not search_results:
+            raise HTTPException(status_code=404, detail="No similar reference cases found")
+
+        match = search_results[0]
+        raw_context = match.payload.get("report_text", "No reference report available")
+        similarity_score = match.score
+
+        # 3. Gemini: Structure the report (using your existing llm_model)
+        prompt = f"""
+        You are an expert diagnostic radiologist. Create a detailed clinical report based on a similar case.
+        USE PLAIN TEXT ONLY. NO EMOJIS.
+        
+        RETRIEVED DATA:
+        {raw_context}
+        
+        STRUCTURE:
+        1. CLINICAL FINDINGS: (Anatomical observations)
+        2. IMPRESSION: (Main diagnosis)
+        3. RECOMMENDED REMEDIES & LIFESTYLE: (Actionable medical advice)
+        4. CLINICAL FOLLOW-UP: (Next steps for the patient)
+        """
+        
+        # Using the generativeai configuration you already have at the top
+        response = llm_model.generate_content(prompt)
+        structured_report = response.text
+
+        # 4. PDF Generation
+        pdf = PDFReport()
+        pdf.add_page()
+        
+        # Meta Info
+        pdf.set_font("Helvetica", 'B', 12)
+        pdf.cell(0, 10, f"Patient ID: {user_record[0].payload.get('patient_id')}", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        pdf.cell(0, 10, f"Scan ID: {scan_id}", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        pdf.cell(0, 10, f"AI Matching Confidence: {similarity_score:.4f}", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        pdf.ln(5)
+        
+        # Report Content
+        pdf.set_font("Helvetica", size=11)
+        safe_report = clean_text_for_pdf(structured_report)
+        pdf.multi_cell(0, 7, text=safe_report)
+        
+        report_filename = f"Report_{scan_id}.pdf"
+        report_path = UPLOAD_DIR / report_filename
+        pdf.output(str(report_path))
+
+        return {
+            "success": True,
+            "pdf_url": f"/uploads/{report_filename}",
+            "raw_text": structured_report
+        }
+
+    except Exception as e:
+        print(f"Report Gen Error: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     import uvicorn
