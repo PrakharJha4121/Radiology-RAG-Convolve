@@ -16,6 +16,8 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const user = getUser();
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisReport, setAnalysisReport] = useState<{ pdf_url: string; text: string } | null>(null);
 
   // State management for cross-component communication
   const [currentScanId, setCurrentScanId] = useState<string | null>(null);
@@ -59,7 +61,7 @@ const Dashboard = () => {
       
       // Set the current scan ID for chat context
       setCurrentScanId(result.scan_id);
-      
+      await handleGenerateReport(result.scan_id);
       // Clear any historical scan context
       setHistoricalScanId(null);
       setHistoricalScanData(null);
@@ -84,7 +86,37 @@ const Dashboard = () => {
       throw error;
     }
   };
+  const handleGenerateReport = async (scanId: string) => {
+  setIsAnalyzing(true);
+  try {
+    const response = await fetch(`${API_BASE}/generate-formal-report/${scanId}`, {
+      method: 'POST',
+    });
 
+    if (!response.ok) throw new Error('Failed to generate AI report');
+
+    const result = await response.json();
+    setAnalysisReport(result);
+
+    toast({
+      title: 'Analysis Complete',
+      description: 'The AI has generated a formal radiology report.',
+    });
+    
+    // Optional: Automatically open the PDF in a new tab
+    // window.open(`${API_BASE}${result.pdf_url}`, '_blank');
+    
+  } catch (error) {
+    console.error('Analysis error:', error);
+    toast({
+      title: 'Analysis Failed',
+      description: 'Could not generate AI report. Please try again.',
+      variant: 'destructive',
+    });
+  } finally {
+    setIsAnalyzing(false);
+  }
+};
   // Handle opening chat for a historical scan
   const handleOpenChat = useCallback((scanId: string, scanData: ScanHistoryItem) => {
     setHistoricalScanId(scanId);
@@ -174,6 +206,10 @@ const Dashboard = () => {
               historicalScanId={historicalScanId}
               historicalScanData={historicalScanData}
               onClearHistoricalScan={handleClearHistorical}
+              isAnalyzing={isAnalyzing}
+              analysisReport={analysisReport}
+              onGenerateReport={() => currentScanId && handleGenerateReport(currentScanId)}
+                        
             />
           </ResizablePanel>
 

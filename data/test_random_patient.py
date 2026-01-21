@@ -157,7 +157,7 @@ import torch
 import random
 import open_clip
 import matplotlib.pyplot as plt
-<<<<<<< HEAD
+
 from PIL import Image
 from qdrant_client import QdrantClient
 from fpdf import FPDF, XPos, YPos

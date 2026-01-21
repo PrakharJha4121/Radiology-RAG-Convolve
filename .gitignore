@@ -31,6 +31,7 @@ ENV/
 # Secrets (CRITICAL)
 google_credentials.json
 client_secret_*.json
-data/data/
+data/chest_xrays/
+data/data/chest_xrays/
 backend/uploads/
 qdrant_storage/
