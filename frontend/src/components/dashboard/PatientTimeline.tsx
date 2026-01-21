@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, FileImage, FlaskConical, Stethoscope, TestTube, Microscope, MessageSquare, Eye, RefreshCw, Loader2, ChevronRight, Clock } from 'lucide-react';
+import { Activity, FileImage, FlaskConical, Stethoscope, TestTube, Microscope, MessageSquare, Eye, RefreshCw, Loader2, ChevronRight, Clock, FolderOpen } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -165,6 +166,7 @@ const TimelineItem = ({ scan, index, isLast, isSelected, onOpenChat, onViewScan 
 
 const PatientTimeline = ({ onOpenChat, onViewScan, refreshTrigger }: PatientTimelineProps) => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const user = getUser();
   const [history, setHistory] = useState<ScanHistoryItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -218,8 +220,26 @@ const PatientTimeline = ({ onOpenChat, onViewScan, refreshTrigger }: PatientTime
     });
   };
 
+  const handleViewMedicalHistory = () => {
+    if (user?.patientId) {
+      navigate(`/medical-history/${user.patientId}`);
+    }
+  };
+
   return (
     <Card className="h-full flex flex-col border-border shadow-sm">
+      {/* View Complete Medical History Button */}
+      <div className="p-3 border-b border-border">
+        <Button 
+          onClick={handleViewMedicalHistory}
+          variant="outline" 
+          className="w-full gap-2 bg-primary/5 hover:bg-primary/10 border-primary/20 text-foreground"
+        >
+          <FolderOpen className="h-4 w-4 text-primary" />
+          View Complete Medical History
+        </Button>
+      </div>
+      
       <CardHeader className="py-3 px-4 border-b border-border">
         <div className="flex items-center justify-between">
           <CardTitle className="text-sm font-semibold flex items-center gap-2 text-foreground">

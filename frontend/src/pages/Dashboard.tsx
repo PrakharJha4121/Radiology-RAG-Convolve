@@ -7,6 +7,7 @@ import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from '@/componen
 import ImageViewer from '@/components/dashboard/ImageViewer';
 import ChatInterface from '@/components/dashboard/ChatInterface';
 import PatientTimeline, { type ScanHistoryItem } from '@/components/dashboard/PatientTimeline';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { getUser, logout } from '@/lib/auth';
 import { useToast } from '@/hooks/use-toast';
 
@@ -137,6 +138,7 @@ const Dashboard = () => {
             <p className="text-xs text-muted-foreground">{user.patientId}</p>
           </div>
           <div className="flex items-center gap-1">
+            <ThemeToggle />
             <Button variant="ghost" size="icon" className="h-8 w-8">
               <Settings className="h-4 w-4" />
             </Button>

@@ -868,6 +868,436 @@ async def health_check():
     """Health check endpoint"""
     return {"status": "healthy", "timestamp": datetime.now().isoformat()}
 
+# --- MEDICAL HISTORY FILE MANAGEMENT ---
+
+MEDICAL_HISTORY_COLLECTION = "medical_history"
+
+# Ensure medical history collection exists
+def ensure_medical_history_collection():
+    """Ensure medical history collection exists"""
+    try:
+        if not qdrant_client.collection_exists(MEDICAL_HISTORY_COLLECTION):
+            qdrant_client.create_collection(
+                collection_name=MEDICAL_HISTORY_COLLECTION,
+                vectors_config={
+                    "text_vector": models.VectorParams(size=512, distance=models.Distance.COSINE),
+                }
+            )
+            print(f"✅ Created collection: {MEDICAL_HISTORY_COLLECTION}")
+        
+        # Create indexes
+        indexes_to_create = ["patient_id", "path", "item_type", "parent_path"]
+        for field_name in indexes_to_create:
+            try:
+                qdrant_client.create_payload_index(
+                    collection_name=MEDICAL_HISTORY_COLLECTION,
+                    field_name=field_name,
+                    field_schema=models.PayloadSchemaType.KEYWORD
+                )
+                print(f"✅ Created {field_name} index on {MEDICAL_HISTORY_COLLECTION}")
+            except Exception as idx_e:
+                if "already exists" not in str(idx_e).lower():
+                    print(f"⚠️ Index warning for {field_name}: {idx_e}")
+    except Exception as e:
+        print(f"⚠️ Medical history collection setup warning: {e}")
+
+ensure_medical_history_collection()
+
+# Pydantic models for medical history
+class CreateFolderRequest(BaseModel):
+    name: str
+    path: str = ""
+
+class RenameItemRequest(BaseModel):
+    name: str
+
+@app.get("/medical-history/{patient_id}")
+async def get_medical_history(patient_id: str, path: str = ""):
+    """
+    Get the contents of a folder in the patient's medical history.
+    Initialize default folders for new patients.
+    """
+    try:
+        # Build filter for this patient and path
+        filter_conditions = [
+            models.FieldCondition(
+                key="patient_id",
+                match=models.MatchValue(value=patient_id)
+            ),
+            models.FieldCondition(
+                key="parent_path",
+                match=models.MatchValue(value=path)
+            )
+        ]
+        
+        results = qdrant_client.scroll(
+            collection_name=MEDICAL_HISTORY_COLLECTION,
+            scroll_filter=models.Filter(must=filter_conditions),
+            limit=1000,
+            with_payload=True,
+            with_vectors=False
+        )
+        
+        items = []
+        for point in results[0]:
+            payload = point.payload
+            item_type = payload.get("item_type", "file")
+            
+            if item_type == "folder":
+                # Count items in this folder
+                folder_path = f"{path}/{payload.get('name')}" if path else payload.get("name")
+                item_count = count_items_in_folder(patient_id, folder_path)
+                
+                items.append({
+                    "id": str(point.id),
+                    "name": payload.get("name"),
+                    "type": "folder",
+                    "createdAt": payload.get("created_at"),
+                    "itemCount": item_count
+                })
+            else:
+                items.append({
+                    "id": str(point.id),
+                    "name": payload.get("name"),
+                    "type": "file",
+                    "fileType": payload.get("file_type", "other"),
+                    "mimeType": payload.get("mime_type", ""),
+                    "size": payload.get("size", 0),
+                    "uploadedAt": payload.get("uploaded_at"),
+                    "path": payload.get("path", "")
+                })
+        
+        # If this is root path and no items exist, create default folders
+        if path == "" and len(items) == 0:
+            default_folders = ["Scans", "Prescriptions", "Reports", "Lab Results", "Other Documents"]
+            for folder_name in default_folders:
+                folder_id = str(uuid.uuid4())
+                text_vector = get_text_embedding(f"Medical folder: {folder_name}")
+                
+                payload = {
+                    "patient_id": patient_id,
+                    "item_type": "folder",
+                    "name": folder_name,
+                    "parent_path": "",
+                    "path": folder_name,
+                    "created_at": datetime.now().isoformat()
+                }
+                
+                point = models.PointStruct(
+                    id=folder_id,
+                    vector={"text_vector": text_vector},
+                    payload=payload
+                )
+                
+                qdrant_client.upsert(collection_name=MEDICAL_HISTORY_COLLECTION, points=[point])
+                
+                items.append({
+                    "id": folder_id,
+                    "name": folder_name,
+                    "type": "folder",
+                    "createdAt": payload["created_at"],
+                    "itemCount": 0
+                })
+            
+            print(f"✅ Initialized default folders for patient: {patient_id}")
+        
+        # Sort folders first, then files
+        items.sort(key=lambda x: (0 if x["type"] == "folder" else 1, x["name"].lower()))
+        
+        return {"success": True, "items": items}
+        
+    except Exception as e:
+        print(f"Error fetching medical history: {str(e)}")
+        return {"success": False, "items": [], "error": str(e)}
+
+def count_items_in_folder(patient_id: str, folder_path: str) -> int:
+    """Count items in a folder"""
+    try:
+        results = qdrant_client.scroll(
+            collection_name=MEDICAL_HISTORY_COLLECTION,
+            scroll_filter=models.Filter(
+                must=[
+                    models.FieldCondition(
+                        key="patient_id",
+                        match=models.MatchValue(value=patient_id)
+                    ),
+                    models.FieldCondition(
+                        key="parent_path",
+                        match=models.MatchValue(value=folder_path)
+                    )
+                ]
+            ),
+            limit=1000,
+            with_payload=False,
+            with_vectors=False
+        )
+        return len(results[0])
+    except Exception:
+        return 0
+
+@app.post("/medical-history/{patient_id}/folder")
+async def create_folder(patient_id: str, request: CreateFolderRequest):
+    """
+    Create a new folder in the patient's medical history.
+    """
+    try:
+        folder_id = str(uuid.uuid4())
+        
+        # Generate a simple text vector for the folder
+        text_vector = get_text_embedding(f"Medical folder: {request.name}")
+        
+        payload = {
+            "patient_id": patient_id,
+            "item_type": "folder",
+            "name": request.name,
+            "parent_path": request.path,
+            "path": f"{request.path}/{request.name}" if request.path else request.name,
+            "created_at": datetime.now().isoformat()
+        }
+        
+        point = models.PointStruct(
+            id=folder_id,
+            vector={"text_vector": text_vector},
+            payload=payload
+        )
+        
+        qdrant_client.upsert(collection_name=MEDICAL_HISTORY_COLLECTION, points=[point])
+        
+        return {"success": True, "folder_id": folder_id, "message": "Folder created successfully"}
+        
+    except Exception as e:
+        print(f"Error creating folder: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to create folder: {str(e)}")
+
+@app.post("/medical-history/{patient_id}/upload")
+async def upload_medical_file(
+    patient_id: str,
+    file: UploadFile = File(...),
+    file_type: str = Form(default="other"),
+    path: str = Form(default="")
+):
+    """
+    Upload a file to the patient's medical history.
+    """
+    try:
+        # Create patient-specific upload directory
+        patient_upload_dir = UPLOAD_DIR / "medical_history" / patient_id
+        patient_upload_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Generate unique filename
+        file_extension = Path(file.filename).suffix or ""
+        unique_filename = f"{uuid.uuid4()}{file_extension}"
+        file_path = patient_upload_dir / unique_filename
+        
+        # Save file
+        with open(file_path, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+        
+        file_id = str(uuid.uuid4())
+        
+        # Generate text vector for the file
+        text_vector = get_text_embedding(f"Medical {file_type}: {file.filename}")
+        
+        payload = {
+            "patient_id": patient_id,
+            "item_type": "file",
+            "name": file.filename,
+            "file_type": file_type,
+            "mime_type": file.content_type,
+            "size": file_path.stat().st_size,
+            "parent_path": path,
+            "path": str(file_path),
+            "storage_filename": unique_filename,
+            "uploaded_at": datetime.now().isoformat()
+        }
+        
+        point = models.PointStruct(
+            id=file_id,
+            vector={"text_vector": text_vector},
+            payload=payload
+        )
+        
+        qdrant_client.upsert(collection_name=MEDICAL_HISTORY_COLLECTION, points=[point])
+        
+        return {"success": True, "file_id": file_id, "message": "File uploaded successfully"}
+        
+    except Exception as e:
+        print(f"Error uploading file: {str(e)}")
+        if 'file_path' in locals() and file_path.exists():
+            file_path.unlink()
+        raise HTTPException(status_code=500, detail=f"Failed to upload file: {str(e)}")
+
+@app.delete("/medical-history/{patient_id}/item/{item_id}")
+async def delete_medical_item(patient_id: str, item_id: str):
+    """
+    Delete a file or folder from the patient's medical history.
+    """
+    try:
+        # Get item details first
+        result = qdrant_client.retrieve(
+            collection_name=MEDICAL_HISTORY_COLLECTION,
+            ids=[item_id],
+            with_payload=True
+        )
+        
+        if result:
+            payload = result[0].payload
+            
+            # Verify ownership
+            if payload.get("patient_id") != patient_id:
+                raise HTTPException(status_code=403, detail="Access denied")
+            
+            # If it's a file, delete the actual file
+            if payload.get("item_type") == "file":
+                file_path = Path(payload.get("path", ""))
+                if file_path.exists():
+                    file_path.unlink()
+            
+            # If it's a folder, recursively delete contents
+            if payload.get("item_type") == "folder":
+                folder_path = payload.get("path", "")
+                await delete_folder_contents(patient_id, folder_path)
+        
+        # Delete from Qdrant
+        qdrant_client.delete(
+            collection_name=MEDICAL_HISTORY_COLLECTION,
+            points_selector=models.PointIdsList(points=[item_id])
+        )
+        
+        return {"success": True, "message": "Item deleted successfully"}
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Error deleting item: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to delete item: {str(e)}")
+
+async def delete_folder_contents(patient_id: str, folder_path: str):
+    """Recursively delete folder contents"""
+    try:
+        results = qdrant_client.scroll(
+            collection_name=MEDICAL_HISTORY_COLLECTION,
+            scroll_filter=models.Filter(
+                must=[
+                    models.FieldCondition(
+                        key="patient_id",
+                        match=models.MatchValue(value=patient_id)
+                    ),
+                    models.FieldCondition(
+                        key="parent_path",
+                        match=models.MatchValue(value=folder_path)
+                    )
+                ]
+            ),
+            limit=1000,
+            with_payload=True,
+            with_vectors=False
+        )
+        
+        for point in results[0]:
+            payload = point.payload
+            if payload.get("item_type") == "folder":
+                # Recursively delete subfolder
+                await delete_folder_contents(patient_id, payload.get("path", ""))
+            elif payload.get("item_type") == "file":
+                # Delete file
+                file_path = Path(payload.get("path", ""))
+                if file_path.exists():
+                    file_path.unlink()
+            
+            # Delete point
+            qdrant_client.delete(
+                collection_name=MEDICAL_HISTORY_COLLECTION,
+                points_selector=models.PointIdsList(points=[str(point.id)])
+            )
+    except Exception as e:
+        print(f"Error deleting folder contents: {str(e)}")
+
+@app.patch("/medical-history/{patient_id}/item/{item_id}/rename")
+async def rename_medical_item(patient_id: str, item_id: str, request: RenameItemRequest):
+    """
+    Rename a file or folder in the patient's medical history.
+    """
+    try:
+        # Get item details first
+        result = qdrant_client.retrieve(
+            collection_name=MEDICAL_HISTORY_COLLECTION,
+            ids=[item_id],
+            with_payload=True
+        )
+        
+        if not result:
+            raise HTTPException(status_code=404, detail="Item not found")
+        
+        payload = result[0].payload
+        
+        # Verify ownership
+        if payload.get("patient_id") != patient_id:
+            raise HTTPException(status_code=403, detail="Access denied")
+        
+        # Update the name
+        new_payload = {"name": request.name}
+        
+        # If it's a folder, update the path as well
+        if payload.get("item_type") == "folder":
+            parent_path = payload.get("parent_path", "")
+            new_path = f"{parent_path}/{request.name}" if parent_path else request.name
+            new_payload["path"] = new_path
+        
+        qdrant_client.set_payload(
+            collection_name=MEDICAL_HISTORY_COLLECTION,
+            payload=new_payload,
+            points=[item_id]
+        )
+        
+        return {"success": True, "message": "Item renamed successfully"}
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Error renaming item: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to rename item: {str(e)}")
+
+@app.get("/medical-history/{patient_id}/download/{item_id}")
+async def download_medical_file(patient_id: str, item_id: str):
+    """
+    Download a file from the patient's medical history.
+    """
+    try:
+        result = qdrant_client.retrieve(
+            collection_name=MEDICAL_HISTORY_COLLECTION,
+            ids=[item_id],
+            with_payload=True
+        )
+        
+        if not result:
+            raise HTTPException(status_code=404, detail="File not found")
+        
+        payload = result[0].payload
+        
+        # Verify ownership and item type
+        if payload.get("patient_id") != patient_id:
+            raise HTTPException(status_code=403, detail="Access denied")
+        
+        if payload.get("item_type") != "file":
+            raise HTTPException(status_code=400, detail="Cannot download a folder")
+        
+        file_path = Path(payload.get("path", ""))
+        if not file_path.exists():
+            raise HTTPException(status_code=404, detail="File not found on disk")
+        
+        return FileResponse(
+            file_path,
+            filename=payload.get("name", "download"),
+            media_type=payload.get("mime_type", "application/octet-stream")
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Error downloading file: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to download file: {str(e)}")
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

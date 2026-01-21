@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Brain, Search, History, FileCheck, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import heroImage from '@/assets/hero-medical.jpg';
 
 const features = [
@@ -35,11 +36,14 @@ const Landing = () => {
             </div>
             <span className="font-semibold text-lg text-foreground">Radiology-RAG</span>
           </div>
-          <Link to="/login">
-            <Button variant="outline" size="sm">
-              Sign In
-            </Button>
-          </Link>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <Link to="/login">
+              <Button variant="outline" size="sm">
+                Sign In
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
