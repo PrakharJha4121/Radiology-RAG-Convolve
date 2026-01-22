@@ -159,7 +159,7 @@ const Dashboard = () => {
             <Brain className="h-5 w-5 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="font-semibold text-foreground leading-none">Radiology-RAG</h1>
+            <h1 className="font-semibold text-foreground leading-none">Radiology Expert</h1>
             <p className="text-xs text-muted-foreground mt-0.5">Clinical Decision Support</p>
           </div>
         </div>

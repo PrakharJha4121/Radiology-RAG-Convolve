@@ -285,7 +285,7 @@ const ImageViewer = ({ onImageUpload, historicalImage, historicalScanId, onClear
                     ) : uploadSuccess ? (
                       <>
                         <Check className="h-5 w-5 mr-2" />
-                        Scan Saved - Ask AI in Chat
+                        Scan Saved
                       </>
                     ) : (
                       <>
@@ -295,7 +295,7 @@ const ImageViewer = ({ onImageUpload, historicalImage, historicalScanId, onClear
                     )}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">
-                    HIPAA Compliant • Encrypted Upload
+                    Encrypted
                   </p>
                 </div>
               )}

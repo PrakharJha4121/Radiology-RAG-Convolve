@@ -47,7 +47,7 @@ interface ChatInterfaceProps {
 
 const API_BASE = 'http://localhost:8000';
 
-const welcomeMessage = `## 👋 Welcome to Radiology-RAG Assistant
+const welcomeMessage = `## 👋 Welcome to Radiology Expert
 
 I can help you with:
 
@@ -242,7 +242,7 @@ You can now ask questions about this scan or compare it with your current scan.`
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm font-semibold flex items-center gap-2 text-foreground">
               <Brain className="h-4 w-4 text-primary" />
-              AI Assistant
+              Clinical Expert
               {currentScanId && (
                 <Badge variant="outline" className="ml-2 text-[10px] bg-primary/5">
                   <Sparkles className="h-2.5 w-2.5 mr-1" />
@@ -278,7 +278,7 @@ You can now ask questions about this scan or compare it with your current scan.`
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-bold flex items-center gap-2 text-primary">
                   <Sparkles className="h-4 w-4" />
-                  AI Clinical Analysis
+                  Clinical Analysis
                 </h3>
                 {isAnalyzing && <Loader2 className="h-3 w-3 animate-spin text-primary" />}
               </div>
@@ -319,7 +319,7 @@ You can now ask questions about this scan or compare it with your current scan.`
                       download
                     >
                       <FileText className="h-3 w-3" />
-                      Download Formal PDF Report
+                      Download Report
                     </a>
                   </Button>
                 </motion.div>
@@ -462,7 +462,7 @@ You can now ask questions about this scan or compare it with your current scan.`
               </Button>
             </form>
             <p className="text-[10px] text-muted-foreground text-center mt-2">
-              Powered by BioMedCLIP + Gemini • RAG-Enhanced Diagnosis
+              AI can make mistakes
             </p>
           </div>
         </CardContent>
