@@ -328,25 +328,37 @@ def classify_intent(message: str) -> dict:
     return {"intent": "diagnose", "confidence": 0.8}
 
 def generate_llm_response(prompt: str, context: str = "") -> str:
-    """Generate response using Gemini LLM"""
+    """Generate response using Gemini LLM with strict professional formatting."""
     if not llm_model:
         return "LLM not configured. Please set GEMINI_API_KEY environment variable."
     
     try:
-        full_prompt = f"""You are an expert radiologist AI assistant. 
-{context}
+        # Improved System Prompt for Professionalism
+        full_prompt = f"""
+        ACT AS A SENIOR CONSULTING RADIOLOGIST.
+        
+        {context}
 
-User Query: {prompt}
+        CLINICAL QUERY: {prompt}
 
-Provide a detailed, professional medical response. Use markdown formatting for clarity.
-Include relevant clinical observations, potential diagnoses, and recommendations when appropriate.
-Always remind that final interpretation should be by a qualified radiologist."""
+        INSTRUCTIONS:
+        1.  **Professional Tone**: Be direct, objective, and clinical. Do NOT use phrases like "As an AI", "I think", "Based on the database", or "The visual similarity suggests".
+        2.  **Formatting**: Use Markdown strictly.
+            * Use `### Header` for sections.
+            * Use `**Bold**` for key findings or anatomical structures.
+            * Use bullet points for lists.
+            * **CRITICAL**: Leave a blank line between every paragraph or list item for readability.
+        3.  **Structure**:
+            * **Observations**: What is seen.
+            * **Analysis**: Clinical reasoning.
+            * **Recommendation**: Next steps.
+        4.  **Disclaimer**: End with a subtle standard disclaimer.
+        """
         
         response = llm_model.generate_content(full_prompt)
         return response.text
     except Exception as e:
         return f"Error generating response: {str(e)}"
-
 # --- ENDPOINTS ---
 
 @app.post("/upload-scan")
@@ -598,23 +610,26 @@ async def handle_diagnose_intent(request: ChatMessage) -> dict:
                 image_vector = user_record[0].vector['image_vector']
                 
                 # Search knowledge base
+                # FIXED: Added .points to extract the list of hits
                 search_results = qdrant_client.query_points(
                     collection_name=KNOWLEDGE_COLLECTION,
                     query=image_vector,
                     using="image_vector",
                     limit=5
-                ).points
+                ).points  
                 
+                # Format context as strict data points
                 context_reports = []
                 for hit in search_results:
                     report = hit.payload.get("report_text", "")
-                    context_reports.append(f"**Similar Case (Similarity: {hit.score:.1%})**:\n{report}\n")
+                    context_reports.append(f"- CASE STUDY (Confidence: {hit.score:.2f}): {report}")
                 
-                context = f"""You are analyzing a medical scan. Based on visual similarity, here are the most relevant cases from our verified radiology database:
-
-{chr(10).join(context_reports[:3])}
-
-The user asked: {request.message}"""
+                context = f"""
+                REFERENCE CLINICAL DATA (Derived from similar verified cases):
+                {chr(10).join(context_reports[:3])}
+                
+                Analyze the current query using the reference data above as diagnostic precedence.
+                """
                 
                 llm_response = generate_llm_response(request.message, context)
                 
@@ -630,6 +645,7 @@ The user asked: {request.message}"""
         # If no current scan, use text-based search
         text_vector = get_text_embedding(request.message)
         
+        # FIXED: Added .points here as well
         search_results = qdrant_client.query_points(
             collection_name=KNOWLEDGE_COLLECTION,
             query=text_vector,
@@ -638,7 +654,7 @@ The user asked: {request.message}"""
         ).points
         
         context_reports = [hit.payload.get("report_text", "") for hit in search_results]
-        context = f"Relevant medical reports:\n\n" + "\n\n".join(context_reports)
+        context = f"REFERENCE LITERATURE:\n" + "\n".join(context_reports)
         
         llm_response = generate_llm_response(request.message, context)
         
@@ -654,18 +670,16 @@ The user asked: {request.message}"""
         return {
             "intent": "diagnose",
             "confidence": 0.5,
-            "message": f"I encountered an issue while analyzing: {str(e)}. Please try again.",
+            "message": f"**System Error**: Diagnostic analysis interrupted. {str(e)}",
             "images": [],
             "scan_data": None
         }
-
+        
 async def handle_fetch_intent(request: ChatMessage) -> dict:
     """Handle fetch intent - Find specific patient scan by semantic search"""
     try:
-        # Generate embedding for the user's query
         query_vector = get_text_embedding(request.message)
         
-        # Search patient's scans with semantic matching
         search_results = qdrant_client.query_points(
             collection_name=USER_COLLECTION,
             query=query_vector,
@@ -685,27 +699,29 @@ async def handle_fetch_intent(request: ChatMessage) -> dict:
             return {
                 "intent": "fetch",
                 "confidence": 0.7,
-                "message": "I couldn't find any scans matching your description in your history. Please try different keywords or check your scan history panel.",
+                "message": "### 🔍 Search Result\n\nNo records found matching that description in the patient history.",
                 "images": [],
                 "scan_data": None
             }
         
-        # Get the best match
         best_match = search_results[0]
         payload = best_match.payload
         
-        # Format response
-        scan_info = f"""## Found Your Scan
+        # Professional Formatting for Fetch
+        scan_info = f"""### 📂 Record Retrieved
 
-**Scan Type:** {payload.get('scan_type', 'Medical Scan')}  
-**Date:** {payload.get('upload_date', 'Unknown')}  
-**Similarity Score:** {best_match.score:.1%}
-
-### Findings
-{payload.get('report_text', 'No findings recorded')}
+**Scan Details**
+* **Type:** `{payload.get('scan_type', 'Medical Scan')}`
+* **Date:** {payload.get('upload_date_full', payload.get('upload_date', 'Unknown'))}
+* **Match Confidence:** {best_match.score:.1%}
 
 ---
-*Click the image to view in full resolution.*"""
+
+### 📝 Clinical Findings
+{payload.get('report_text', 'No findings recorded in this file.')}
+
+---
+*Select the image below to open the full viewer.*"""
         
         return {
             "intent": "fetch",
@@ -729,7 +745,7 @@ async def handle_fetch_intent(request: ChatMessage) -> dict:
         return {
             "intent": "fetch",
             "confidence": 0.5,
-            "message": f"Error fetching scan: {str(e)}",
+            "message": f"**Retrieval Error**: {str(e)}",
             "images": [],
             "scan_data": None
         }
@@ -741,7 +757,7 @@ async def handle_compare_intent(request: ChatMessage) -> dict:
             return {
                 "intent": "compare",
                 "confidence": 0.7,
-                "message": "To compare scans, please first upload or select a current scan to compare against.",
+                "message": "### ⚠️ Action Required\n\nPlease select or upload a **Current Scan** to initiate a comparison.",
                 "images": [],
                 "scan_data": None
             }
@@ -758,7 +774,7 @@ async def handle_compare_intent(request: ChatMessage) -> dict:
             return {
                 "intent": "compare",
                 "confidence": 0.5,
-                "message": "Could not find the current scan. Please try uploading again.",
+                "message": "**Error**: Current scan reference lost. Please reload.",
                 "images": [],
                 "scan_data": None
             }
@@ -766,7 +782,7 @@ async def handle_compare_intent(request: ChatMessage) -> dict:
         current_payload = current_record[0].payload
         current_image_vector = current_record[0].vector['image_vector']
         
-        # Find previous scan using semantic search on user's message
+        # Find previous scan
         query_vector = get_text_embedding(request.message)
         
         historical_results = qdrant_client.query_points(
@@ -794,7 +810,7 @@ async def handle_compare_intent(request: ChatMessage) -> dict:
             return {
                 "intent": "compare",
                 "confidence": 0.6,
-                "message": "I couldn't find a previous scan to compare with. Please ensure you have historical scans uploaded.",
+                "message": "### 📉 Comparison Unavailable\n\nNo suitable historical scan was found in the patient record to compare against.",
                 "images": [],
                 "scan_data": None
             }
@@ -811,7 +827,7 @@ async def handle_compare_intent(request: ChatMessage) -> dict:
         
         historical_image_vector = historical_record[0].vector['image_vector']
         
-        # RAG: Get similar cases for both scans from knowledge base
+        # RAG: Get similar cases
         current_similar = qdrant_client.query_points(
             collection_name=KNOWLEDGE_COLLECTION,
             query=current_image_vector,
@@ -826,25 +842,27 @@ async def handle_compare_intent(request: ChatMessage) -> dict:
             limit=2
         ).points
         
-        # Build context for LLM
+        # Context
         current_context = "\n".join([hit.payload.get("report_text", "")[:500] for hit in current_similar])
         historical_context = "\n".join([hit.payload.get("report_text", "")[:500] for hit in historical_similar])
         
-        comparison_prompt = f"""Compare these two medical scans and provide a detailed analysis of changes/improvements:
+        comparison_prompt = f"""
+        Perform a strict chronological comparison between the two scans below.
 
-**CURRENT SCAN ({current_payload.get('upload_date', 'Recent')})**:
-Similar cases indicate: {current_context[:800]}
+        DATA A: CURRENT SCAN ({current_payload.get('upload_date', 'Recent')})
+        Context A: {current_context[:800]}
 
-**PREVIOUS SCAN ({historical_payload.get('upload_date', 'Earlier')})**:
-Similar cases indicated: {historical_context[:800]}
+        DATA B: PREVIOUS SCAN ({historical_payload.get('upload_date', 'Earlier')})
+        Context B: {historical_context[:800]}
 
-User's question: {request.message}
+        USER QUERY: {request.message}
 
-Provide:
-1. Key differences observed between the scans
-2. Assessment of improvement or progression
-3. Clinical significance of changes
-4. Recommendations for follow-up"""
+        FORMATTING RULES:
+        1. Use a table or distinct headers to show "Before" vs "After".
+        2. Focus on **INTERVAL CHANGES** (worsened, improved, stable).
+        3. Do not be vague. State "No significant change" if applicable.
+        4. End with a "Progression Assessment" section.
+        """
 
         llm_response = generate_llm_response(comparison_prompt, "")
         
@@ -884,11 +902,11 @@ Provide:
         return {
             "intent": "compare",
             "confidence": 0.5,
-            "message": f"Error comparing scans: {str(e)}",
+            "message": f"**Comparison Error**: {str(e)}",
             "images": [],
             "scan_data": None
         }
-
+        
 @app.post("/save-chat")
 async def save_chat_history(request: SaveChatRequest):
     """Save chat conversation for a specific scan"""
