@@ -8,6 +8,9 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { getUser } from '@/lib/auth';
+// Import the new manager
+import { autoSaveManager } from '@/lib/autoSaveManager'; 
+import { v4 as uuidv4 } from 'uuid';
 
 interface Message {
   id: string;
@@ -23,7 +26,6 @@ interface Message {
   intent?: string;
 }
 
-// 1. UPDATED INTERFACE to accept the new props from Dashboard
 interface ChatInterfaceProps {
   currentScanId?: string | null;
   historicalScanId?: string | null;
@@ -35,12 +37,12 @@ interface ChatInterfaceProps {
   } | null;
   onClearHistoricalScan?: () => void;
   
-  // New props for AI Analysis
+  // AI Analysis Props
   isAnalyzing?: boolean;
   analysisReport?: {
     pdf_url: string;
     text: string;
-    raw_text?: string; // <--- Adding this fixes the "Property does not exist" error
+    raw_text?: string;
   } | null;
   onGenerateReport?: () => void;
 }
@@ -68,7 +70,6 @@ const ChatInterface = ({
   historicalScanId, 
   historicalScanData,
   onClearHistoricalScan,
-  // 2. DESTRUCTURE NEW PROPS with default values
   isAnalyzing = false,
   analysisReport = null,
   onGenerateReport
@@ -134,42 +135,60 @@ You can now ask questions about this scan or compare it with your current scan.`
     }
   };
 
-  const saveChatHistory = async (scanId: string, messagesData: Message[]) => {
-    try {
-      await fetch(`${API_BASE}/save-chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          patient_id: user?.patientId,
-          scan_id: scanId,
-          messages: messagesData.map(m => ({
-            id: m.id,
-            role: m.role,
-            content: m.content,
-            images: m.images,
-            intent: m.intent
-          }))
-        })
-      });
-    } catch (error) {
-      console.error('Failed to save chat history:', error);
-    }
-  };
-
+  // Scroll on updates
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isAnalyzing, analysisReport]); // Scroll when analysis state changes
+  }, [messages, isAnalyzing, analysisReport]);
 
-  // Auto-save chat when messages change
+
+  // =================================================================
+  // 🚀 NEW: Robust Autosave Implementation
+  // =================================================================
+
+  // 1. Continuous Autosave (Debounced)
+  // Monitors messages, AI report, or analysis state changes
   useEffect(() => {
-    const scanToSave = currentScanId || historicalScanId;
-    if (scanToSave && messages.length > 1) {
-      const timeoutId = setTimeout(() => {
-        saveChatHistory(scanToSave, messages);
-      }, 2000);
-      return () => clearTimeout(timeoutId);
+    // Determine the active ID (Current or Historical)
+    const activeId = currentScanId || historicalScanId;
+
+    if (activeId && user?.patientId && messages.length > 1) {
+      // Determine status based on analysis state
+      let status: 'pending' | 'completed' = 'pending';
+      if (analysisReport) status = 'completed';
+      
+      autoSaveManager.scheduleSave({
+        consultationId: activeId,
+        patientId: user.patientId,
+        messages: messages,
+        status: status,
+        // Optional: Include specific analysis fields if available for metadata
+        diagnosis: analysisReport?.text || '',
+        ai_analysis: analysisReport?.raw_text || ''
+      });
     }
-  }, [messages, currentScanId, historicalScanId]);
+  }, [messages, currentScanId, historicalScanId, user?.patientId, analysisReport]);
+
+  // 2. Force Save on Unmount / Scan Switch
+  // Ensures data is pushed immediately when user clicks away or changes patient
+  useEffect(() => {
+    return () => {
+      if ((currentScanId || historicalScanId) && messages.length > 1) {
+        console.log("♻️ Context switch detected - Forcing save...");
+        autoSaveManager.forceSave();
+      }
+    };
+  }, [currentScanId, historicalScanId]);
+
+  // 3. Safety Net: Browser Close / Reload
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      autoSaveManager.forceSave();
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, []);
+
+  // =================================================================
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -272,7 +291,7 @@ You can now ask questions about this scan or compare it with your current scan.`
         
         <CardContent className="flex-1 p-0 flex flex-col overflow-hidden">
           
-          {/* 3. NEW AI ANALYSIS PANEL */}
+          {/* AI ANALYSIS PANEL */}
           {(isAnalyzing || analysisReport) && (
             <div className="mx-4 mt-4 p-4 rounded-lg border bg-primary/5 space-y-3 shrink-0">
               <div className="flex items-center justify-between">
@@ -299,12 +318,11 @@ You can now ask questions about this scan or compare it with your current scan.`
                   className="space-y-3"
                 >
                   <div className="text-xs text-muted-foreground line-clamp-3 prose prose-sm dark:prose-invert">
-  <ReactMarkdown>
-    {/* SAFETY CHECK: Use optional chaining and a fallback string */}
-                  {(analysisReport?.text || analysisReport?.raw_text || "Report generated successfully. Click download to view.")
-                    .toString()
-                    .substring(0, 300) + "..."}
-                   </ReactMarkdown>
+                    <ReactMarkdown>
+                      {(analysisReport?.text || analysisReport?.raw_text || "Report generated successfully. Click download to view.")
+                        .toString()
+                        .substring(0, 300) + "..."}
+                    </ReactMarkdown>
                   </div>
                   <Button 
                     variant="default" 

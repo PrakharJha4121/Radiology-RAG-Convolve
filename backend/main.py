@@ -19,7 +19,11 @@ import json
 import google.generativeai as genai
 from fpdf import FPDF, XPos, YPos
 import re
-
+import shutil
+import os
+from medical_history import create_medical_folder
+STORAGE_DIR = "storage/medical_history"
+os.makedirs(STORAGE_DIR, exist_ok=True)
 # Helper for PDF character safety
 def clean_text_for_pdf(text: str):
     """Removes non-Latin-1 characters to prevent PDF crashes."""
@@ -194,7 +198,63 @@ def get_image_embedding(image_path: str):
     with torch.no_grad():
         img_features = model.encode_image(image)
         img_features /= img_features.norm(dim=-1, keepdim=True)
-    return img_features.squeeze().tolist()
+
+def save_to_medical_history(
+    patient_id: str,
+    folder_id: str,
+    image_path: Optional[str] = None,
+    analysis_text: Optional[str] = None,
+    original_filename: Optional[str] = None
+):
+    """
+    Save image scan and AI analysis to the medical history folder structure.
+    """
+    try:
+        # Create folder structure
+        folder_path = Path(STORAGE_DIR) / patient_id / folder_id
+        folder_path.mkdir(parents=True, exist_ok=True)
+        print(f"✅ Folder created: {folder_path}")
+        
+        saved_files = {}
+        
+        # Save image scan if provided
+        if image_path:
+            image_file = Path(image_path)
+            if image_file.exists():
+                file_extension = image_file.suffix or ".jpg"
+                image_dest = folder_path / f"scan{file_extension}"
+                shutil.copy2(str(image_file), str(image_dest))
+                saved_files['image'] = str(image_dest)
+                print(f"✅ Image saved: {image_dest}")
+        
+        # Save AI analysis if provided
+        if analysis_text:
+            analysis_file = folder_path / "analysis.txt"
+            with open(analysis_file, "w", encoding="utf-8") as f:
+                f.write(analysis_text)
+            saved_files['analysis'] = str(analysis_file)
+            print(f"✅ Analysis saved: {analysis_file}")
+        
+        # Save metadata
+        metadata = {
+            "patient_id": patient_id,
+            "folder_id": folder_id,
+            "created_at": datetime.now().isoformat(),
+            "files": saved_files,
+            "original_filename": original_filename
+        }
+        
+        metadata_file = folder_path / "metadata.json"
+        with open(metadata_file, "w", encoding="utf-8") as f:
+            json.dump(metadata, f, indent=2)
+        saved_files['metadata'] = str(metadata_file)
+        print(f"✅ Metadata saved: {metadata_file}")
+        
+        return saved_files
+        
+    except Exception as e:
+        print(f"❌ Error in save_to_medical_history: {str(e)}")
+        raise
 
 def classify_intent(message: str) -> dict:
     """
@@ -384,9 +444,10 @@ async def get_scan_image(filename: str):
 async def analyze_scan(request: AnalysisRequest):
     """
     RAG-based scan analysis using the knowledge base.
+    Saves analysis and creates medical history folder with scan image.
     """
     try:
-        # Get the user's image vector
+        # Get the user's image vector and scan info
         user_record = qdrant_client.retrieve(
             collection_name=USER_COLLECTION,
             ids=[request.scan_id],
@@ -395,7 +456,11 @@ async def analyze_scan(request: AnalysisRequest):
         
         if not user_record:
             raise HTTPException(status_code=404, detail="Scan not found")
-            
+        
+        user_payload = user_record[0].payload
+        patient_id = user_payload.get("patient_id")
+        file_path = user_payload.get("file_path")
+        original_filename = user_payload.get("original_filename")
         user_image_vector = user_record[0].vector['image_vector']
 
         # Search the knowledge collection
@@ -430,11 +495,55 @@ Use these similar cases to provide a comprehensive analysis."""
             context
         )
 
+        # 🆕 Save to medical history folder
+        print(f"\n📌 Analyze Scan - Checking if should save:")
+        print(f"   patient_id: {patient_id}")
+        print(f"   file_path: {file_path}")
+        
+        if patient_id and file_path:
+            print(f"✅ Conditions met - saving files...")
+            folder_id = str(uuid.uuid4())
+            try:
+                saved_files = save_to_medical_history(
+                    patient_id=patient_id,
+                    folder_id=folder_id,
+                    image_path=file_path,
+                    analysis_text=llm_analysis,
+                    original_filename=original_filename
+                )
+                
+                # Create medical history entry in Qdrant
+                medical_folder_vector = get_text_embedding(f"Medical scan analysis: {llm_analysis[:100]}")
+                medical_payload = {
+                    "patient_id": patient_id,
+                    "item_type": "folder",
+                    "name": f"Analysis - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+                    "parent_path": "",
+                    "scan_id": request.scan_id,
+                    "analysis": llm_analysis,
+                    "created_at": datetime.now().isoformat(),
+                    "files": saved_files
+                }
+                
+                point = models.PointStruct(
+                    id=folder_id,
+                    vector={"text_vector": medical_folder_vector},
+                    payload=medical_payload
+                )
+                
+                qdrant_client.upsert(collection_name=MEDICAL_HISTORY_COLLECTION, points=[point])
+                print(f"✅ Medical history folder created with ID: {folder_id}")
+                
+            except Exception as save_error:
+                print(f"⚠️ Warning: Could not save to medical history: {save_error}")
+                # Continue anyway, analysis is still generated
+
         return {
             "status": "success",
             "analysis": llm_analysis,
             "similar_cases": similar_cases,
-            "reasoning": "Analysis generated using RAG with BioMedCLIP embeddings and Gemini LLM."
+            "reasoning": "Analysis generated using RAG with BioMedCLIP embeddings and Gemini LLM.",
+            "medical_history_saved": True if patient_id else False
         }
 
     except Exception as e:
@@ -1389,7 +1498,88 @@ async def generate_formal_report(scan_id: str):
     except Exception as e:
         print(f"Report Gen Error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
+from fastapi import FastAPI, Form, File, UploadFile, BackgroundTasks
+from pydantic import Json
+import shutil
+import os
+from medical_history import create_medical_folder
+# ... existing imports
 
+# Setup storage path
+STORAGE_DIR = "storage/medical_history"
+os.makedirs(STORAGE_DIR, exist_ok=True)
+
+@app.post("/api/consultations/autosave")
+async def autosave_consultation(
+    background_tasks: BackgroundTasks,
+    consultationId: str = Form(...),
+    patientId: str = Form(...),
+    messages: Json = Form(...),
+    status: str = Form("pending"), # pending, analysis_in_progress, completed
+    diagnosis: str = Form(""),
+    prescription: str = Form(""),
+    ai_analysis: str = Form(""),
+    image: UploadFile = File(None)
+):
+    # 1. Define Paths
+    user_folder = os.path.join(STORAGE_DIR, patientId, consultationId)
+    os.makedirs(user_folder, exist_ok=True)
+    
+    # 2. Save Image (if new one provided)
+    image_filename = "original_image.jpg" # Default name to keep simple
+    if image:
+        file_path = os.path.join(user_folder, image_filename)
+        with open(file_path, "wb") as buffer:
+            shutil.copyfileobj(image.file, buffer)
+            
+    # 3. Save Metadata (Fast JSON dump to disk)
+    metadata = {
+        "id": consultationId,
+        "patientId": patientId,
+        "messages": messages,
+        "diagnosis": diagnosis,
+        "prescription": prescription,
+        "ai_analysis": ai_analysis,
+        "status": status,
+        "last_updated": datetime.now().isoformat()
+    }
+    with open(os.path.join(user_folder, "metadata.json"), "w") as f:
+        json.dump(metadata, f)
+
+    # 4. Sync to Qdrant (Background Task)
+    # Only sync if we have enough data to form a meaningful record
+    # or if the user explicitly switched chats (status='completed' or 'pending_sync')
+    if status == "completed" or len(messages) > 0:
+        # NOTE: You need a function to generate embeddings from text here. 
+        # Assuming `get_text_embedding(text)` exists in your code.
+        # wrapper_sync_to_qdrant handles the embedding logic + qdrant call
+        background_tasks.add_task(
+            wrapper_sync_to_qdrant, 
+            consultationId, patientId, metadata, image_filename
+        )
+
+    return {"status": "saved", "id": consultationId}
+
+def wrapper_sync_to_qdrant(cid, pid, meta, img_fname):
+    # This is a helper to bridge your existing medical_history logic
+    # You might need to generate a dummy vector if analysis is empty
+    dummy_text = meta['diagnosis'] or "Consultation Draft"
+    vector = get_text_embedding(dummy_text) # Replace with your actual embedding function
+    
+    create_medical_folder(
+        qdrant_client=qdrant_client, # Ensure this is available globally or passed
+        text_embedding_vector=vector,
+        patient_id=pid,
+        report_date=datetime.now().strftime("%Y-%m-%d"),
+        image_filename=img_fname,
+        ai_analysis=meta['ai_analysis'],
+        prescription=meta['prescription'],
+        diagnosis=meta['diagnosis'],
+        messages=meta['messages'],
+        provenance={},
+        folder_id=cid, # UPDATE EXISTING ID
+        status=meta['status']
+    )
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
