@@ -769,19 +769,22 @@ async def handle_fetch_intent(request: ChatMessage) -> dict:
 async def handle_compare_intent(request: ChatMessage) -> dict:
     """Handle compare intent - Compare current and historical scans"""
     try:
-        if not request.current_scan_id:
+        # Use current_scan_id if available, otherwise fall back to scan_id (historical scan)
+        primary_scan_id = request.current_scan_id or request.scan_id
+        
+        if not primary_scan_id:
             return {
                 "intent": "compare",
                 "confidence": 0.7,
-                "message": "### ⚠️ Action Required\n\nPlease select or upload a **Current Scan** to initiate a comparison.",
+                "message": "### ⚠️ Action Required\n\nPlease select or upload a **Scan** to initiate a comparison.",
                 "images": [],
                 "scan_data": None
             }
         
-        # Get current scan
+        # Get primary scan (current or selected historical)
         current_record = qdrant_client.retrieve(
             collection_name=USER_COLLECTION,
-            ids=[request.current_scan_id],
+            ids=[primary_scan_id],
             with_vectors=True,
             with_payload=True
         )
@@ -798,7 +801,7 @@ async def handle_compare_intent(request: ChatMessage) -> dict:
         current_payload = current_record[0].payload
         current_image_vector = current_record[0].vector['image_vector']
         
-        # Find previous scan
+        # Find previous scan (exclude the primary scan from results)
         query_vector = get_text_embedding(request.message)
         
         historical_results = qdrant_client.query_points(
@@ -815,7 +818,7 @@ async def handle_compare_intent(request: ChatMessage) -> dict:
                 must_not=[
                     models.FieldCondition(
                         key="scan_id",
-                        match=models.MatchValue(value=request.current_scan_id)
+                        match=models.MatchValue(value=primary_scan_id)
                     )
                 ]
             ),

@@ -115,9 +115,9 @@ const Login = () => {
             <div className="mt-6 p-4 bg-muted rounded-lg">
               <p className="text-xs text-muted-foreground mb-2 font-medium">Demo Credentials:</p>
               <div className="text-xs text-muted-foreground space-y-1">
-                <p><span className="font-mono">PID1</span> / <span className="font-mono">AAA</span></p>
-                <p><span className="font-mono">PID2</span> / <span className="font-mono">BBB</span></p>
-                <p><span className="font-mono">PID3</span> / <span className="font-mono">CCC</span></p>
+                {/* <p><span className="font-mono">PID1</span> / <span className="font-mono">AAA</span></p> */}
+                {/* <p><span className="font-mono">PID2</span> / <span className="font-mono">BBB</span></p> */}
+                {/* <p><span className="font-mono">PID3</span> / <span className="font-mono">CCC</span></p> */}
                 <p><span className="font-mono">PID3</span> / <span className="font-mono">CCC</span></p>
                 <p><span className="font-mono">PID4</span> / <span className="font-mono">DDD</span></p>
                 <p><span className="font-mono">PID5</span> / <span className="font-mono">EEE</span></p>
