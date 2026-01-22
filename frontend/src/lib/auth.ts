@@ -9,6 +9,10 @@ const VALID_CREDENTIALS: Record<string, { password: string; name: string }> = {
   PID1: { password: 'AAA', name: 'John Doe' },
   PID2: { password: 'BBB', name: 'Jane Smith' },
   PID3: { password: 'CCC', name: 'Robert Johnson' },
+  PID4: { password: 'DDD', name: 'Prakhar Jha' },
+  PID5: { password: 'EEE', name: 'Sunita Williams' },
+  PID6: { password: 'FFF', name: 'Einstein' },
+  PID7: { password: 'GGG', name: 'Newton' },
 };
 
 export const authenticate = (patientId: string, password: string): User | null => {

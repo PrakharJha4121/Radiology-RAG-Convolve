@@ -425,12 +425,28 @@ async def upload_scan(
 
         qdrant_client.upsert(collection_name=USER_COLLECTION, points=[point])
 
+        # Sync scan to Medical History -> Scans folder
+        sync_result = await sync_to_medical_history(
+            patient_id=patient_id,
+            source_file_path=file_path,
+            original_filename=file.filename or f"scan_{scan_id}{file_extension}",
+            file_type="scan",
+            target_folder="Scans",
+            mime_type=file.content_type
+        )
+        
+        if sync_result["success"]:
+            print(f"✅ Scan synced to medical history for patient {patient_id}")
+        else:
+            print(f"⚠️ Failed to sync scan to medical history: {sync_result.get('error')}")
+
         return {
             "success": True,
             "scan_id": scan_id,
             "filename": unique_filename,
             "upload_timestamp": upload_timestamp.isoformat(),
-            "message": "Scan uploaded and saved to patient records."
+            "message": "Scan uploaded and saved to patient records.",
+            "synced_to_history": sync_result["success"]
         }
 
     except Exception as e:
@@ -1018,7 +1034,7 @@ def ensure_medical_history_collection():
             print(f"✅ Created collection: {MEDICAL_HISTORY_COLLECTION}")
         
         # Create indexes
-        indexes_to_create = ["patient_id", "path", "item_type", "parent_path"]
+        indexes_to_create = ["patient_id", "path", "item_type", "parent_path", "name"]
         for field_name in indexes_to_create:
             try:
                 qdrant_client.create_payload_index(
@@ -1034,6 +1050,121 @@ def ensure_medical_history_collection():
         print(f"⚠️ Medical history collection setup warning: {e}")
 
 ensure_medical_history_collection()
+
+# --- HELPER FUNCTION TO SYNC TO MEDICAL HISTORY ---
+
+async def sync_to_medical_history(
+    patient_id: str,
+    source_file_path: Path,
+    original_filename: str,
+    file_type: str,  # 'scan' or 'report'
+    target_folder: str,  # 'Scans' or 'Reports'
+    mime_type: str = "application/octet-stream"
+) -> dict:
+    """
+    Sync a file to the patient's medical history folder.
+    Creates the target folder if it doesn't exist.
+    Returns the file_id and success status.
+    """
+    try:
+        # Ensure collection exists before proceeding
+        ensure_medical_history_collection()
+        
+        # First, ensure the target folder exists
+        folder_filter = [
+            models.FieldCondition(
+                key="patient_id",
+                match=models.MatchValue(value=patient_id)
+            ),
+            models.FieldCondition(
+                key="item_type",
+                match=models.MatchValue(value="folder")
+            ),
+            models.FieldCondition(
+                key="name",
+                match=models.MatchValue(value=target_folder)
+            ),
+            models.FieldCondition(
+                key="parent_path",
+                match=models.MatchValue(value="")
+            )
+        ]
+        
+        folder_results = qdrant_client.scroll(
+            collection_name=MEDICAL_HISTORY_COLLECTION,
+            scroll_filter=models.Filter(must=folder_filter),
+            limit=1,
+            with_payload=True,
+            with_vectors=False
+        )
+        
+        # If folder doesn't exist, create it
+        if not folder_results[0]:
+            folder_id = str(uuid.uuid4())
+            text_vector = get_text_embedding(f"Medical folder: {target_folder}")
+            
+            folder_payload = {
+                "patient_id": patient_id,
+                "item_type": "folder",
+                "name": target_folder,
+                "parent_path": "",
+                "path": target_folder,
+                "created_at": datetime.now().isoformat()
+            }
+            
+            folder_point = models.PointStruct(
+                id=folder_id,
+                vector={"text_vector": text_vector},
+                payload=folder_payload
+            )
+            
+            qdrant_client.upsert(collection_name=MEDICAL_HISTORY_COLLECTION, points=[folder_point])
+            print(f"✅ Created {target_folder} folder for patient: {patient_id}")
+        
+        # Create patient-specific upload directory for medical history
+        patient_upload_dir = UPLOAD_DIR / "medical_history" / patient_id
+        patient_upload_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Copy file to medical history folder with unique name
+        file_extension = Path(original_filename).suffix or ""
+        unique_filename = f"{uuid.uuid4()}{file_extension}"
+        dest_file_path = patient_upload_dir / unique_filename
+        
+        # Copy the file
+        shutil.copy2(source_file_path, dest_file_path)
+        
+        # Create file entry in medical history collection
+        file_id = str(uuid.uuid4())
+        text_vector = get_text_embedding(f"Medical {file_type}: {original_filename}")
+        
+        file_payload = {
+            "patient_id": patient_id,
+            "item_type": "file",
+            "name": original_filename,
+            "file_type": file_type,
+            "mime_type": mime_type,
+            "size": dest_file_path.stat().st_size,
+            "parent_path": target_folder,
+            "path": str(dest_file_path),
+            "storage_filename": unique_filename,
+            "uploaded_at": datetime.now().isoformat()
+        }
+        
+        file_point = models.PointStruct(
+            id=file_id,
+            vector={"text_vector": text_vector},
+            payload=file_payload
+        )
+        
+        qdrant_client.upsert(collection_name=MEDICAL_HISTORY_COLLECTION, points=[file_point])
+        
+        print(f"✅ Synced {original_filename} to {target_folder} for patient: {patient_id}")
+        
+        return {"success": True, "file_id": file_id, "storage_path": str(dest_file_path)}
+        
+    except Exception as e:
+        print(f"⚠️ Failed to sync to medical history: {str(e)}")
+        return {"success": False, "error": str(e)}
 
 # Pydantic models for medical history
 class CreateFolderRequest(BaseModel):
@@ -1521,10 +1652,26 @@ async def generate_formal_report(scan_id: str):
         report_path = UPLOAD_DIR / report_filename
         pdf.output(str(report_path))
 
+        # Sync report to Medical History -> Reports folder
+        sync_result = await sync_to_medical_history(
+            patient_id=patient_id,
+            source_file_path=report_path,
+            original_filename=f"Diagnostic_Report_{datetime.now().strftime('%Y-%m-%d')}_{scan_id[:8]}.pdf",
+            file_type="report",
+            target_folder="Reports",
+            mime_type="application/pdf"
+        )
+        
+        if sync_result["success"]:
+            print(f"✅ Report synced to medical history for patient {patient_id}")
+        else:
+            print(f"⚠️ Failed to sync report to medical history: {sync_result.get('error')}")
+
         return {
             "success": True,
             "pdf_url": f"/uploads/{report_filename}",
-            "raw_text": structured_text
+            "raw_text": structured_text,
+            "synced_to_history": sync_result["success"]
         }
 
     except Exception as e:
