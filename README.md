@@ -54,7 +54,6 @@ The AI assistant supports **three types of intents**:
 
 2. **Set up environment variables**
    ```bash
-   cd Radiology-RAG-Convolve
    cp .env.example .env
    Include GEMINI_API_KEY in the .env
    ```
