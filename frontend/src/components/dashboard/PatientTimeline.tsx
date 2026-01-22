@@ -106,7 +106,8 @@ const TimelineItem = ({ scan, index, isLast, isSelected, onOpenChat, onViewScan 
                 )}
               </div>
               <p className="text-sm font-medium text-foreground truncate">{scan.title}</p>
-              <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">{scan.finding}</p>
+
+              <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">{scan.finding.substring(0, 50)}{scan.finding.length > 50 ? '...' : ''}</p>
             </div>
             
             <ChevronRight className={`h-4 w-4 text-muted-foreground transition-transform shrink-0 mt-2 ${isExpanded ? 'rotate-90' : ''}`} />

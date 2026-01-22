@@ -462,7 +462,7 @@ You can now ask questions about this scan or compare it with your current scan.`
               </Button>
             </form>
             <p className="text-[10px] text-muted-foreground text-center mt-2">
-              AI can make mistakes
+              For clinical decision support only. Not a substitute for professional medical judgment.
             </p>
           </div>
         </CardContent>

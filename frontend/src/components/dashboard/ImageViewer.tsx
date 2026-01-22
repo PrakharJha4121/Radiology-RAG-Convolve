@@ -125,7 +125,7 @@ const ImageViewer = ({ onImageUpload, historicalImage, historicalScanId, onClear
         <div className="flex items-center justify-between">
           <CardTitle className="text-sm font-semibold flex items-center gap-2 text-foreground">
             <Upload className="h-4 w-4 text-primary" />
-            {viewMode === 'historical' ? 'Historical Scan' : 'Scan Upload'}
+            {viewMode === 'historical' ? 'Historical Scan' : 'Radiology Expert'}
           </CardTitle>
           <div className="flex items-center gap-1">
             {viewMode === 'historical' && (
@@ -295,7 +295,7 @@ const ImageViewer = ({ onImageUpload, historicalImage, historicalScanId, onClear
                     )}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">
-                    Encrypted
+                    End-to-End Encrypted
                   </p>
                 </div>
               )}
