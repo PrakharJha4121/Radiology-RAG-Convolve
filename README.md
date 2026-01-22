@@ -54,8 +54,8 @@ The AI assistant supports **three types of intents**:
 
 2. **Set up environment variables**
    ```bash
+   cd Radiology-RAG-Convolve
    cp .env.example .env
-   # Edit .env and add your QDRANT_API_KEY if using cloud Qdrant
    Include GEMINI_API_KEY in the .env
    ```
 
