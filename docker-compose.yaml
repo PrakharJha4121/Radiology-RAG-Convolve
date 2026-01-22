@@ -20,14 +20,14 @@ services:
     restart: unless-stopped
     ports:
       - "8000:8000"
+    env_file:
+      - ./backend/.env       # Load environment variables from .env file
     environment:
       - QDRANT_URL=http://qdrant:6333
       - QDRANT_COLLECTION=radiology_memory
-      # Add your OpenAI/Other keys here if needed
-      # - OPENAI_API_KEY=sk-...
     volumes:
-      - ./backend:/app/backend   # Hot reload for code changes
-      - ./uploads:/app/uploads   # Keep uploads safe
+      - ./backend:/app/backend                        # Hot reload for code changes
+      - ./backend/uploads:/app/backend/uploads        # Keep uploads safe
     depends_on:
       - qdrant
 
@@ -39,6 +39,6 @@ services:
     container_name: radiology_frontend
     restart: unless-stopped
     ports:
-      - "3000:4173"          # Maps PC port 3000 to Vite preview port 4173
+      - "8080:4173"          # Maps PC port 8080 to Vite preview port 4173
     depends_on:
       - backend

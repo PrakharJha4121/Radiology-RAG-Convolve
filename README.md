@@ -56,16 +56,16 @@ The AI assistant supports **three types of intents**:
    ```bash
    cp .env.example .env
    # Edit .env and add your QDRANT_API_KEY if using cloud Qdrant
+   Include GEMINI_API_KEY in the .env
    ```
 
 3. **Start all services**
    ```bash
    docker-compose up --build
-   docker run -p 6333:6333 -v "$(pwd)/qdrant_storage:/qdrant/storage" qdrant/qdrant
    ```
 
 4. **Access the application**
-   - Frontend: http://localhost:3000
+   - Frontend: http://localhost:8080
    - Backend API: http://localhost:8000
    - Qdrant Dashboard: http://localhost:6333/dashboard
 
