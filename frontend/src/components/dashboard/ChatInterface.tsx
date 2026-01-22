@@ -182,6 +182,17 @@ You can now ask questions about this scan or compare it with your current scan.`
 
     setMessages(prev => [...prev, userMessage]);
     setInput('');
+
+    // Check if no scan/chat is selected
+    if (!currentScanId && !historicalScanId) {
+      setMessages(prev => [...prev, {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: '⚠️ **Please select a scan first.**\n\nI need context to understand your request. Please upload a new scan using the left panel or select a historical scan from your timeline to continue.',
+      }]);
+      return;
+    }
+
     setIsLoading(true);
 
     try {
